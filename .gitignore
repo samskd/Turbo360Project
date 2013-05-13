@@ -1,0 +1,10 @@
+
+*.class
+
+WebSearchEngineHW3/bin/edu/nyu/cs/cs2580/.DS_Store
+
+*.txt
+
+WebSearchEngineHW3/.DS_Store
+
+WebSearchEngineHW3/data/wiki
