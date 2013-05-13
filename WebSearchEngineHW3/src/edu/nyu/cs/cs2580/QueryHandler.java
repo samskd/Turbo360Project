@@ -32,6 +32,7 @@ class QueryHandler implements HttpHandler {
 		private int _numResults = 10;
 		private int _numDocs = 10;
 		private int _numTerms = 10;
+		public double _realtimeWeight = 0.0; //all corpus based
 
 		// The type of the ranker we will be using.
 		public enum RankerType {
@@ -92,6 +93,12 @@ class QueryHandler implements HttpHandler {
 				} else if (key.equals("numterms")) {
 					try {
 						_numTerms = Integer.parseInt(val);
+					} catch (NumberFormatException e) {
+						// Ignored, search engine should never fail upon invalid user input.
+					}
+				} else if (key.equals("rw")) {
+					try {
+						_realtimeWeight = Double.parseDouble(val);
 					} catch (NumberFormatException e) {
 						// Ignored, search engine should never fail upon invalid user input.
 					}

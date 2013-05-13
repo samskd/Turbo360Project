@@ -43,6 +43,9 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	// Maps each term to their posting list
 	private Map<Integer, Postings> _invertedIndex = new TreeMap<Integer, Postings>();
+	
+	// Maps each term to their posting list
+	private Map<Integer, Postings> _realtimeInvertedIndex = new TreeMap<Integer, Postings>();
 
 	//Stores all Document in memory.
 	private Vector<Document> _documents = new Vector<Document>();
@@ -75,6 +78,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	private final double[] pageRanks;
 	private final Map<Integer, Integer> numViews;
+	private final String REALTIME = "realtime";
 
 	Map<Integer, Postings> postingLists = new HashMap<Integer, Postings>();
 
@@ -146,13 +150,13 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				fileCount++;
 				
 				if(fileCount > 0 && fileCount % 100 == 0){
-					saveIndexInFile("twitter");
+					saveIndexInFile(REALTIME);
 				}
 			}
 		}
 		//save the remaining data
-		saveIndexInFile("twitter");
-		mergeFile("twitter");
+		saveIndexInFile(REALTIME);
+		mergeFile(REALTIME);
 
 	}
 
@@ -296,8 +300,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	}
 
 
-	public List<Integer> asList(int[] ints)
-	{
+	public List<Integer> asList(int[] ints) {
 		List<Integer> intList = new ArrayList<Integer>();
 		for (int index = 0; index < ints.length; index++)
 		{
@@ -306,8 +309,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		return intList;
 	}
 
-	private String getPostingList(File indexTempFile, int term_id)
-	{
+	private String getPostingList(File indexTempFile, int term_id) {
 		Scanner scanner = scanners.get(indexTempFile.getName());
 
 		while(scanner.hasNext()){
@@ -610,12 +612,11 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	
 	public Document nextDoc(Query query, int docid, String docType) {
 
-		System.out.println("NextDoc -> "+docid);
 		Vector<String> queryTerms = query._tokens;
-
-		if(docid < 0){
-			docid = 0;
-		}
+		
+//		if(docid < 0){
+//			docid = 0;
+//		}
 
 		//case 1 
 		Vector <Integer> docIds = new Vector<Integer>();
@@ -643,8 +644,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		}
 
 		//case 3 
-		Integer maxDocID = Collections.max(docIds);
-
+		int maxDocID = Collections.max(docIds);
 		return nextDoc(query, maxDocID-1, docType);
 	}
 
@@ -656,24 +656,32 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	 * @return
 	 */
 	private int next(String term , int currentDoc, String docType){
-
+	
 		Postings postingList = null;
 		Integer termID = _dictionary.get(term);
 
+		Map<Integer, Postings> indexToUsed;
+		 
+		if(docType.equals(REALTIME)){
+			indexToUsed = _realtimeInvertedIndex;
+		}else{
+			indexToUsed = _invertedIndex;
+		}
+		
 		if(postingLists.containsKey(termID)){
 			postingList = postingLists.get(termID);
-		} else if(_invertedIndex != null && _dictionary != null && termID != null){
-			postingList = _invertedIndex.get(termID);
+		} else if(indexToUsed != null && _dictionary != null && termID != null){
+			postingList = indexToUsed.get(termID);
 			postingLists.put(termID, postingList);
 		}
 
 		if(postingList == null){
-			_invertedIndex = getIndex(termID, docType);
-			postingList = _invertedIndex.get(termID);
+			indexToUsed = getIndex(termID, docType);
+			postingList = indexToUsed.get(termID);
 			postingLists.put(termID, postingList);
 		}
 
-		Integer lt = postingList.size();
+		int lt = postingList.size();
 		Integer ct = postingList.getCachedIndex();
 
 		if(ct == null){
@@ -692,7 +700,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		}
 
 		if(ct > 0 && postingList.get(ct-1) > currentDoc){
-			ct=0;
+			ct = 0;
 			postingList.setCachedIndex(0);
 		}
 
@@ -706,7 +714,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	private Map<Integer, Postings> getIndex(Integer integer, String docType) {
 
-		int file_no = (int)integer /mergeCount + 1;
+		int file_no = (int)integer/mergeCount + 1;
 		String filepath = _options._indexPrefix+"/index/"+docType+"/"+file_no+".idx";
 		T3FileReader fileReader = new T3FileReader(filepath);
 		String fileContents = fileReader.readAllBytes();
@@ -715,7 +723,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		GsonBuilder builder = new GsonBuilder();
 		Gson gson = builder.enableComplexMapKeySerialization().setPrettyPrinting().create();
 		Type type = new TypeToken<TreeMap<Integer,Postings>>(){}.getType();
-		TreeMap<Integer,Postings> treeMap = gson.fromJson(fileContents, type);
+		Map<Integer,Postings> treeMap = gson.fromJson(fileContents, type);
 
 		return treeMap;
 	}
