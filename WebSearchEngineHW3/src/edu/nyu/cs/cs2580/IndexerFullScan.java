@@ -15,6 +15,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.Vector;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import edu.nyu.cs.cs2580.SearchEngine.Options;
 
 /**
@@ -235,5 +236,10 @@ class IndexerFullScan extends Indexer implements Serializable {
     }
     return retval;
   }
+
+@Override
+public Document nextDoc(Query query, int docid, String source) {
+	throw new NotImplementedException();
+}
 
 }

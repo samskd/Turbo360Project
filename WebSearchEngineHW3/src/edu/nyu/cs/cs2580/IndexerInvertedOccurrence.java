@@ -47,4 +47,10 @@ public class IndexerInvertedOccurrence extends Indexer {
     SearchEngine.Check(false, "Not implemented!");
     return 0;
   }
+
+@Override
+public Document nextDoc(Query query, int docid, String source) {
+	// TODO Auto-generated method stub
+	return null;
+}
 }

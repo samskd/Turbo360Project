@@ -70,6 +70,7 @@ public abstract class Indexer {
    * null if no such document exists.
    */
   public abstract Document nextDoc(Query query, int docid);
+  public abstract Document nextDoc(Query query, int docid, String source);
 
   // APIs for index construction and loading.
 

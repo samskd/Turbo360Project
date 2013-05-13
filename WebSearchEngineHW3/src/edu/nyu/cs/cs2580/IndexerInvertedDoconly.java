@@ -580,7 +580,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	private Vector<Document> getDocuments(int docid2) {
 
-		int file_no = (int)docid2 /100 + 1;
+		int file_no = (int)docid2 /mergeCount + 1;
 		String filepath = _options._indexPrefix+"/Documents/"+file_no+".idx";
 		T3FileReader fileReader = new T3FileReader(filepath);
 		String fileContents = fileReader.readAllBytes();
@@ -613,14 +613,14 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		System.out.println("NextDoc -> "+docid);
 		Vector<String> queryTerms = query._tokens;
 
-		if(docid<0){
+		if(docid < 0){
 			docid = 0;
 		}
 
 		//case 1 
 		Vector <Integer> docIds = new Vector<Integer>();
 		for(String token : queryTerms){
-			Integer nextDocID = next(token, docid, docType);
+			int nextDocID = next(token, docid, docType);
 			if(nextDocID == Integer.MAX_VALUE){
 				//value not found;
 				return null;
@@ -645,7 +645,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		//case 3 
 		Integer maxDocID = Collections.max(docIds);
 
-		return nextDoc(query, maxDocID-1);
+		return nextDoc(query, maxDocID-1, docType);
 	}
 
 	/**

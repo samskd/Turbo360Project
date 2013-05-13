@@ -18,7 +18,7 @@ import edu.nyu.cs.cs2580.SearchEngine.Options;
  */
 public class RankerComprehensive extends Ranker {
 
-	private double realtimeWeighingFactor = 0.7;
+	private double realtimeWeighingFactor = 1.0;
 	public RankerComprehensive(Options options,
 			CgiArguments arguments, Indexer indexer) {
 		super(options, arguments, indexer);
@@ -35,8 +35,24 @@ public class RankerComprehensive extends Ranker {
 		while ((doc = (DocumentIndexed)_indexer.nextDoc(query, docid)) != null) {
 			//Scoring the document
 			double contentScore = this.getScore(query, doc) + 0.2*doc.getNumViews() + 0.8*doc.getPageRank();
-			double realtimeScore = this.getRealTimeTwitterScore(query, doc);
+			double realtimeScore = this.getRealTimeTwitterScore(doc);
 			double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
+			
+			System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
+			rankQueue.add(new ScoredDocument(doc,totalScore));
+			
+			if (rankQueue.size() > numResults) {
+				rankQueue.poll();
+			}
+			docid = doc._docid;
+		}
+		
+		while ((doc = (DocumentIndexed) _indexer.nextDoc(query, docid, "twitter")) != null) {
+			//Scoring the document
+			double contentScore = this.getScore(query, doc) + 0.2*doc.getNumViews() + 0.8*doc.getPageRank();
+			double realtimeScore = this.getRealTimeTwitterScore(doc);
+			double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
+			
 			rankQueue.add(new ScoredDocument(doc,totalScore));
 			
 			if (rankQueue.size() > numResults) {
@@ -115,7 +131,7 @@ public class RankerComprehensive extends Ranker {
 	}
 	
 	
-	private Double getRealTimeTwitterScore(Query query, DocumentIndexed d){
+	private Double getRealTimeTwitterScore(DocumentIndexed d){
 		
 		double score = 0.0;
 				

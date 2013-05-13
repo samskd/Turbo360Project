@@ -767,7 +767,7 @@ public class IndexerInvertedCompressed extends Indexer {
 	 * In HW2, you should be using {@link DocumentIndexed}.
 	 */
 	@Override
-	public DocumentIndexed nextDoc(Query query, int docid) {
+	public DocumentIndexed nextDoc(Query query, int docid, String source) {
 
 		Vector<String> queryTerms = query._tokens;
 
@@ -784,7 +784,7 @@ public class IndexerInvertedCompressed extends Indexer {
 		//case 1 
 		Vector <Integer> docIds = new Vector<Integer>();
 		for(String token : queryTerms) {
-			Integer nextDocID = next(token,docid);
+			Integer nextDocID = next(token, docid);
 			if(nextDocID == INFINITY) {
 				//value not found;
 				return null;
@@ -808,9 +808,14 @@ public class IndexerInvertedCompressed extends Indexer {
 		//case 3 
 		Integer maxDocID = Collections.max(docIds);
 
-		return nextDoc(query, maxDocID-1);
+		return nextDoc(query, maxDocID-1, source);
 	}
 
+	
+	@Override
+	public Document nextDoc(Query query, int docid) {
+		return nextDoc(query, docid, "wiki");
+	}
 
 	/**
 	 * Finds the next document containing the term.
@@ -981,4 +986,7 @@ public class IndexerInvertedCompressed extends Indexer {
 
 		return entry.getOffset().size();
 	}
+
+
+	
 }
