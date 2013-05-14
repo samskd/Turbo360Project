@@ -18,10 +18,10 @@ public class RankerComprehensive extends Ranker {
 
 	private double realtimeWeighingFactor = 0.2;
 	private double realtimeResultsPercentage = 0.3;
-	private final String REALTIME = "realtime";
+	private final String REALTIME = "twitter"; //realtime
 	private final String CORPUS = "wiki";
 	private int numDocs = 0;
-	
+
 	public RankerComprehensive(Options options,
 			CgiArguments arguments, Indexer indexer) {
 		super(options, arguments, indexer);
@@ -32,64 +32,74 @@ public class RankerComprehensive extends Ranker {
 	@Override
 	public Vector<ScoredDocument> runQuery(Query query, int numResults) {
 
-		int totalCorpusDocs = (int)(numResults*(1-realtimeResultsPercentage));
-		
-		Queue<ScoredDocument> corpusRankQueue = new PriorityQueue<ScoredDocument>();
-		DocumentIndexed doc = null;
-		int docid = -1;
-
-		System.out.println("Corpus Processing");
-		while ((doc = (DocumentIndexed)_indexer.nextDoc(query, docid)) != null) {
-			//Scoring the document
-			double contentScore = this.getContentScore(query, doc, CORPUS);
-			double realtimeScore = this.getRealTimeTwitterScore(doc);
-			double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
-
-			System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
-			corpusRankQueue.add(new ScoredDocument(doc, totalScore));
-
-			if (corpusRankQueue.size() > totalCorpusDocs) {
-				corpusRankQueue.poll();
-			}
-			docid = doc._docid;
-		}
-
-		int totalRealtimeDocs = (int)(numResults*realtimeResultsPercentage);
-		Queue<ScoredDocument> realtimeRankQueue = new PriorityQueue<ScoredDocument>();
-		docid = -1;
-		System.out.println("Tweets Processing");
-		while ((doc = (DocumentIndexed) _indexer.nextDoc(query, docid, REALTIME)) != null) {
-			//Scoring the document
-			double contentScore = this.getContentScore(query, doc, REALTIME);
-			double realtimeScore = this.getRealTimeTwitterScore(doc);
-			double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
-
-			System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
-			realtimeRankQueue.add(new ScoredDocument(doc, totalScore));
-
-			if (realtimeRankQueue.size() > totalRealtimeDocs) {
-				realtimeRankQueue.poll();
-			}
-			docid = doc._docid;
-		}
-
-		Vector<ScoredDocument> corpusResults = new Vector<ScoredDocument>();
-		ScoredDocument scoredDoc = null;
-		while ((scoredDoc = corpusRankQueue.poll()) != null) {
-			corpusResults.add(scoredDoc);
-		}
-		
-		Collections.sort(corpusResults, Collections.reverseOrder());
-		
-		
 		Vector<ScoredDocument> realtimeResults = new Vector<ScoredDocument>();
-		while ((scoredDoc = realtimeRankQueue.poll()) != null) {
-			realtimeResults.add(scoredDoc);
-		}
-		Collections.sort(realtimeResults, Collections.reverseOrder());
+		Vector<ScoredDocument> corpusResults = new Vector<ScoredDocument>();
 		
-		//combine results
-		realtimeResults.addAll(corpusResults);
+		try{
+			Queue<ScoredDocument> corpusRankQueue = new PriorityQueue<ScoredDocument>();
+			DocumentIndexed doc = null;
+			int docid = -1;
+
+			System.out.println("Corpus Processing");
+			while ((doc = (DocumentIndexed)_indexer.nextDoc(query, docid)) != null) {
+				//Scoring the document
+				double contentScore = this.getContentScore(query, doc, CORPUS);
+				double realtimeScore = this.getRealTimeTwitterScore(doc);
+				double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
+
+				System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
+				corpusRankQueue.add(new ScoredDocument(doc, totalScore));
+
+				if (corpusRankQueue.size() > numResults) {
+					corpusRankQueue.poll();
+				}
+				docid = doc._docid;
+			}
+
+			int totalRealtimeDocs = (int)(numResults*realtimeResultsPercentage);
+			Queue<ScoredDocument> realtimeRankQueue = new PriorityQueue<ScoredDocument>();
+			docid = -1;
+			
+			System.out.println("Tweets Processing");
+			while ((doc = (DocumentIndexed) _indexer.nextDoc(query, docid, REALTIME)) != null) {
+				//Scoring the document
+				double contentScore = this.getContentScore(query, doc, REALTIME);
+				double realtimeScore = this.getRealTimeTwitterScore(doc);
+				double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
+
+				System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
+				realtimeRankQueue.add(new ScoredDocument(doc, totalScore));
+
+				if (realtimeRankQueue.size() > totalRealtimeDocs) {
+					realtimeRankQueue.poll();
+				}
+				docid = doc._docid;
+			}
+
+			ScoredDocument scoredDoc = null;
+			
+			while ((scoredDoc = realtimeRankQueue.poll()) != null) {
+				realtimeResults.add(scoredDoc);
+			}
+			Collections.sort(realtimeResults, Collections.reverseOrder());
+			
+			int totalCorpusDocs = numResults - realtimeResults.size();
+			while ((scoredDoc = corpusRankQueue.poll()) != null) {
+				corpusResults.add(scoredDoc);
+			}
+			Collections.sort(corpusResults, Collections.reverseOrder());
+			
+			totalCorpusDocs = numResults - realtimeResults.size();
+			if(totalCorpusDocs > corpusResults.size()){
+				totalCorpusDocs = corpusResults.size();
+				realtimeResults.addAll(corpusResults);
+			}else{
+				realtimeResults.addAll(corpusResults.subList(0, totalCorpusDocs));
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		
 		return realtimeResults;
 	}
@@ -190,7 +200,7 @@ public class RankerComprehensive extends Ranker {
 
 			//User Entities
 			int followerCount = d._userFollowers;
-//			score += followerCount*0.13;
+			//			score += followerCount*0.13;
 			switch(followerCount){
 			case 5000 : score += 0.05; break;
 			case 10000 : score += 0.09; break;

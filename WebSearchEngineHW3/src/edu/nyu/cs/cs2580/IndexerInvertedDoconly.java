@@ -15,6 +15,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -81,7 +82,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	private final double[] pageRanks;
 	private final Map<Integer, Integer> numViews;
-	private final String REALTIME = "realtime";
+	private final String REALTIME = "twitter"; //realtime
 	private final String CORPUS = "wiki";
 
 	Map<Integer, Postings> _corpusPostingLists = new HashMap<Integer, Postings>();
@@ -107,7 +108,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	@Override
 	public void constructIndex() throws IOException {
 
-		createWikiIndex(new File(_options._corpusPrefix));
+		//createWikiIndex(new File(_options._corpusPrefix));
 		createTwitterIndex(new File("data/"+REALTIME));
 
 		System.out.println(
@@ -152,22 +153,28 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		docId = 1;
 		fileId = 1;
 
-		System.out.println("Processing Tweets");
+		try{
+			System.out.println("Processing Tweets");
 
-		if(corpusDirectory.isDirectory()){
-			for(File tweetFile :corpusDirectory.listFiles()){
-				//to avoided retweeted tweets
-				if(!processTweet(tweetFile)) continue;	
-				fileCount++;
-				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
-					saveIndexInFile(REALTIME);
+			if(corpusDirectory.isDirectory()){
+				for(File tweetFile : corpusDirectory.listFiles()){
+					System.out.println(tweetFile);
+					if(tweetFile.isDirectory()) continue;
+					//to avoided retweeted tweets
+					if(!processTweet(tweetFile)) continue;	
+					fileCount++;
+					if(fileCount > 0 && fileCount % fileCountPerFile == 0){
+						saveIndexInFile(REALTIME);
+					}
 				}
 			}
-		}
 
-		//save the remaining data
-		saveIndexInFile(REALTIME);
-		mergeFile(REALTIME);
+			//save the remaining data
+			saveIndexInFile(REALTIME);
+			mergeFile(REALTIME);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 	private void mergeFile(String docType) {
@@ -182,7 +189,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			Gson gson = new Gson();
 
 			if(indexDirectory.isDirectory()) {
-				
+
 				File[] files = indexDirectory.listFiles();
 
 				Comparator<File> comp = new Comparator<File>() {
@@ -196,7 +203,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				};
 
 				Arrays.sort(files, comp); 
-				
+
 				indexWriter.write("{");
 				for(int  i = 0 ; i < _dictionary.size();i++){
 
@@ -207,7 +214,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 					for(int f=0; f<files.length; f++) {
 						File indexTempFile = files[f];
-						
+
 						if(scanners.get(indexTempFile.getName()) == null) {
 							try {
 								Scanner scanner = new Scanner(indexTempFile);
@@ -270,7 +277,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	{
 		File directory = new File(_options._indexPrefix+"/temp");
 		try{
-			//delete(directory);
+			delete(directory);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -435,53 +442,69 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 		try{
 			ois = new ObjectInputStream(new FileInputStream(file));
-			Status tweet = (Status)ois.readObject();
+			//			Status tweet = (Status)ois.readObject();
+			T3Status t3Status = (T3Status)ois.readObject();
+			Status tweet = t3Status.status;
 
 			//avoid storing retweeted tweets
-			if(tweet.isRetweet()){
-				return false;
-			}
+//			if(tweet.isRetweet()){
+//				return false;
+//			}
 
-			Vector<String> bodyTokens_Str = documentProcessor.process(tweet.getText());
+			Map<String, String> documents = t3Status.documents;
+			Iterator<String> titles = documents.keySet().iterator();
 
-			Vector<Integer> bodyTokens = new Vector<Integer>();
-			readTermVector(bodyTokens_Str, bodyTokens);
+			while(titles.hasNext()){
 
-			String title = tweet.getText();
+				String title = titles.next();
+				String url = documents.get(title);
 
-			int documentID = documentsCount++;
-			DocumentIndexed doc = new DocumentIndexed(documentID, null);
-			doc.setTitle(title);
-			doc.setUrl(title);
-			doc.setNumViews(0);
-			doc.setPageRank(0);
-			doc.setDocumentTokens(bodyTokens);
+				File titleDoc = new File("data/"+title);
 
-			//tweet
-			doc._isTweet = true;
-			doc._createdAt = tweet.getCreatedAt();
-			doc._retweetCount = tweet.getRetweetCount();
-			doc._isFavorited = tweet.isFavorited();
-			doc._isPossiblySensitive = tweet.isPossiblySensitive();
-			long[] contributors = tweet.getContributors();
-			if(contributors != null)
-				doc._totalContributors = tweet.getContributors().length;
+				if(!titleDoc.exists()){
+					System.out.println("X -> "+file.getPath());
+				}
 
-			User user = tweet.getUser();
-			doc._isVerified = user.isVerified();
-			doc._userFavoriteCount = user.getFavouritesCount();
-			doc._userFollowers = user.getFollowersCount();
-			doc._totalPublicLists = user.getListedCount();
+				Vector<String> bodyTokens_Str = documentProcessor.process(titleDoc);
 
-			_documents.add(doc);
-			_docIds.put(title, documentID);
-			++_numDocs;
+				Vector<Integer> bodyTokens = new Vector<Integer>();
+				readTermVector(bodyTokens_Str, bodyTokens);
 
-			Set<Integer> uniqueTerms = new HashSet<Integer>();
-			updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
+				int documentID = documentsCount++;
+				DocumentIndexed doc = new DocumentIndexed(documentID, null);
+				doc.setTitle(title);
+				doc.setUrl(url);
+				doc.setNumViews(0);
+				doc.setPageRank(0);
+				doc.setDocumentTokens(bodyTokens);
 
-			for (int idx : uniqueTerms) {
-				_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
+				//tweet
+				doc._isTweet = true;
+				doc._createdAt = tweet.getCreatedAt();
+				doc._retweetCount = tweet.getRetweetCount();
+				doc._isFavorited = tweet.isFavorited();
+				doc._isPossiblySensitive = tweet.isPossiblySensitive();
+				long[] contributors = tweet.getContributors();
+				if(contributors != null)
+					doc._totalContributors = tweet.getContributors().length;
+
+				User user = tweet.getUser();
+				doc._isVerified = user.isVerified();
+				doc._userFavoriteCount = user.getFavouritesCount();
+				doc._userFollowers = user.getFollowersCount();
+				doc._totalPublicLists = user.getListedCount();
+
+				_documents.add(doc);
+				_docIds.put(title, documentID);
+				++_numDocs;
+
+				Set<Integer> uniqueTerms = new HashSet<Integer>();
+				updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
+
+				for (int idx : uniqueTerms) {
+					_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
+				}
+
 			}
 
 		}catch(Exception e){
@@ -718,7 +741,12 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 
 		int lt = postingList.size();
+		if(lt == 0)
+			return Integer.MAX_VALUE;
+
 		Integer ct = postingList.getCachedIndex();
+		if(lt == 0)
+			return Integer.MAX_VALUE;
 
 		if(ct == null){
 			ct = 0;

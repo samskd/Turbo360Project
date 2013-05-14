@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html itemscope itemtype="http://schema.org/NewsArticle" lang="en-US">
+<head>
+<title>Molding the next generation of computer scientists - CNN.com</title>
+<meta charset="UTF-8"/>
+<meta content="2013-05-14T15:05:50Z" http-equiv="last-modified"/>
+<meta content="index,follow" name="robots"/>
+<meta content="noarchive" name="googlebot"/>
+<meta content="width=1024" name="viewport"/>
+<meta content="news" itemprop="genre" name="medium"/>
+<meta content="en-US" itemprop="inLanguage"/>
+<meta content="Molding the next generation of computer scientists - CNN.com" name="title"/>
+<meta content="Kevin Wang always had the teaching bug in him. " itemprop="description" name="description" property="og:description"/>
+<meta content="" itemprop="keywords" name="keywords"/>
+<meta content="" name="news_keywords"/>
+<meta content="Flora Zhang, CNN" itemprop="author" name="author"/>
+<meta content="tech" itemprop="articleSection" name="section"/>
+<meta content="CNN" itemprop="sourceOrganization" name="source"/>
+<meta content="innovation" name="subsection"/>
+<meta content="2013-05-14T15:05:50Z" itemprop="datePublished" name="pubdate"/>
+<meta content="2013-05-14T15:05:50Z" itemprop="dateModified" name="lastmod"/>
+<meta content="2013-05-14T15:05:50Z" itemprop="dateCreated"/>
+<meta content="" itemprop="contentLocation"/>
+<meta content="Molding the next generation of computer scientists" itemprop="headline" property="og:title" />
+<meta content="article" property="og:type"/>
+<meta content="http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html" itemprop="url" property="og:url"/>
+<meta content="CNN" property="og:site_name"/>
+<meta content="http://i2.cdn.turner.com/cnn/dam/assets/130510155852-computer-science-teals-2-story-top.jpg" itemprop="thumbnailUrl" property="og:image"/>
+<meta content="80401312489" property="fb:app_id"/>
+<meta content="129343697106537" property="fb:page_id"/>
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="@CNN"/>
+<meta property="twitter:site:id" content="759251"/>
+<meta property="twitter:creator" content="@cnntech"/>
+<meta property="twitter:creator:id" content="42703075"/>
+<meta property="twitter:image" content="http://i2.cdn.turner.com/cnn/dam/assets/130510155852-computer-science-teals-2-left-tease.jpg"/>
+<link href="http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals" rel="canonical"/>
+<link href="/" rel="Start"/>
+<link href="http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/apple-touch-icon.png" rel="apple-touch-icon" type="image/png"/>
+<link href="http://i2.cdn.turner.com/cnn/dam/assets/130510155852-computer-science-teals-2-video-tease.jpg" itemprop="image" rel="image_src" type="image/jpg"/>
+<link href="/tools/search/cnncom.xml" rel="search" title="CNN.com" type="application/opensearchdescription+xml"/>
+<link href="/tools/search/cnncomvideo.xml" rel="search" title="CNN.com Video" type="application/opensearchdescription+xml"/>
+<link href="http://rss.cnn.com/rss/cnn_tech.rss" rel="alternate" title="CNN - Technology [RSS]" type="application/rss+xml"/>
+<link href="http://z.cdn.turner.com/cnn/tmpl_asset/static/www_article/1696/css/artlib-min.css" rel="stylesheet" type="text/css"/>
+<link href="http://mediacdn.disqus.com/1296789715/styles/dtpl/defaults.css" rel="stylesheet" type="text/css"/>
+<link href="http://disqus.com/forums/cnn/styles.css" rel="stylesheet" type="text/css"/>
+<link href="http://widgets.outbrain.com/mu/css/outbrainWidget.css?v=33961" id="cssLinkID" rel="stylesheet" type="text/css"/>
+<link href="https://plus.google.com/u/0/b/117515799321987910349/117515799321987910349/posts" rel="publisher"/>
+<script>
+var cnnCurrTime=new Date(1368563104000),
+cnnCurrHour=16,
+cnnCurrMin=25,
+cnnCurrDay="Tue",
+cnnIsIntl=false,
+clickID=211911,
+cnn_cvpAdpre="",
+cnnCVPAdSectionT1="cnn.com_technology_t1",
+cnnCVPAdSectionInPage="cnn.com_technology_inpage",
+cnnShareUrl="%2F2013%2F05%2F14%2Ftech%2Finnovation%2Fcomputer-science-teals%2Findex.html",
+cnnShareTitle="Molding%20the%20next%20generation%20of%20computer%20scientists",
+cnnShareDesc="",
+cnnFirstPub=new Date('Tuesday May 14 11:05:50 EDT 2013'),
+cnnSectionName="tech",
+cnnSubSectionName="tch : news",
+cnnPageType="Story",
+cnnBrandingValue="default";
+cnnPartnerValue="";
+cnnOmniBranding="",
+cnnAuthor="Flora Zhang, CNN",
+disqus_category_id=207582,
+disqus_identifier="/2013/05/14/tech/innovation/computer-science-teals/index.html",
+disqus_title="Molding the next generation of computer scientists",
+cnn_edtnswtchver="www",
+cnnIsStoryPage=true,
+cnn_metadata = {},
+cnn_shareconfig = [];
+cnn_metadata = {
+section: [
+"tech",
+"tch : news"
+],
+friendly_name: "Molding the next generation of computer scientists",
+template_type: "content",
+template_type_content: "",
+business: {
+cnn: {
+page: {
+author: "Flora Zhang, CNN",
+broadcast_franchise: "",
+video_embed_count: "0",
+publish_date: "2013/05/14",
+photo_gallery: ""
+},
+video: {
+video_player: ""
+}
+}
+},
+user: {
+authenticated: "",
+segment: {
+age: "",
+zip: "",
+gender: ""
+}
+}
+};
+if (typeof(cnnOmniPartner) !== "undefined") {
+if (cnn_metadata.template_type_content === "") {
+cnn_metadata.template_type_content = "partner";
+}
+}
+var photo_gallery = "";
+</script>
+<script src="http://z.cdn.turner.com/cnn/tmpl_asset/static/www_article/1696/js/artlib-min.js"></script>
+<script>
+if(typeof CNN==='undefined'){var CNN=Class.create();}
+CNN.expandableMap=[''];
+function _loginOptions(){};
+var disqus_url=(typeof disqus_identifier!=='undefined') ? 'http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html' : 'http://www.cnn.com'+location.pathname;
+cnnad_newTileIDGroup(['728x90_top','336x850_rgt']);
+cnnad_newTileIDGroup(['607x95_adlinks','336x280_adlinks']);
+</script>
+<!--
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+-->
+<!--adType:bst-->
+</head>
+<body>
+<a name="top_of_page"></a><a href="#ContentArea"><img src="http://i.cdn.turner.com/cnn/images/1.gif" align="right" alt="Skip to main content" border="0" height="1" hspace="0" style="display:none;" vspace="0" width="10"/></a>
+<div id="cnn_hdr"> <div id="cnn_hdr-prompt" style="display:none"><div class="hdr-wrap" id="cnn_hdr-promptcntnt"></div></div> <div id="cnn_hdr-main"> <div class="hdr-wrap"> <div id="hdr-banner"> <a href="/TECH/" id="hdr-banner-title"><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/header/us/hdr-tech.gif" alt="CNN Tech" border="0" height="82" style="border: none;" width="183"/></a> </div> <div id="hdr-editions"> <ul> <li class="no-pad-left"><span><a href="javascript:cnn_initeditionhtml(3);" class="cnn_hdr-editionlnk">SET EDITION</a>: &nbsp;U.S.</span></li> <li><a id="cnn_switchEdition_intl" href="http://edition.cnn.com/?hpt=ed_Intl" title="CNN INTERNATIONAL">INTERNATIONAL</a></li> <li><a href="http://mexico.cnn.com/?hpt=ed_Mexico" hreflang="es" title="CNN M&#201;XICO">M&#201;XICO</a></li> <li class="no-border"><a href="http://arabic.cnn.com/?hpt=ed_Arabic" hreflang="ar" title="CNN ARABIC">ARABIC</a></li> </ul> <div class="cnn_clear"></div><div style="padding-top:2px"> <ul> <li class="no-pad-left no-border no-pad-right"><span><a href="/CNN/Programs" class="cnn_hdr-editionlnk">TV</a>: &nbsp;</span></li> <li class="no-pad-left"><a href="/cnn/programs/" title="CNN TV programming schedule">CNN</a></li> <li><a href="/cnni/" title="CNN International TV programming schedule">CNNi</a></li> <li><a href="http://cnnespanol.cnn.com/" hreflang="es" title="CNN in Spanish">CNN en Espa&#241;ol</a></li> <li class="no-border"><a href="http://www.hlntv.com">HLN</a></li> </ul> </div> </div> <div id="hdr-auth"> <ul> <li><a href="javascript:void(0);" onclick="showOverlay('profile_signup_overlay');return false;" title="Sign up">Sign up</a></li> <li class="no-border no-pad-right"><a href="javascript:void(0);" onclick="showOverlay('profile_signin_overlay');return false;" title="Log in">Log in</a></li> </ul> </div> <div id="hdr-search"> <form method="get" action="http://www.cnn.com/search/" onsubmit="return cnnSearch(this);"> <div class="ftr-search-datacntr"> <div class="ftr-search-tfield"><input id="hdr-search-box" maxlength="100" name="query" size="12" type="text" value=""/></div> <div class="ftr-search-sicon"><input alt="Search" height="21" src="http://i.cdn.turner.com/cnn/.e/img/3.0/search/btn_search_hp_text.gif" type="image" width="55"/></div> </div> <input name="primaryType" type="hidden" value="mixed"/><input name="sortBy" type="hidden" value="relevance"/><input name="intl" type="hidden" value="false"/> </form> </div> </div> </div> <div id="cnn_hdr-nav"> <ul id="us-menu"> <li class="no-border"><a href="/?hpt=sitenav" class="nav-media no-border" id="nav-home" title=""><span>Home</span></a></li> <li class="no-border"><a href="/video/?hpt=sitenav" class="nav-media no-border" id="nav-video" title="Video Breaking News Videos from CNN.com"><span>TV &amp; Video</span></a></li> <li class="no-border"><a href="/trends/?hpt=sitenav" class="nav-media" id="nav-trends" title="CNN Trends powered by Zite"><span>CNN Trends</span></a></li> <li class=""><a href="/US/?hpt=sitenav" class="" id="nav-us" title="U.S. News, Headlines, Stories, and Video from CNN.com"><span>U.S.</span></a></li> <li class=""><a href="/WORLD/?hpt=sitenav" class="" id="nav-world" title="World News International Headlines Stories and Video from CNN.com"><span>World</span></a></li> <li class=""><a href="/POLITICS/?hpt=sitenav" class="" id="nav-politics" title="Election and Politics News from CNN.com"><span>Politics</span></a></li> <li class=""><a href="/JUSTICE/?hpt=sitenav" class="" id="nav-justice" title="Justice News Courts Celebrity Docket and Law News from CNN.com"><span>Justice</span></a></li> <li class=""><a href="/SHOWBIZ/?hpt=sitenav" class="" id="nav-entertainment" title="Entertainment News Celebrities Movies and TV from CNN.com"><span>Entertainment</span></a></li> <li class=""><a href="/TECH/" class="nav-on" id="nav-tech" title="Technology Computers Internet and Personal Tech News from CNN.com">Tech</a></li> <li class=""><a href="/HEALTH/?hpt=sitenav" class="" id="nav-health" title="Health News Medicine Diet Fitness and Parenting from CNN.com"><span>Health</span></a></li> <li class=""><a href="/LIVING/?hpt=sitenav" class="" id="nav-living" title="Living News Personal Work and Home from CNN.com"><span>Living</span></a></li> <li class=""><a href="/TRAVEL/?hpt=sitenav" class="" id="nav-travel" title="Travel News Vacations Destinations and Video from CNN.com"><span>Travel</span></a></li> <li class=""><a href="/OPINION/?hpt=sitenav" class="" id="nav-opinion" title="Opinion Editorial Analysis and Insight from CNN.com"><span>Opinion</span></a></li> <li class=""><a href="http://ireport.cnn.com/?hpt=sitenav" class="" id="nav-ireport" title="CNN iReport &#8211; Share your story, discuss the issues with CNN.com"><span>iReport</span></a></li> <li class=""><a href="http://money.cnn.com/?hpt=sitenav" class="" id="nav-money" title="Business financial personal finance news from CNNMoney"><span>Money</span><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/header/nav-arrow.gif" width="3" height="5" alt="" /></a></li> <li class=""><a href="http://bleacherreport.com/?utm_source=cnn.com&utm_medium=referral&utm_campaign=cnn-nav" class="" id="nav-sports" title="The latest sports news and insights on all of your teams and today's hot topics from Bleacher Report (BleacherReport.com)."><span>Sports</span><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/header/nav-arrow.gif" width="3" height="5" alt="" /></a></li> <!--include virtual="/.element/ssi/www/misc/3.0/header/menu.bleacher.html"--> </ul> </div> </div><div align="center" id="cnnContainer"><div class="cnn_maincntnr"><div class="cnn_contentarea">
+<!-- this is where the breaking news CSI code will go -->
+<div id="cnnBannerContainer" class="cnn_www_banner"></div>
+<script type="text/javascript">
+CSIManager.getInstance().call('/.element/ssi/www/breaking_news/3.0/banner.html','','cnnBannerContainer',cnnRenderDomesticBanner);
+</script>
+<div id="cnnSetEditionContainer"></div>
+<div id="cnnMakeHPContainer"></div>
+
+
+<div class="cnn_adcntr">
+<div class="cnn_adcntr728x90t">
+<div><!-- ADSPACE: technology/innovation/bst/top.728x90 -->
+<!-- CALLOUT|http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=728x90_top&cnn_rollup=technology&cnn_section=innovation&page.allowcompete=no&params.styles=fs|CALLOUT -->
+<div id="ad-28086" align="center" style="padding: 0; margin: 0; border: 0;"></div><script>cnnad_createAd("28086","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=728x90_top&cnn_rollup=technology&cnn_section=innovation&page.allowcompete=no&params.styles=fs","90","728");cnnad_registerSpace(28086,728,90);</script></div>
+<div class="cnn_adtitle"></div>
+</div>
+</div>
+<div class="cnn_storyarea" id="cnnContentContainer">
+<div class="cnn_stryarblkbr"></div>
+<div class="cnn_strybtntools">
+<div id="cnn_sharebar1">
+<div class="c_sharebar_cntr c_sharebar_loading">
+<div class="c_sharelftcol">
+<div class="c_sharetitle">SHARE THIS</div>
+<div class="c_sharebtns">
+<ul>
+<li class="c_sharebtn c_sharebtnfb"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'facebook');"></a></li>
+<li class="c_sharebtn c_sharebtntwtr"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'twitter');"></a></li>
+<li class="c_sharebtn c_sharebtngplus"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'googleplus');"></a></li>
+<li class="c_sharebtn c_sharebtnlnkn"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'linkedin');"></a></li>
+</ul>
+<div class="cnn_clear"></div>
+</div>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-action="recommend" href="http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html"></div>
+</div><!-- /c_sharelftcol -->
+<div class="c_sharedivcol"></div>
+<div class="c_shareweb c_sharergtcol">
+<ul>
+<li class="cnn_sswdgtweb1"><a href="#" onclick="if(typeof CleanPrintPrintHtml!='undefined' && CleanPrintPrintHtml) CleanPrintPrintHtml(); else window.print(); return false;">Print</a></li>
+<li class="cnn_sswdgtweb2"><a href="#" onclick="return(ET());">Email</a></li>
+<li class="cnn_sswdgtweb3"><a href="javascript:void(0);" onclick="$j('#cnn_sharebarmore1').toggle();">More sharing</a>
+<div id="cnn_sharebarmore1" class="sharebar_othersites sharebar_othersitesl" style="display:none;">
+<div class="shareProp">
+<div class="sharebutton_reddit" title="Reddit"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'reddit');">Reddit</a></div>
+</div>
+<div class="shareProp">
+<div class="sharebutton_stumbleupon" title="StumbleUpon"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'stumbleupon');">StumbleUpon</a></div>
+</div>
+<div class="shareProp">
+<div class="sharebutton_delicious" title="Delicious"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar1', 'delicious');">Delicious</a></div>
+</div>
+</div>
+</li>
+</ul>
+</div><!-- /c_sharergtcol -->
+<div class="cnn_clear"></div>
+</div>
+</div>
+</div>
+<script>
+/* push in config for this share instance */
+cnn_shareconfig.push({
+"id" : "cnn_sharebar1",
+"url" : "http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html",
+"title" : "Molding the next generation of computer scientists"
+});
+</script>
+<!--google_ad_section_start--><!--startclickprintinclude-->
+<h1>Molding the next generation of computer scientists</h1>
+<!--endclickprintinclude--><!--startclickprintexclude-->
+<div class="cnn_stryathrtmp"><div class="cnn_story_attribution"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr valign="bottom">
+<td style="vertical-align:bottom;">
+<div class="cnn_strycblnk"></div>
+<!-- no specific author value -->
+</td>
+<td style="vertical-align:bottom;">
+<div class="cnn_story_author">
+<div class="cnnByline">By <strong>Flora Zhang</strong>, CNN</div>
+<div class="cnn_strytmstmp">updated 11:05 AM EDT, Tue May 14, 2013 | Filed under: <a href="/TECH/innovation/archive/" class="cnn_SRLTbbnfltr_6">Innovations</a>
+</div>
+</div>
+<div class="cnn_clear"></div>
+</td>
+</tr></tbody></table></div></div>
+<!--google_ad_section_end-->
+<div class="cnn_strycntntlft">
+<!--startclickprintexclude-->
+<div class="cnn_stryimg640captioned"><img src="http://i2.cdn.turner.com/cnn/dam/assets/130510155852-computer-science-teals-2-story-top.jpg" alt="Robert El-Soudani teaches an advanced computer-science TEALS course at Hazen High School in Renton, Washington." border="0" height="360" width="640"/></div>
+<div class="cnn_stryimg640caption"><div class="cnn_strycaptiontxt">Robert El-Soudani teaches an advanced computer-science TEALS course at Hazen High School in Renton, Washington.</div></div>
+<a name="em0"></a>
+<div class="cnn_strylftcntnt"><div class="cnn_strylctcntr">
+<div><strong>STORY HIGHLIGHTS</strong></div>
+<ul class="cnn_bulletbin cnnStryHghLght">
+<!--google_ad_section_start-->
+<li>The TEALS program seeks to develop more computer-science students in the U.S.</li>
+<li>The United States has a shortage of qualified computer engineers</li>
+<li>Despite tech's growing role in society, few high schools offer computer-science classes</li>
+<li>TEALS now has over 100 volunteers covering 35 schools in seven states</li>
+<!--google_ad_section_end-->
+</ul>
+</div></div>
+<!--endclickprintexclude--><!--google_ad_section_start--><!--startclickprintinclude-->
+<p><strong>(CNN)</strong> -- Kevin Wang always had the teaching bug in him.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph2">After graduating from UC-Berkeley in 2002 with a degree in electrical engineering and computer science, he turned down industry jobs to teach in the Bay Area. A few years later he got a masters degree in education from Harvard and then went to Microsoft to work as a software developer.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph3">But he couldn't stop teaching.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph4">Before he arrived at the office every morning, Wang drove to a nearby high school and taught first-period computer science. He told colleagues and friends about his experience and recruited them to teach in local schools.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph5">The word spread. In 2009 Wang launched <a href='http://tealsk12.org/' target='_blank'>Technology Education and Literacy in Schools (TEALS)</a>, an initiative that places high-tech professionals as part-time teachers in high schools.</p>
+<div class="cnn_strylftcntnt"><div class="cnn_strylctcntr cnn_strylccimg300">
+<div class="cnn_strylccimg300cntr">
+<img src="http://i2.cdn.turner.com/cnn/dam/assets/130510155452-computer-science-teals-story-body.jpg" alt="Nihar Shah, left in striped shirt, teaches a computer-science course at Liberty High School in Issaquah, Washington." border="0" class="box-image" height="169" width="300"/>
+</div>
+<div>Nihar Shah, left in striped shirt, teaches a computer-science course at Liberty High School in Issaquah, Washington.</div>
+</div></div>
+<p class="cnn_storypgraphtxt cnn_storypgraph6">Wang's goal was to see to it that every high school in the country has a computer-science course. He thought he might need to quit his job to manage the growing effort. But he didn't have to.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph7">Microsoft offered to support Wang, asking him to devote all his workday time to it. The company's decision to incubate the TEALS program stems partly from founder Bill Gates's longstanding interest in promoting education, Microsoft's broader philanthropic focus and a pressing, industry-wide need for more engineers.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph8">"America produces the best computer engineers in the world," said Wang, "but we just don't have enough."</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph9">Which is why TEALS has over 100 volunteers covering 35 schools in seven states, and is now mounting a big push in New York City.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph10"><strong>Falling behind</strong><strong>?</strong></p>
+<p class="cnn_storypgraphtxt cnn_storypgraph11">In February of this year, Gates joined Facebook's Mark Zuckerberg and other tech titans <a href='http://www.cnn.com/2013/02/27/tech/innovation/code-video-gates-zuckerberg/index.html?iref=allsearch'>in a video</a> by nonprofit<a href='http://www.code.org/' target='_blank'> Code.org</a> to encourage interest among young people in programming. Demand for top tech talent also has prompted the industry to lobby the State Department to give out more H1-B visas to highly skilled foreign-born immigrants. In April, Zuckerberg <a href='http://articles.washingtonpost.com/2013-04-10/opinions/38444416_1_knowledge-economy-immigration-policy-students' target='_blank'>penned an op-ed in the Washington Post</a> calling for revised immigration policies so that U.S. companies can better attract the most talented foreign-born computer scientists.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph12">Computer science is the <a href='http://www.forbes.com/sites/susanadams/2013/01/24/college-degrees-with-the-highest-starting-salaries-2/' target='_blank'>third highest-paying bachelor degree</a>, right behind computer engineering and chemical engineering. While the average starting salary for computer science college graduates is $64,400, industry insiders frequently cite higher figures. In large or competitive companies like Google or Facebook, starting salary for the cream of the crop college graduates is nearly $100,000, not counting bonuses or stock options.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph13">Despite the financial appeal, there aren't enough computer programmers entering the U.S. workforce to fill the <a href='http://www.nytimes.com/2012/10/01/technology/microsoft-sends-engineers-to-schools-to-encourage-the-next-generation.html' target='_blank'>estimated 150,000 new computing jobs</a> that will be produced every year for the next decade. This adds to <a href='http://www.homelandsecuritynewswire.com/us-faces-critical-shortage-computer-scientists' target='_blank'>anxiety</a> among industry professionals and policy leaders that the U.S. could fall behind other countries in innovation if it doesn't foster education in STEM (science, technology, engineering and math).</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph14">Part of the problem is that the U.S. lacks enough computer science teachers, said Wang. Recent graduates with a computer science degree are far more likely to go into the tech industry, where offers are more lucrative.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph15">Early exposure to computer science can lead students to develop an aptitude or liking for the subject, apply for opportunities like tech internships, and pursue it as a career path. But even as technology becomes an integral part of most people's lives, <a href='http://www.csedweek.org/key-facts' target='_blank'>fewer computer-science courses are being offered in high schools</a>.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph16">Perhaps as a result, computer-science tests account for just 0.69% of all high school AP tests taken. And yet knowledge of computer programming is becoming more critical in the workplace.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph17">"Computer science is permeating every industry and every field, and its importance will only grow," said Wang. "Whether it's biology, finance, architecture, or a host of other disciplines, a basic computer literacy is critical."</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph18"><strong>TEALS in NY</strong><strong>C</strong></p>
+<p class="cnn_storypgraphtxt cnn_storypgraph19">That the U.S. produces so few graduates in a field that will grow in importance makes the demand-supply problem only more urgent.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph20">New York Mayor Michael Bloomberg, never one to shy away from national issues, tried in 2011 to jumpstart the city's tech scene with the proposal to build a <a href='http://www.washingtonpost.com/national/on-innovations/mayor-bloomberg-this-is-how-new-york-can-beat-silicon-valley/2011/07/22/gIQAdEPxTI_story.html' target='_blank'>world-class engineering campus</a>. When the mayor's office heard about TEALS after <a href='http://www.nytimes.com/2012/10/01/technology/microsoft-sends-engineers-to-schools-to-encourage-the-next-generation.html' target='_blank'>The New York Times ran an article</a> about it in fall 2012, officials reached out to Wang and asked him to bring the program to New York City.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph21">With help from the mayor's Office, TEALS began setting up and recruiting volunteers. In March, Wang appeared at a New York tech meetup to invite the city's tech community to get involved. A<a href='http://www.avc.com/a_vc/2013/02/teach-computer-science-to-kids-on-your-way-to-work.html' target='_blank'> plug from venture capitalist and blogger Fred Wilson</a> also helped generate interest.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph22">Interviews with applicants, conducted jointly with nine participating high schools, started this month. Wang is curious to see how the composite of the volunteer force shapes up since few major technology companies are headquartered in New York City.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph23">Selected volunteers will go through an intensive training program in the summer so that they can use a standardized curriculum and learn how to manage classrooms by the fall. Since tech professionals often have flexible working hours, the program places them in first-period classes, which usually ends shortly after 9 a.m.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph24">Volunteers are paid a small stipend to cover transportation costs. But as Wang put it, "No one is doing this for the money."</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph25">Jeff Tyson, a Microsoft employee, began teaching at a Seattle school last September and tries to appeal to students' creativity.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph26">"If there is one thing we try to avoid in our class, it is (being) boring. We often try to show how deeply computer science has altered our world," he said. "We even have some students who plan to code artistic projects. I think Steve Jobs was spot on when he called computer science a liberal art."</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph27"><strong>Bad numbers, big gain</strong><strong>s</strong></p>
+<p class="cnn_storypgraphtxt cnn_storypgraph28">About 80% of TEALS' volunteers are Microsoft employees, part of a push by the company to address the dearth of engineering talent in the U.S. The program is also part of the Microsoft YouthSpark initiative, which seeks to provide better access to education for young people worldwide.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph29">For Donald Hense, CEO and founder of the Friendship Public Charter Schools in the Washington, D.C., area, TEALS was a boon.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph30">"We were excited that it could help us identify extremely qualified teachers to staff a very difficult field," he said. "We specifically pushed for STEM courses in our schools. Kids are judged on ability, and the ability to code is going to help them a long way in tomorrow's world."</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph31">The numbers suggest Wang has an uphill battle. In 2012, only 61 students took advanced-placement computer science in the entire state of Utah, for example. In the nation's capital, it's the same number. But Wang is taking an optimistic view.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph32">"The numbers are so bad that anything we can do is a huge, huge gain," he told CNN.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph33">Wang needs more students like Adrian Chavez, a senior taking a TEALS AP course at Hazen High School in Renton, Washington, who said, "It is a dream of mine to someday work as a software engineer or programmer graphic artist in video games."</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph34">What would really help, Wang said, is if states recognized computer science as a core requirement rather than an elective.</p>
+<p class="cnn_storypgraphtxt cnn_storypgraph35">"It really should be the fourth science course in high school, right beside biology, physics and chemistry," he said. "If the next generation in this country is going to compete successfully for 21st-century jobs, they're going to need to know computer science."</p>
+<script type="text/javascript">if(typeof CNN.expElements==='object'){CNN.expElements.init();}</script>
+<p class="cnn_strycbftrtxt"></p>
+<!--endclickprintinclude--><!--google_ad_section_end-->
+<!--no partner-->
+<div class="cnn_stryshrwdgtbtm">
+<div id="cnn_sharebar2">
+<div class="c_sharebar_cntr c_sharebar_loading">
+<div class="cnn_stryswdgtbtm1">
+<div class="cnn_stryswdgtbtm1a"><a href="http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html#disqus_thread">0</a></div>
+<div class="cnn_stryswdgtbtm1b"><a href="#cnn-disqus-area">Comments &raquo;</a></div>
+</div><!-- /cnn_stryswdgtbtm1 -->
+<div class="cnn_stryswdgtbtm2">
+<div class="c_sharebtmcol1">
+<div class="c_sharetitle">SHARE THIS</div>
+<div class="c_sharebtns">
+<ul>
+<li class="c_sharebtn c_sharebtnfb"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'facebook');"></a></li>
+<li class="c_sharebtn c_sharebtntwtr"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'twitter');"></a></li>
+<li class="c_sharebtn c_sharebtngplus"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'googleplus');"></a></li>
+<li class="c_sharebtn c_sharebtnlnkn"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'linkedin');"></a></li>
+</ul>
+<div class="cnn_clear"></div>
+</div>
+</div><!-- /c_sharebtmcol1 -->
+<div class="c_sharebtmdiv"></div>
+<div class="c_sharebtmcol2">
+<div class="fb-like" data-send="false" data-layout="box_count" data-width="90" data-show-faces="false" data-action="recommend" href="http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html"></div>
+</div><!-- /c_sharebtmcol2 -->
+<div class="c_sharebtmdiv"></div>
+<div class="c_shareweb c_sharebtmcol3">
+<ul>
+<li class="cnn_sswdgtweb1"><a href="#" onclick="if(typeof CleanPrintPrintHtml!='undefined' && CleanPrintPrintHtml) CleanPrintPrintHtml(); else window.print(); return false;">Print</a></li>
+<li class="cnn_sswdgtweb2"><a href="#" onclick="return(ET());">Email</a></li>
+<li class="cnn_sswdgtweb3"><a href="javascript:void(0);" onclick="$j('#cnn_sharebarmore2').toggle();">More sharing</a>
+<div id="cnn_sharebarmore2" class="sharebar_othersites sharebar_othersitesl" style="display:none;">
+<div class="shareProp">
+<div class="sharebutton_reddit" title="Reddit"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'reddit');">Reddit</a></div>
+</div>
+<div class="shareProp">
+<div class="sharebutton_stumbleupon" title="StumbleUpon"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'stumbleupon');">StumbleUpon</a></div>
+</div>
+<div class="shareProp">
+<div class="sharebutton_delicious" title="Delicious"><a href="javascript:void(0);" onclick="cnnsocial.share.click('cnn_sharebar2', 'delicious');">Delicious</a></div>
+</div>
+</div>
+</li>
+</ul>
+</div><!-- /c_sharebtmcol3 -->
+<div class="cnn_clear"></div>
+</div>
+<div class="cnn_clear"></div>
+</div>
+</div>
+</div>
+<script>
+/* push in config for this share instance */
+cnn_shareconfig.push({
+"id" : "cnn_sharebar2",
+"url" : "http://www.cnn.com/2013/05/14/tech/innovation/computer-science-teals/index.html",
+"title" : "Molding the next generation of computer scientists"
+});
+</script>
+<div class="cnn_strybtmcntnt">
+<div class="cnn_divline"></div>
+<div class="cnn_divline"></div>
+<div class="cnn_strybtmmorebx" id="outbrain_ext_element" style="display:none;">
+<div class="cnn_strybtmmbx1">
+<h4>We recommend</h4><div class="cnn_clear"></div>
+<script>
+var cnn_oburlStr=location.pathname+'';
+cnn_oburlStr=(cnn_oburlStr.indexOf('?') > -1) ? cnn_oburlStr.substr(0,cnn_oburlStr.indexOf('?')) : cnn_oburlStr;
+var OutbrainPermaLink='http://www.cnn.com'+cnn_oburlStr;
+var OB_Template="cnn";
+var OB_langJS='http://widgets.outbrain.com/lang_en.js';
+var OB_widgetId='AR_1';
+if (typeof(OB_Script)!='undefined'){
+OutbrainStart();
+}else{
+var OB_Script=true;
+var str="<script src='http://widgets.outbrain.com/outbrainWidget.js'; type='text/javascript'></"+"script>";
+document.write(str);
+}
+</script>
+</div>
+<div class="cnn_strybtmmbx2">
+<h4>From around the web</h4><div class="cnn_clear"></div><div id="outbrain_cnn_hook_0"></div>
+</div><div class="cnn_clear"></div>
+</div>
+<script>cnnad_newTileIDGroup(['607x95_adlinks','336x280_adlinks']);</script>
+<!-- ADSPACE: technology/bst/adlinks.607x95 -->
+<!-- CALLOUT|http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=607x95_adlinks&cnn_rollup=technology&page.allowcompete=no&params.styles=fs|CALLOUT -->
+<div id="ad-768339" align="center" style="padding: 0; margin: 0; border: 0;"></div><script>cnnad_createAd("768339","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=607x95_adlinks&cnn_rollup=technology&page.allowcompete=no&params.styles=fs","95","607");cnnad_registerSpace(768339,607,95);</script>
+<div class="cnn_divline cnn_divln3pxblck" style="margin-top:20px;" id="cnn-disqus-area"></div>
+<div id="disqus_thread"></div>
+<script src="http://cnn.disqus.com/embed.js"></script>
+</div>
+</div>
+<div class="cnn_strycntntrgt">
+<div>
+<span id="medium_rectangle" class="_fwph">
+<form id="_fw_form_medium_rectangle" style="display:none">
+<input type="hidden" name="_fw_input_medium_rectangle" id="_fw_input_medium_rectangle" value="w=336&h=280&envp=g_js&sflg=-nrpl&cd=336,280|300,250;">
+</form>
+<span id="_fw_container_medium_rectangle" class="_fwac">
+<div><!-- ADSPACE: technology/innovation/bst/rgt.336x280 -->
+<!-- CALLOUT|http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=336x850_rgt&cnn_rollup=technology&cnn_section=innovation&page.allowcompete=no&params.styles=fs|CALLOUT -->
+<div id="ad-494579" align="center" style="padding: 0; margin: 0; border: 0;"></div><script>cnnad_createAd("494579","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=336x850_rgt&cnn_rollup=technology&cnn_section=innovation&page.allowcompete=no&params.styles=fs","280","336");cnnad_registerSpace(494579,336,280);</script></div>
+<div class="cnn_adtitle"><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/advertisement.gif" alt="ADVERTISEMENT" border="0" height="5" width="58"/></div>
+<div class="cnn_divline cnn_divlscrct"></div>
+</span>
+</span>
+</div>
+<div class="cnn_strycrcntr">
+<div class="cnn_divline cnn_divlscrc"></div>
+<div id="cnn_nwspls_story_tech" class="cnn_strycrcntrpad">
+<div class="cnn_strycrcntrnwsp">
+<h4><a href="http://newspulse.cnn.com/section/tech">[TECH: NEWSPULSE]</a></h4>
+<div class="cnn_clear"></div>
+<div class="cnn_stryccnwsp1">Most popular Tech stories right now</div>
+<div class="cnn_divline"></div>
+<div class="cnn_stryccnwsp2">
+<div class="cnn_stryccnwsp3"><h2><a href="http://www.cnn.com/2013/05/13/tech/web/astronaut-space-oddity/index.html">Astronaut sings Bowie in zero gravity</a></h2></div>
+<div class="cnn_stryccnwsp4" style="width:58.587px;"></div>
+<div class="cnn_clear"></div>
+</div>
+<div class="cnn_divline"></div>
+<div class="cnn_stryccnwsp2">
+<div class="cnn_stryccnwsp3"><h2><a href="http://www.cnn.com/2013/05/13/tech/solar-plane/index.html">Funny-looking plane designed to make history</a></h2></div>
+<div class="cnn_stryccnwsp4" style="width:33.915px;"></div>
+<div class="cnn_clear"></div>
+</div>
+<div class="cnn_divline"></div>
+<div class="cnn_stryccnwsp2">
+<div class="cnn_stryccnwsp3"><h2><a href="http://www.cnn.com/2013/05/13/tech/innovation/douglas-trumbull-interview/index.html">Special-effects master 'breaking the mold' </a></h2></div>
+<div class="cnn_stryccnwsp4" style="width:27.322px;"></div>
+<div class="cnn_clear"></div>
+</div>
+<div class="cnn_divline"></div>
+<div class="cnn_stryccnwsp2">
+<div class="cnn_stryccnwsp3"><h2><a href="http://www.cnn.com/2013/05/10/tech/web/paul-miller-internet-year/index.html">Disconnected: My year without the Internet</a></h2></div>
+<div class="cnn_stryccnwsp4" style="width:10px;"></div>
+<div class="cnn_clear"></div>
+</div>
+<div class="cnn_divline"></div>
+<div class="cnn_stryccnwsp5"><a href="http://newspulse.cnn.com/">Explore the news with NewsPulse &raquo;</a></div>
+</div>
+
+<!--
+Last snapshot: 11/14/2011 10:58 AM
+IF auto generated include above stops working, uncomment the html below and manually update at hourly intervals:
+PUBLISH THE BELOW FILE BEFORE UNCOMMENTING THE INCLUDE.
+-->
+<!--include virtual="/.element/ssi/www/sect/3.0/MAIN/newpulse_data_tech_m.html"-->
+</div>
+<div class="cnn_divline cnn_divlscrc"></div>
+<div style="padding-bottom:17px;padding-top:17px;" class="cnn_strycrcntrpad">
+<script>
+var cnn_oburlStr = location.pathname + '';
+cnn_oburlStr = (cnn_oburlStr.indexOf('?') > -1) ? cnn_oburlStr.substr(0, cnn_oburlStr.indexOf('?')) : cnn_oburlStr;
+var OB_permalink= 'http://www.cnn.com' + cnn_oburlStr;
+var OB_Template="cnn";
+var OB_widgetId= 'VR_1';
+var OB_langJS ='http://widgets.outbrain.com/lang_en.js';
+if ( typeof(OB_Script)!='undefined' ) {
+OutbrainStart();
+} else {
+var OB_Script = true;
+var str = "<script src='http://widgets.outbrain.com/outbrainWidget.js'; ></"+"script>";
+document.write(str);
+}
+</script>
+<script>
+var cnn_oburlStr = location.pathname + '';
+cnn_oburlStr = (cnn_oburlStr.indexOf('?') > -1) ? cnn_oburlStr.substr(0, cnn_oburlStr.indexOf('?')) : cnn_oburlStr;
+var OB_permalink= 'http://www.cnn.com' + cnn_oburlStr;
+var OB_Template="cnn";
+var OB_widgetId= 'SB_1';
+var OB_langJS ='http://widgets.outbrain.com/lang_en.js';
+if ( typeof(OB_Script)!='undefined' ) {
+OutbrainStart();
+} else {
+var OB_Script = true;
+var str = "<script src='http://widgets.outbrain.com/outbrainWidget.js'; ></"+"script>";
+document.write(str);
+}
+</script>
+<script>
+var OB_Template="cnn";
+var OB_widgetId= 'SB_2';
+var OB_langJS ='http://widgets.outbrain.com/lang_en.js';
+if ( typeof(OB_Script)!='undefined' ) {
+OutbrainStart();
+} else {
+var OB_Script = true;
+var str = "<script src='http://widgets.outbrain.com/outbrainWidget.js'; ></"+"script>";
+document.write(str);
+}
+</script>
+</div>
+<style>
+.OB_SB_1, .OB_SB_2 { padding:0px; }
+#outbrain_container_1_stripBox .strip-like, #outbrain_container_2_stripBox .strip-like { font-size:18px; }
+#ob_strip_container_rel_1_stripBox { }
+#ob_strip_container_rel_1_stripBox .item-container, #ob_strip_container_rel_2_stripBox .item-container { padding-top:8px;border-top:1px solid #E5E5E5; }
+</style>
+<div class="cnn_divline"></div>
+<div class="cnn_strycrcntrad">
+<div><!-- ADSPACE: technology/innovation/bst/rgt.300x150 -->
+<!-- CALLOUT|http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=300x150_rgt&cnn_rollup=technology&cnn_section=innovation&page.allowcompete=no&params.styles=fs|CALLOUT -->
+<div id="ad-238142" align="center" style="padding: 0; margin: 0; border: 0;"></div><script>cnnad_createAd("238142","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=300x150_rgt&cnn_rollup=technology&cnn_section=innovation&page.allowcompete=no&params.styles=fs","150","300");cnnad_registerSpace(238142,300,150);</script></div>
+<div class="cnn_adtitle"><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/advertisement.gif" alt="ADVERTISEMENT" border="0" height="5" width="58"/></div>
+</div>
+<!-- ADSPACE: technology/bst/bot.1x1 -->
+<!-- CALLOUT|http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=1x1_bot&cnn_rollup=technology&page.allowcompete=no&params.styles=fs|CALLOUT -->
+<div id="ad-261371" align="center" style="padding: 0; margin: 0; border: 0;"></div><script>cnnad_createAd("261371","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=1x1_bot&cnn_rollup=technology&page.allowcompete=no&params.styles=fs","1","1");cnnad_registerSpace(261371,1,1);</script>
+<div class="cnn_divline"></div>
+<div class="cnn_divline cnn_divlscrc"></div>
+<div style="padding:0 0 0 6px;">
+<!-- ADSPACE: technology/bst/adlinks.336x280 -->
+<!-- CALLOUT|http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=336x280_adlinks&cnn_rollup=technology&page.allowcompete=no&params.styles=fs|CALLOUT -->
+<div id="ad-375691" align="center" style="padding: 0; margin: 0; border: 0;"></div><script>cnnad_createAd("375691","http://ads.cnn.com/html.ng/site=cnn&cnn_pagetype=bst&cnn_position=336x280_adlinks&cnn_rollup=technology&page.allowcompete=no&params.styles=fs","280","336");cnnad_registerSpace(375691,336,280);</script>
+</div>
+</div>
+</div><div class="cnn_clear"></div>
+</div>
+</div></div></div>
+<div id="fb-root"></div>
+<div align="center"> <div class="cnn_pad6top"></div> <div class='cnn_containerwht' style='width:990px'> <div id="cnn_ftrcntnt"><div class="clearfix" id="cnn_ftrcntntinner"> <div class="cnn_ftrdivl1"></div> <div id="pmWeatherFooter" style="visibility:visible"><p><strong></strong></p></div> <div id="ftr-search"> <form action="http://www.cnn.com/search/" method="get" onsubmit="return cnnSearch(this);"> <div class="ftr-search-datacntr"> <div class="ftr-search-tfield"><input id="ftr-search-box" maxlength="100" name="query" size="12" type="text" value=""/></div> <div class="ftr-search-sicon"><input alt="Search" src="http://i.cdn.turner.com/cnn/.e/img/3.0/search/search_btn_footer.gif" type="image"/></div> </div> <input id="cnnFtrSrchType" name="primaryType" type="hidden" value="mixed"/> <input name="sortBy" type="hidden" value="relevance"/> <input name="intl" type="hidden" value="false"/> <div class="cnn_ftrggle"><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/footer/pngs/footer_google.png" alt="Powered by Google" border="0" class="cnn_ie6png" height="13" width="88"/></div> </form> </div> <div class="cnn_clear"></div> <div class="cnn_divline" style="background-color:#ebebeb;margin-top:3px"></div> <div class="cnn_ftrnvlnks"> <div><a href="/">Home</a> | <a href="/video/">Video</a> | <a href="/trends/">CNN Trends</a> | <a href="/US/">U.S.</a> | <a href="/WORLD/">World</a> | <a href="/POLITICS/">Politics</a> | <a href="/JUSTICE/">Justice</a> | <a href="/SHOWBIZ/">Entertainment</a> | <a href="/TECH/">Tech</a> | <a href="/HEALTH/">Health</a> | <a href="/LIVING/">Living</a> | <a href="/TRAVEL/">Travel</a> | <a href="/OPINION/">Opinion</a> | <a href="http://ireport.cnn.com/?cnn=yes">iReport</a> | <a href="http://money.cnn.com/?cnn=yes">Money</a> | <a href="http://bleacherreport.com/?utm_source=cnn.com&utm_medium=referral&utm_campaign=cnn-footer">Sports</a></div> <div><a href="/tools/index.html">Tools &amp; widgets</a> | <a href="/services/rss/">RSS</a> | <a href="/services/podcasting/">Podcasts</a> | <a href="/exchange/blogs/index.html">Blogs</a> | <a href="/mobile/">CNN mobile</a> | <a href="/profile/">My profile</a> | <a href="/profile/">E-mail alerts</a> | <a href="http://www.turnerstoreonline.com/">CNN shop</a> | <a href="/sitemap/">Site map</a> | <a href="/feedback/">Contact us</a> </div> </div> <div class="cnn_ftrdivl2"></div> <div class="cnn_ftrlnggcntr"> <div><a href="/espanol/" hreflang="es" title="CNN in Spanish">CNN en ESPA&Ntilde;OL</a> | <a href="http://mexico.cnn.com" hreflang="es">CNN M&eacute;xico</a> | <a href="http://www.cnnchile.com" hreflang="es">CNN Chile</a> | <a href="http://www.cnnexpansion.com" hreflang="es">CNN Expansi&oacute;n</a></div> <div><a href="http://arabic.cnn.com/" hreflang="ar" title="CNN Arabic">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a> | <a href="http://www.cnn.co.jp/" hreflang="ja" title="CNN Japan">&#26085;&#26412;&#35486;</a> | <a href="http://www.cnnturk.com/" hreflang="tr" title="CNN Turkey">T&uuml;rk&ccedil;e</a></div> <div><a href="/CNN/Programs/" title="CNN TV programming schedule">CNN TV</a> | <a href="/HLN/">HLN</a> | <a href="http://transcripts.cnn.com/TRANSCRIPTS/">Transcripts</a> | </div> </div> <div class="cnn_ftrlgcpy"> <div><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/footer/pngs/footer_cnn_logo.png" alt="CNN" border="0" class="cnn_ie6png" height="11" width="23"/>&copy; 2013 Cable News Network. <a href="http://www.turner.com/" class="cnn_ftrtbslink">Turner Broadcasting System, Inc.</a> All Rights Reserved.</div> <div class="cnn_ftrlgcpy1"><a href="/interactive_legal.html" rel="nofollow">Terms of service</a> | <a href="/privacy.html" rel="nofollow">Privacy guidelines</a> | <a href="/services/ad.choices/" rel="nofollow">Ad choices</a><img src="http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/logo_ad_choices_footer.png" alt="" border="0" class="cnn_ie6png" height="12" style="margin:0pt 0pt 0pt 4px;" width="12"/> | <a href="/services/advertise/main.html" rel="nofollow">Advertise with us</a> | <a href="/about/" rel="nofollow">About us</a> | <a href="http://www.turner.com/careers/">Work for us</a> | <a href="/help/" rel="help">Help</a></div> </div><div class="cnn_clear"></div> </div></div> </div> </div> <script src="http://z.cdn.turner.com/cnn/tmpl_asset/static/www_global/863/js/globallib-min.js"></script> <script src="http://content.dl-rms.com/rms/mother/5721/nodetag.js"></script> <script src="http://icompass.insightexpressai.com/97.js"></script> <script src="http://ad.insightexpressai.com/adserver/adServer.aspx?publisherID=97"></script> <script src="http://js.revsci.net/gateway/gw.js?csid=A09801"></script> <script>cnnad_sendADMData();cnnad_ugsync();if(ms_isLoggedIn()){CNN_setCookie('CNN_member',true,854400,'/',document.domain);}</script> <div id="csimanagerdiv"><div id="csiIframeObjscsi2"><iframe style="visibility:hidden;position:absolute;top:0px;left:-100px;" name="csiDataIframecsi2" id="csiDataIframecsi2" src="http://svcs.cnn.com/weather/getForecast?time=24&amp;mode=json_html&amp;zipCode=30303&amp;locCode=&amp;celcius=false&amp;csiID=csi2" width="10" height="10"></iframe></div></div> <div id="csimanagerdivdelayed"></div>
+<!--jsmd-->
+<script src="http://z.cdn.turner.com/cnn/.e/js/libs/jsmd-370.min.js"></script>
+
+<script>
+var jsmd=_jsmd.init(),pageURL=location.href.toLowerCase();
+if (pageURL.indexOf("/.element/ssi/ads.iframes/")==-1&&pageURL.indexOf("/doubleclick/dartiframe.html")==-1&&pageURL.indexOf("/search/")==-1){
+if (_jsmd.plugin.gQuery("refresh")){
+jsmd.trackMetrics("dynamic-autoRefresh","autorefresh","cnn-autorefresh");
+} else if (_jsmd.plugin.gQuery("is_LR")){
+} else if (cnn_metadata.template_type_content!="gallery"){
+jsmd.send();
+}
+}
+</script>
+<!--/jsmd-->
+<script>
+/*globals FOOTERTOOLS*/
+$j(window).load(function () {
+'use strict';
+FOOTERTOOLS.init();
+});
+</script>
+<script>
+/*globals CNN_CB, cnnsocial */
+/* configure apis to load and specify their callbacks */
+cnnsocial.setapiconfig([
+{
+'site' : 'facebook',
+'success' : function() {
+/* trigger connect-cnnsocial.js calls */
+window.cnn_fbAsyncInit();
+}
+},
+{ 'site' : 'twitter' }
+]);
+/* add the multiple config instance for sharebars */
+cnnsocial.share.setconfig(cnn_shareconfig);
+$j(document).ready(function () {
+'use strict';
+loadChartbeat("tech", "Flora Zhang, CNN");
+CNN.initFlipperTicker();
+/* initialize cnnsocial */
+cnnsocial.init();
+});
+</script>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'cnn'; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script src="http://cache-02.cleanprint.net/cpf/cleanprint?key=cnn" name="cleanprintloader"></script>
+</body>
+</html>
