@@ -23,6 +23,7 @@ import java.util.TreeMap;
 import java.util.Vector;
 
 import twitter4j.Status;
+import twitter4j.User;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -43,12 +44,13 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	// Maps each term to their posting list
 	private Map<Integer, Postings> _invertedIndex = new TreeMap<Integer, Postings>();
-	
+
 	// Maps each term to their posting list
-	private Map<Integer, Postings> _realtimeInvertedIndex = new TreeMap<Integer, Postings>();
+	private Map<Integer, Postings> _realtimeInvertedIndex = null;
 
 	//Stores all Document in memory.
 	private Vector<Document> _documents = new Vector<Document>();
+	private Map<Integer, Document> _documentsMap = new HashMap<Integer, Document>();
 
 	private Map<String, Integer> _docIds = new HashMap<String, Integer>();
 
@@ -72,15 +74,18 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	private static int docId = 1;
 	private static int documentsCount = 0;
 	private int mergeCount = 10000;
-	private static Map<String,Scanner> scanners= new HashMap<String,Scanner>();
-	private static Map<String,String> pointerToScanners= new HashMap<String,String>();
+	private int fileCountPerFile = 100;
+	private static Map<String, Scanner> scanners= new HashMap<String, Scanner>();
+	private static Map<String, String> pointerToScanners= new HashMap<String, String>();
 	private static int finalIndexCount = 1;
 
 	private final double[] pageRanks;
 	private final Map<Integer, Integer> numViews;
 	private final String REALTIME = "realtime";
+	private final String CORPUS = "wiki";
 
-	Map<Integer, Postings> postingLists = new HashMap<Integer, Postings>();
+	Map<Integer, Postings> _corpusPostingLists = new HashMap<Integer, Postings>();
+	Map<Integer, Postings> _realTimePostingLists = new HashMap<Integer, Postings>();
 
 	@SuppressWarnings("unchecked")
 	public IndexerInvertedDoconly(Options options) {
@@ -103,7 +108,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	public void constructIndex() throws IOException {
 
 		createWikiIndex(new File(_options._corpusPrefix));
-		createTwitterIndex(new File("data/tweets"));
+		createTwitterIndex(new File("data/"+REALTIME));
 
 		System.out.println(
 				"Indexed " + Integer.toString(_numDocs) + " docs with " +
@@ -122,141 +127,151 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		int fileCount = 0;
 		finalIndexCount = 1;
 		System.out.println("Processing Documents");
-		
+
 		if(corpusDirectory.isDirectory()){
 			for(File corpusFile :corpusDirectory.listFiles()){
 				processDocument(corpusFile);	
 				fileCount++;
 
-				if(fileCount > 0 && fileCount % 100 == 0){
-					saveIndexInFile("wiki");
+				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
+					saveIndexInFile(CORPUS);
 				}
 			}
 		}
 		//save the remaining data
-		saveIndexInFile("wiki");
-		mergeFile("wiki");
+		saveIndexInFile(CORPUS);
+		mergeFile(CORPUS);
 	}
-	
+
 	private void createTwitterIndex(File corpusDirectory) throws FileNotFoundException {
 		int fileCount = 0;
+		scanners.clear();
+		pointerToScanners.clear();
 		finalIndexCount = 1;
+		documentsCount = 0;
+		docId = 1;
+		fileId = 1;
+
 		System.out.println("Processing Tweets");
-		
+
 		if(corpusDirectory.isDirectory()){
 			for(File tweetFile :corpusDirectory.listFiles()){
-				
-				processTweet(tweetFile);	
+				//to avoided retweeted tweets
+				if(!processTweet(tweetFile)) continue;	
 				fileCount++;
-				
-				if(fileCount > 0 && fileCount % 100 == 0){
+				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 					saveIndexInFile(REALTIME);
 				}
 			}
 		}
+
 		//save the remaining data
 		saveIndexInFile(REALTIME);
 		mergeFile(REALTIME);
-
 	}
 
-	private void mergeFile(String docType)
-	{
+	private void mergeFile(String docType) {
+
 		System.out.println("Merging...");
-		
-		//Final index file
-		T3FileWriter indexWriter = new T3FileWriter(_options._indexPrefix+"/index/"+docType+"/"+(finalIndexCount++)+".idx");
 
-		File indexDirectory = new File(_options._indexPrefix+"/temp/"+docType);
-		Gson gson = new Gson();
+		try{
+			//Final index file
+			T3FileWriter indexWriter = new T3FileWriter(_options._indexPrefix+"/index/"+docType+"/"+(finalIndexCount++)+".idx");
 
-		if(indexDirectory.isDirectory())
-		{
-			indexWriter.write("{");
-			for(int  i = 0 ; i < _dictionary.size();i++){
+			File indexDirectory = new File(_options._indexPrefix+"/temp/"+docType);
+			Gson gson = new Gson();
 
-//				System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
-
-				//get posting list of term_id i from all the files and merge them
-				List<Integer> mergedPostingList = new ArrayList<Integer>();
-
+			if(indexDirectory.isDirectory()) {
+				
 				File[] files = indexDirectory.listFiles();
 
-				Comparator<File> comp = new Comparator<File>()
-						{
-					public int compare(File f1, File f2)
-					{
+				Comparator<File> comp = new Comparator<File>() {
+					public int compare(File f1, File f2) {
 
 						// Alphabetic order otherwise
 						Integer fileIndex1 = Integer.parseInt(f1.getName().replaceFirst(".idx",""));
 						Integer fileIndex2 = Integer.parseInt(f2.getName().replaceFirst(".idx",""));
 						return fileIndex1.compareTo(fileIndex2);
 					}
-						};
-						Arrays.sort(files, comp); 
+				};
 
-						for(File indexTempFile : files) {
-							if(scanners.get(indexTempFile.getName()) == null) {
-								try {
-									Scanner scanner = new Scanner(indexTempFile);
-									scanner.useDelimiter("],");
-									scanners.put(indexTempFile.getName(),scanner);
+				Arrays.sort(files, comp); 
+				
+				indexWriter.write("{");
+				for(int  i = 0 ; i < _dictionary.size();i++){
 
-								} catch (FileNotFoundException e) {
-									e.printStackTrace();
-								}
-							}
+					//				System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
 
-							String postingList = getPostingList(indexTempFile , i );
+					//get posting list of term_id i from all the files and merge them
+					List<Integer> mergedPostingList = new ArrayList<Integer>();
 
-							//sample posting list = [1,2,3,4,5]
-							if(postingList != null){
-								try{
+					for(int f=0; f<files.length; f++) {
+						File indexTempFile = files[f];
+						
+						if(scanners.get(indexTempFile.getName()) == null) {
+							try {
+								Scanner scanner = new Scanner(indexTempFile);
+								scanner.useDelimiter("],");
+								scanners.put(indexTempFile.getName(), scanner);
 
-									if(postingList.charAt(postingList.length()-2)== '}'){
-										postingList = postingList.substring(0,postingList.length()-2);
-									}
-
-									int[] intList = gson.fromJson(postingList, int[].class); 
-									mergedPostingList.addAll(asList(intList));
-								}catch(Exception e){
-									e.printStackTrace();
-								}
+							} catch (FileNotFoundException e) {
+								e.printStackTrace();
 							}
 						}
 
-						//Write the merger list to file i
-						if(i%mergeCount == 0 && i > 0 ){
-							indexWriter.write("}");
-							indexWriter.close();
-							indexWriter = new T3FileWriter(_options._indexPrefix+"/index/"+docType+"/"+(finalIndexCount++)+".idx");
-							indexWriter.write("{");
-						}
-						String entry = "\""+i+"\""+":"+gson.toJson(mergedPostingList);
-						indexWriter.write(entry);
-						if((i+1)%mergeCount != 0){
-							indexWriter.write(",");
-						}
+						String postingList = getPostingList(indexTempFile , i );
 
-						if(i == _dictionary.size() -1){
-							indexWriter.write("}");
-							indexWriter.close();
+						//sample posting list = [1,2,3,4,5]
+						if(postingList != null){
+							try{
+
+								if(postingList.charAt(postingList.length()-2)== '}'){
+									postingList = postingList.substring(0,postingList.length()-2);
+								}
+
+								int[] intList = gson.fromJson(postingList, int[].class); 
+								mergedPostingList.addAll(asList(intList));
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 						}
+					}
+
+					//Write the merger list to file i
+					if(i%mergeCount == 0 && i > 0){
+						indexWriter.write("}");
+						indexWriter.close();
+						indexWriter = new T3FileWriter(_options._indexPrefix+"/index/"+docType+"/"+(finalIndexCount++)+".idx");
+						indexWriter.write("{");
+					}
+					String entry = "\""+i+"\""+":"+gson.toJson(mergedPostingList);
+					indexWriter.write(entry);
+
+					if((i+1)%mergeCount != 0){
+						indexWriter.write(",");
+					}
+
+					if(i == _dictionary.size()-1){
+						indexWriter.write("}");
+						indexWriter.close();
+					}
+				}
 			}
+
+			indexWriter.close();
+			//clean temp files 
+			deleteTempFiles();
+		}catch(Exception e){
+			e.printStackTrace();
 		}
-
-		indexWriter.close();
-		//clean temp files 
-		deleteTempFiles();
 	}
-
 
 	private void deleteTempFiles() 
 	{
 		File directory = new File(_options._indexPrefix+"/temp");
 		try{
-			delete(directory);
-		}catch(IOException e){
+			//delete(directory);
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
@@ -268,8 +283,8 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			//directory is empty, then delete it
 			if(file.list().length==0){
 				file.delete();
-//				System.out.println("Directory is deleted : " 
-//						+ file.getAbsolutePath());
+				//				System.out.println("Directory is deleted : " 
+				//						+ file.getAbsolutePath());
 
 			}else{
 
@@ -287,18 +302,17 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				//check the directory again, if empty then delete it
 				if(file.list().length==0){
 					file.delete();
-//					System.out.println("Directory is deleted : " 
-//							+ file.getAbsolutePath());
+					//					System.out.println("Directory is deleted : " 
+					//							+ file.getAbsolutePath());
 				}
 			}
 
 		}else{
 			//if file, then delete it
 			file.delete();
-//			System.out.println("File is deleted : " + file.getAbsolutePath());
+			//			System.out.println("File is deleted : " + file.getAbsolutePath());
 		}
 	}
-
 
 	public List<Integer> asList(int[] ints) {
 		List<Integer> intList = new ArrayList<Integer>();
@@ -322,7 +336,6 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			}else{
 				nextElement = pointerToScanners.get(indexTempFile.getName());
 			}
-
 
 			nextElement = nextElement.substring(nextElement.indexOf("\""));
 
@@ -359,7 +372,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		fileWriter.write(json);
 		fileWriter.close();
 
-		fileWriter= new T3FileWriter(_options._indexPrefix+"/Documents/"+(docId++)+".idx");
+		fileWriter= new T3FileWriter(_options._indexPrefix+"/Documents/"+docType+"/"+(docId++)+".idx");
 		json = gson.toJson(_documents);
 		fileWriter.write(json);
 		fileWriter.close();
@@ -394,7 +407,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		String title = file.getName();
 
 		//Integer documentID = _documents.size();
-		Integer documentID = documentsCount++;
+		int documentID = documentsCount++;
 		int numView = numViews.get(documentID);
 		double pageRank = pageRanks[documentID];
 		DocumentIndexed doc = new DocumentIndexed(documentID, null);
@@ -410,13 +423,12 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		Set<Integer> uniqueTerms = new HashSet<Integer>();
 		updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
 
-		for (Integer idx : uniqueTerms) {
+		for (int idx : uniqueTerms) {
 			_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
 		}
 	}
-	
-	
-	private void processTweet(File file) {
+
+	private boolean processTweet(File file) {
 
 		DocumentProcessor documentProcessor = new DocumentProcessor();
 		ObjectInputStream ois = null;
@@ -425,6 +437,11 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			ois = new ObjectInputStream(new FileInputStream(file));
 			Status tweet = (Status)ois.readObject();
 
+			//avoid storing retweeted tweets
+			if(tweet.isRetweet()){
+				return false;
+			}
+
 			Vector<String> bodyTokens_Str = documentProcessor.process(tweet.getText());
 
 			Vector<Integer> bodyTokens = new Vector<Integer>();
@@ -432,13 +449,30 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 			String title = tweet.getText();
 
-			Integer documentID = documentsCount++;
+			int documentID = documentsCount++;
 			DocumentIndexed doc = new DocumentIndexed(documentID, null);
 			doc.setTitle(title);
+			doc.setUrl(title);
 			doc.setNumViews(0);
 			doc.setPageRank(0);
-			doc.setTweet(tweet);
 			doc.setDocumentTokens(bodyTokens);
+
+			//tweet
+			doc._isTweet = true;
+			doc._createdAt = tweet.getCreatedAt();
+			doc._retweetCount = tweet.getRetweetCount();
+			doc._isFavorited = tweet.isFavorited();
+			doc._isPossiblySensitive = tweet.isPossiblySensitive();
+			long[] contributors = tweet.getContributors();
+			if(contributors != null)
+				doc._totalContributors = tweet.getContributors().length;
+
+			User user = tweet.getUser();
+			doc._isVerified = user.isVerified();
+			doc._userFavoriteCount = user.getFavouritesCount();
+			doc._userFollowers = user.getFollowersCount();
+			doc._totalPublicLists = user.getListedCount();
+
 			_documents.add(doc);
 			_docIds.put(title, documentID);
 			++_numDocs;
@@ -446,7 +480,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			Set<Integer> uniqueTerms = new HashSet<Integer>();
 			updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
 
-			for (Integer idx : uniqueTerms) {
+			for (int idx : uniqueTerms) {
 				_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
 			}
 
@@ -460,6 +494,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			}
 		}
 
+		return true;
 	}
 
 	/**
@@ -489,24 +524,23 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		return;
 	}
 
-
 	/**
 	 * Update the corpus statistics with {@code tokens}. Using {@code uniques} to
 	 * bridge between different token vectors.
 	 * @param tokens
 	 * @param uniques
 	 */
-	private void updateStatistics(Integer documentID, Vector<Integer> tokens, Set<Integer> uniques) {
+	private void updateStatistics(int documentID, Vector<Integer> tokens, Set<Integer> uniques) {
 
 		try{
 			for(int i=0; i<tokens.size(); i++){
 
-				Integer idx = tokens.get(i);
+				int idx = tokens.get(i);
 				uniques.add(idx);
 
 				//create and initialize the posting list
 				if(!_invertedIndex.containsKey(idx)){
-					_invertedIndex.put(idx,new Postings());
+					_invertedIndex.put(idx, new Postings());
 				}
 
 				if(!_invertedIndex.get(idx).contains(documentID)){
@@ -520,8 +554,6 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			throw new OutOfMemoryError(oome.getLocalizedMessage());
 		} 
 	}
-
-	///// Loading related functions.
 
 	/**
 	 * Loads the index from the index file.
@@ -541,7 +573,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		this._documents = loaded._documents;
 		// Compute numDocs and totalTermFrequency b/c Indexer is not serializable.
 		this._numDocs = _documents.size();
-		for (Integer freq : loaded._termCorpusFrequency.values()) {
+		for (int freq : loaded._termCorpusFrequency.values()) {
 			this._totalTermFrequency += freq;
 		}
 		this._dictionary = loaded._dictionary;
@@ -558,45 +590,42 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	@Override
 	public Document getDoc(int docid) {
-
-		//check if it's available
-		for(int i = 0 ; i< _documents.size(); i++){
-			if(_documents.get(i)._docid == docid){
-				return _documents.get(i);
-			}
-		}
-
-		//if not then retrieve from backend store
-		_documents = getDocuments(docid);
-
-		//again check if its available
-		for(int i = 0 ; i< _documents.size(); i++){
-			if(_documents.get(i)._docid == docid){
-				return _documents.get(i);
-			}
-		}
-
-		return null;
-		//return (/*docid >= _documents.size() ||*/ docid < 0) ? null : _documents.get(docid);
+		return getDoc(docid, CORPUS);
 	}
 
-	private Vector<Document> getDocuments(int docid2) {
+	public Document getDoc(int docid, String docType) {
 
-		int file_no = (int)docid2 /mergeCount + 1;
-		String filepath = _options._indexPrefix+"/Documents/"+file_no+".idx";
+		if(_documentsMap.containsKey(docid))
+			return _documentsMap.get(docid);
+
+		//if not then retrieve from backend store
+		_documentsMap = getDocuments(docid, docType);
+
+		return _documentsMap.get(docid);
+	}
+
+	private Map<Integer, Document> getDocuments(int docid, String docType) {
+
+		int file_no = (int)(docid/fileCountPerFile) + 1;
+		String filepath = _options._indexPrefix+"/Documents/"+docType+"/"+file_no+".idx";
 		T3FileReader fileReader = new T3FileReader(filepath);
 		String fileContents = fileReader.readAllBytes();
 		fileReader.close();
 
 		Gson gson = new Gson();
-
 		JsonParser parser = new JsonParser();
 		JsonArray array = parser.parse(fileContents).getAsJsonArray();
 
-		Vector<Document> retVal = new Vector<Document>();
-		for(int i =0;i<array.size();i++){
-			DocumentIndexed doc = gson.fromJson(array.get(i), DocumentIndexed.class);
-			retVal.add(doc);
+		Type type = new TypeToken<DocumentIndexed>(){}.getType();
+
+		Map<Integer, Document> retVal = new HashMap<Integer, Document>();
+		try{
+			for(int i=0; i<array.size(); i++){
+				DocumentIndexed doc = gson.fromJson(array.get(i), type);
+				retVal.put(doc._docid, doc);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
 		}
 
 		return retVal;
@@ -607,16 +636,12 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	 */
 	@Override
 	public Document nextDoc(Query query, int docid) {
-		return nextDoc(query, docid, "wiki");
+		return nextDoc(query, docid, CORPUS);
 	}
-	
+
 	public Document nextDoc(Query query, int docid, String docType) {
 
 		Vector<String> queryTerms = query._tokens;
-		
-//		if(docid < 0){
-//			docid = 0;
-//		}
 
 		//case 1 
 		Vector <Integer> docIds = new Vector<Integer>();
@@ -639,7 +664,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		}
 
 		if(documentFound){
-			Document doc = getDoc(docIds.get(0));
+			Document doc = getDoc(docIds.get(0), docType);
 			return doc;
 		}
 
@@ -656,30 +681,41 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	 * @return
 	 */
 	private int next(String term , int currentDoc, String docType){
-	
+
 		Postings postingList = null;
 		Integer termID = _dictionary.get(term);
 
-		Map<Integer, Postings> indexToUsed;
-		 
 		if(docType.equals(REALTIME)){
-			indexToUsed = _realtimeInvertedIndex;
+
+			if(_realTimePostingLists.containsKey(termID)){
+				postingList = _realTimePostingLists.get(termID);
+			} else if(_realtimeInvertedIndex != null && _dictionary != null && termID != null){
+				postingList = _realtimeInvertedIndex.get(termID);
+				_realTimePostingLists.put(termID, postingList);
+			}
+
+			if(postingList == null){
+				_realtimeInvertedIndex = getIndex(termID, docType);
+				postingList = _realtimeInvertedIndex.get(termID);
+				_realTimePostingLists.put(termID, postingList);
+			}
+
 		}else{
-			indexToUsed = _invertedIndex;
-		}
-		
-		if(postingLists.containsKey(termID)){
-			postingList = postingLists.get(termID);
-		} else if(indexToUsed != null && _dictionary != null && termID != null){
-			postingList = indexToUsed.get(termID);
-			postingLists.put(termID, postingList);
+
+			if(_corpusPostingLists.containsKey(termID)){
+				postingList = _corpusPostingLists.get(termID);
+			} else if(_invertedIndex != null && _dictionary != null && termID != null){
+				postingList = _invertedIndex.get(termID);
+				_corpusPostingLists.put(termID, postingList);
+			}
+
+			if(postingList == null){
+				_invertedIndex = getIndex(termID, docType);
+				postingList = _invertedIndex.get(termID);
+				_corpusPostingLists.put(termID, postingList);
+			}
 		}
 
-		if(postingList == null){
-			indexToUsed = getIndex(termID, docType);
-			postingList = indexToUsed.get(termID);
-			postingLists.put(termID, postingList);
-		}
 
 		int lt = postingList.size();
 		Integer ct = postingList.getCachedIndex();
@@ -714,31 +750,47 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	private Map<Integer, Postings> getIndex(Integer integer, String docType) {
 
-		int file_no = (int)integer/mergeCount + 1;
-		String filepath = _options._indexPrefix+"/index/"+docType+"/"+file_no+".idx";
-		T3FileReader fileReader = new T3FileReader(filepath);
-		String fileContents = fileReader.readAllBytes();
-		fileReader.close();
+		Map<Integer,Postings> treeMap = null;
 
-		GsonBuilder builder = new GsonBuilder();
-		Gson gson = builder.enableComplexMapKeySerialization().setPrettyPrinting().create();
-		Type type = new TypeToken<TreeMap<Integer,Postings>>(){}.getType();
-		Map<Integer,Postings> treeMap = gson.fromJson(fileContents, type);
+		try{
+			int file_no = (int)integer/mergeCount + 1;
+			String filepath = _options._indexPrefix+"/index/"+docType+"/"+file_no+".idx";
+			T3FileReader fileReader = new T3FileReader(filepath);
+			String fileContents = fileReader.readAllBytes();
+			fileReader.close();
 
+			GsonBuilder builder = new GsonBuilder();
+			Gson gson = builder.enableComplexMapKeySerialization().setPrettyPrinting().create();
+			Type type = new TypeToken<TreeMap<Integer,Postings>>(){}.getType();
+			treeMap = gson.fromJson(fileContents, type);
+
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		return treeMap;
 	}
 
 	@Override
 	public int corpusDocFrequencyByTerm(String term) {
-		return corpusDocFrequencyByTerm(term, "wiki");
+		return corpusDocFrequencyByTerm(term, CORPUS);
 	}
-	
+
 	public int corpusDocFrequencyByTerm(String term, String docType) {
-		Postings p = _invertedIndex.get(_dictionary.get(term));
-		if(p == null){
-			_invertedIndex = getIndex(_dictionary.get(term), docType);
+
+		if(docType.equals(REALTIME)){
+			Postings p = _realtimeInvertedIndex.get(_dictionary.get(term));
+			if(p == null){
+				_realtimeInvertedIndex = getIndex(_dictionary.get(term), docType);
+			}
+			return _realtimeInvertedIndex.get(_dictionary.get(term)).size();
+
+		}else{
+			Postings p = _invertedIndex.get(_dictionary.get(term));
+			if(p == null){
+				_invertedIndex = getIndex(_dictionary.get(term), docType);
+			}
+			return _invertedIndex.get(_dictionary.get(term)).size();
 		}
-		return _invertedIndex.get(_dictionary.get(term)).size();
 	}
 
 	@Override
@@ -748,28 +800,40 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	@Override
 	public int documentTermFrequency(String term, String url) {
-		return documentTermFrequency(term, url, "wiki");
+		return documentTermFrequency(term, url, CORPUS);
 	}
-	
+
 	public int documentTermFrequency(String term, String url, String docType) {
 		int returnValue = 0;
 		int docID =  _docIds.get(url);
 
-		Postings p = _invertedIndex.get(_dictionary.get(term));
-		if(p == null){
-			_invertedIndex = getIndex(_dictionary.get(term), docType);
-		}
+		if(docType.equals(REALTIME)){
 
-		HashMap<Integer,Integer> count_terms = _invertedIndex.get(_dictionary.get(term)).get_countTerm();
-		returnValue = count_terms.get(docID);
-		return returnValue;
+			Postings p = _realtimeInvertedIndex.get(_dictionary.get(term));
+			if(p == null){
+				_realtimeInvertedIndex = getIndex(_dictionary.get(term), docType);
+			}
+
+			HashMap<Integer,Integer> count_terms = _realtimeInvertedIndex.get(_dictionary.get(term)).get_countTerm();
+			returnValue = count_terms.get(docID);
+			return returnValue;
+
+		}else{
+			Postings p = _invertedIndex.get(_dictionary.get(term));
+			if(p == null){
+				_invertedIndex = getIndex(_dictionary.get(term), docType);
+			}
+
+			HashMap<Integer,Integer> count_terms = _invertedIndex.get(_dictionary.get(term)).get_countTerm();
+			returnValue = count_terms.get(docID);
+			return returnValue;
+		}
 	}
 
 	@Override
 	public int nextPhrase(Query query, int docid, int position) {
 		return 0;
 	}
-
 
 	public String getTerm(int termId){
 		return _terms.get(termId);

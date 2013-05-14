@@ -23,8 +23,8 @@ class ScoredDocument implements Comparable<ScoredDocument> {
     StringBuffer buf = new StringBuffer();
     buf.append(_doc._docid).append("\t");
     buf.append(_doc.getTitle()).append("\t");
-    buf.append(_doc.getPageRank()).append("\t");
-    buf.append(_doc.getNumViews()).append("\t");
+    //buf.append(_doc.getPageRank()).append("\t");
+    //buf.append(_doc.getNumViews()).append("\t");
     buf.append(_score);
     return buf.toString();
   }

@@ -53,4 +53,10 @@ public Document nextDoc(Query query, int docid, String source) {
 	// TODO Auto-generated method stub
 	return null;
 }
+
+@Override
+public int documentTermFrequency(String term, String url, String docType) {
+	// TODO Auto-generated method stub
+	return 0;
+}
 }

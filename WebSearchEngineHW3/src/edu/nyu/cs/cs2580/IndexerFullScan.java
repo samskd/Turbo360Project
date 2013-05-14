@@ -242,4 +242,9 @@ public Document nextDoc(Query query, int docid, String source) {
 	throw new NotImplementedException();
 }
 
+@Override
+public int documentTermFrequency(String term, String url, String docType) {
+	throw new NotImplementedException();
+}
+
 }

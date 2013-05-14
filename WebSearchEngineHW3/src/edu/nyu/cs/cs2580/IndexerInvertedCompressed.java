@@ -20,7 +20,9 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.Vector;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import twitter4j.Status;
+import twitter4j.User;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -594,8 +596,24 @@ public class IndexerInvertedCompressed extends Indexer {
 			doc.setTitle(title);
 			doc.setNumViews(0);
 			doc.setPageRank(0);
-			doc.setTweet(tweet);
 			doc.setDocumentTokens(bodyTokens);
+			
+			//tweet
+			doc._isTweet = true;
+			doc._createdAt = tweet.getCreatedAt();
+			doc._retweetCount = tweet.getRetweetCount();
+			doc._isFavorited = tweet.isFavorited();
+			doc._isPossiblySensitive = tweet.isPossiblySensitive();
+			long[] contributors = tweet.getContributors();
+			if(contributors != null)
+				doc._totalContributors = tweet.getContributors().length;
+			
+			User user = tweet.getUser();
+			doc._isVerified = user.isVerified();
+			doc._userFavoriteCount = user.getFavouritesCount();
+			doc._userFollowers = user.getFollowersCount();
+			doc._totalPublicLists = user.getListedCount();
+			
 			_documents.add(doc);
 			_docIds.put(title, documentID);
 			++_numDocs;
@@ -985,6 +1003,12 @@ public class IndexerInvertedCompressed extends Indexer {
 		PostingEntry<String> entry = list.searchDocumentID(docID);
 
 		return entry.getOffset().size();
+	}
+
+
+	@Override
+	public int documentTermFrequency(String term, String url, String docType) {
+		throw new NotImplementedException();
 	}
 
 
