@@ -1,0 +1,359 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+<head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb#  video:http://ogp.me/ns/video#">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+    
+    <!-- RA:485381290 -->
+    <title>This live event has concluded - Video on NBCNews.com</title>
+    <meta name="title" content="This live event has concluded" />
+    <meta name="description" content="Video on NBCNews.com: Please select another video." />
+    <link rel="canonical" href="http://www.nbcnews.com/video/nbcnews.com/51877280" />
+    <meta property="fb:app_id" content="10150138890205613" />
+    <meta property="og:site_name" content="NBCNews.com" />
+    <meta property="og:description" name="description" content="Video on msnbc.com: Please select another video." />
+    <meta property="og:video" content="http://www.nbcnews.com/id/32545640/?launch=51877280%26autoplay=true%26omid=facebook" />
+    <link rel="video_src" href="http://www.nbcnews.com/id/32545640/?launch=51877280%26autoplay=true%26omid=facebook"/>
+ 
+    
+    <meta property="og:title" name="title"  content="This live event has concluded" />
+    <meta property="og:url" content="http://www.nbcnews.com/video/nbcnews.com/51877280" />
+    <meta property="og:type" content="video.other" />
+
+    <meta property="og:image" content="http://media3.s-nbcnews.com/j/MSNBC/Components/Video/Live/JPEGs/live_unavailable.standard.jpg" />
+    <link rel="image_src" href="http://media3.s-nbcnews.com/j/MSNBC/Components/Video/Live/JPEGs/live_unavailable.standard.jpg" /> 
+    <meta name="video_height" content="250" />
+    <meta name="video_width" content="425" />
+    <meta name="video_type" content="application/x-shockwave-flash" />
+    <meta property="og:video:height" content="250" />
+    <meta property="og:video:width" content="425" />
+    <meta property="og:video:type" content="application/x-shockwave-flash" />
+
+
+<link rel="stylesheet" type="text/css" href="http://assets1d.msnbc.msn.com/Rendering/msnbc/html40/assets/Css/VideoCanonical.css?h=A1CB8BB888E4481CB9A4EB5C4036C3F1"/>
+
+     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://www.polls.newsvine.com/_elliott/jenga"></script>
+
+    <script type="text/javascript">
+
+        var currentVideoId;
+        var currentSource;
+
+        var videoPlayerParameters =
+    {
+        workbenchId: "51877280",
+        settings: "21438819",
+        flashRenderDiv: "VPFlash",
+        domain: "www.nbcnews.com",
+        noFlashRenderDiv: "VPNoFlash",
+        showMSNLogo: true,
+        showMSNBCLogo: true,
+        isLive: false
+    };
+
+    $j.session.ready(function(user) {
+
+	    $('.demo_activity').fb_activity({
+		    edition: 'video',
+		    title : 'What my friends are viewing',
+		    activity_feed : {
+			    // actions : 'watch' // actions defaults to like, recommend but i'm wondering if we want this to be a video-specific action e.g. "watch" if it even exists...?
+			    width: 300,
+			    toggle : true
+		    },
+		    sharing_message : 'You\'re sharing this video on Facebook',
+		    confirm_message : 'This video has been removed from your Facebook profile.',
+		    share_prompt_message : 'Share what you\'re watching & see what your friends are viewing',
+		    onAllow : function(user) { // or set a url instead of using onAllow
+			    updateOpenGraph(currentVideoId, currentSource);
+		    }
+	    });
+
+    });
+
+    </script>  
+    
+
+</head>
+<body class="default">
+    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+     (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=10150138890205613";
+         fjs.parentNode.insertBefore(js, fjs);
+     } (document, 'script', 'facebook-jssdk'));
+     </script>
+    <script type="text/javascript">
+         FB.init({
+             appId: '10150138890205613', 
+             cookie:true,
+             status: true,
+             xfbml: true, 
+             oauth:true
+         });
+     </script>
+     
+    
+    <div id="flash_container">
+        <div id="VpFlash">
+            <div id="VPFlash">
+                <object width="996" height="600" id="flashPlayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0">
+                    <param name="movie" value="http://www.nbcnews.com/id/32213513" />
+                    <param name="FlashVars" value="launch=51877280&amp;domain=www.nbcnews.com&amp;EID=oVPEFC&amp;playerid=21134540&amp;settings=21438819&amp;sh=1600&amp;showMSNLogo=true&amp;showMSNBCLogo=true&amp;sw=2560&amp;useProxy=true&amp;wbDomain=www.nbcnews.com" />
+                    <param name="allowScriptAccess" value="always" />
+                    <param name="allowFullScreen" value="true" />
+                    <param name="wmode" value="transparent" />
+                    <embed name="flashPlayer" src="http://www.nbcnews.com/id/32213513" width="996" height="600" 
+                        flashvars="launch=51877280&amp;domain=www.nbcnews.com&amp;EID=oVPEFC&amp;playerid=21134540&amp;settings=21438819&amp;sh=1600&amp;showMSNLogo=true&amp;showMSNBCLogo=true&amp;sw=2560&amp;useProxy=true&amp;wbDomain=www.nbcnews.com"
+                        allowscriptaccess="always" allowfullscreen="true" wmode="transparent" type="application/x-shockwave-flash"
+                        pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+                </object>
+            </div>
+        </div>
+        <div id="reportDiv" style="display: none;">
+        </div>
+        <div id="surveyDiv" style="display: none;">
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row rowtop35">
+       
+
+     <div class="cell1">
+        
+<div class="art standard hmedia default" >
+	<div class="img thumbnail" rel="media:image">
+	    <img alt="" src="http://media1.s-nbcnews.com/j/MSNBC/Components/Video/Live/JPEGs/live_unavailable.video-260x195.jpg" >
+	</div>
+	<span class="credit contributor">
+		
+	</span>
+</div>
+     </div>
+     <div class="cell2">
+         <p>
+              <span class="videosource">NBCNews.com</span>
+                &nbsp;&nbsp;|&nbsp;&nbsp;<strong>May 14, 2013</strong>
+         </p>
+        <h1>This live event has concluded</h1>
+        <h2 class="description">Please select another video.</h2>
+         
+<div class="tags-share">
+    <div>
+        <p>Share This:</p>
+        <a class="social-link social-link-facebook" data-name="facebook" data-width="550" data-height="400" href="http://www.facebook.com/share.php?u=http://www.nbcnews.com/video/nbcnews.com/51877280">
+            <img src="http://assets1d.msnbc.msn.com/rendering/msnbc/html40/assets/Video/img/facebook.png" alt="facebook"/>
+        </a>
+        <a class="social-link social-link-twitter" data-name="twitter" data-width="550" data-height="420" href="https://twitter.com/share?original_referer=http://www.nbcnews.com/video/nbcnews.com/51877280&source=custom_tweetbutton&text=This live event has concluded&url=http://www.nbcnews.com/video/nbcnews.com/51877280&via=NBCNews.com">
+                   <img src="http://assets1d.msnbc.msn.com/rendering/msnbc/html40/assets/Video/img/twitter.png" alt="twitter"/>
+        </a>
+        <a class="social-link social-link-googleplus" data-name="googleplus" data-width="450" data-height="500" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://www.nbcnews.com/video/nbcnews.com/51877280">
+            <img src="http://assets1d.msnbc.msn.com/rendering/msnbc/html40/assets/Video/img/googleplus.png" alt="googleplus"/>
+        </a>
+    </div>
+ </div>
+
+
+    </div>
+
+    </div>
+    <div class="row rowtop50">
+        <div class="span12">
+             <ul class="nav nav-tabs">
+              <li class="active"><a href="#related-videos" data-toggle="tab"><strong>Related Videos</strong></a></li>
+              <li><a href="#transcript" data-toggle="tab"><strong>Transcript of this video</strong></a></li>
+            </ul>
+            <div class="tab-content">
+              <!--// first tab for associated playlist showing 12 videos by default //-->
+              <div class="tab-pane active" id="related-videos">
+                  
+
+    <h4>Top videos</h4>
+    <ul class="thumbnails">
+        
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nightly-news/51884441/" class="thumbnail" rel="popover" title="Insects make a nutritious snack, UN says" data-content="A report from the United Nations Food and Agriculture Organization says insects should be considered a nutritious alternative to other forms of protein such as chicken and pork. NBC’s Brian Williams reports. ">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/nn_12bwi_eatbugs_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Insects make a nutritious snack, UN says</h5>
+            <p>Nightly News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nightly-news/51884402/" class="thumbnail" rel="popover" title="Commander Hadfield returns to Earth" data-content="After five months in space, International Space Station Commander Chris Hadfield has returned to the planet. While manning the ISS he also created the first music video in space, using a rendition of David Bowie’s “Space Oddity.” NBC’s Brian Williams reports. ">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/nn_08bwi_astro_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Commander Hadfield returns to Earth</h5>
+            <p>Nightly News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nightly-news/51884264/" class="thumbnail" rel="popover" title="Considering genetic testing? It’s not for everyone" data-content="Actress Angelina Jolie made headlines Tuesday when she announced in a New York Times op-ed that she had underwent a double mastectomy after finding out she had an 87 percent chance of getting breast cancer due to the BRCA1 gene. NBC’s Dr. Nancy Snyderman reports. ">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/nn_05nsn_jolie_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Considering genetic testing? It’s not for everyone</h5>
+            <p>Nightly News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nightly-news/51884168/" class="thumbnail" rel="popover" title="Outrage at White House over IRS actions" data-content="‘Meet the Press’ moderator David Gregory discusses the IRS admission that it had singled out conservative groups, saying there’s frustration more wasn’t done in the Treasury Department to deal with the issue, and people want to know what the president can do right away to take tough action.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/nn_03dgr_scandal_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Outrage at White House over IRS actions</h5>
+            <p>Nightly News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nightly-news/51884129/" class="thumbnail" rel="popover" title="Attorney General orders FBI to investigate IRS" data-content="Three congressional committees have planned hearing into what interaction, if any, the IRS had with Treasury officials or the White House. Beginning in 2010, the IRS singled out conservative groups that were applying for tax exempt status according to a Treasury Department Inspector General report. NBC’s Lisa Myers reports. ">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/nn_01lmy_irs_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Attorney General orders FBI to investigate IRS</h5>
+            <p>Nightly News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbc-news/51880978/" class="thumbnail" rel="popover" title="Brown player in critical condition after assault" data-content="Providence, R.I., authorities said a Brown University basketball player is in critical condition after being punched in the head in what appeared to be an unprovoked assault. WHDH's Dan Hausle reports.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/__NEW/_News Channel/NC_brownplayer0514_test2_mezzn.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Brown player in critical condition after assault</h5>
+            <p>NBC News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbc-news/51880573/" class="thumbnail" rel="popover" title="Holder: 'Outrageous behavior' by IRS" data-content="US Attorney General Eric Holder says he's asked the FBI to investigate the "outrageous and unacceptable" behavior at the IRS, and to see if any criminal actions were taken by the agency.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/__NEW/f_holder_irs_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Holder: 'Outrageous behavior' by IRS</h5>
+            <p>NBC News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbc-news/51880516/" class="thumbnail" rel="popover" title="Holder: This was a 'very, very, serious leak'" data-content="US Attorney General Eric Holder tells reporters he recused himself from the investigation into leaks which led to a subpoena for AP phone records, a leak Holder said "put the American people at risk."">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/__NEW/f_holder_ap_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Holder: This was a 'very, very, serious leak'</h5>
+            <p>NBC News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbcnews.com/51879929/" class="thumbnail" rel="popover" title="Russia accuses US diplomat of spying" data-content="The Russian Federal Security Service says it had detained an American diplomat who was trying to recruit a Russian intelligence official to work for the CIA. NBCNews.com's Matt Rivera reports.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/a_3k_brown_spy2_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Russia accuses US diplomat of spying</h5>
+            <p>NBCNews.com
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbc-news/51878569/" class="thumbnail" rel="popover" title="Prince Harry plays carnival games on N.J. boardwalk " data-content="While touring the recently-rebuilt boardwalk in Seaside Heights, N.J., UK’s Prince Harry and Governor Chris Christie played a boardwalk game — tossing plastic balls into a hole to win prizes — with some children.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/__NEW/f_princeharry_games_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Prince Harry plays carnival games on N.J. boardwalk </h5>
+            <p>NBC News
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbcnews.com/51879973/" class="thumbnail" rel="popover" title="Demolition begins on coaster wrecked by Sandy" data-content="Crews have started dismantling the remains of a Seaside Heights, N.J. roller coaster tossed into the ocean during Hurricane Sandy. NBCNews.com's Dara Brown reports.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Photo/_new/a_3k_brown_seaside_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Demolition begins on coaster wrecked by Sandy</h5>
+            <p>NBCNews.com
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    <li class="span3">
+        <a href="http://www.nbcnews.com/video/nbcnews.com/51877881/" class="thumbnail" rel="popover" title="Explosive flare dances off sun on Mother's Day" data-content="The sun unleashed the most powerful eruption of the year on Sunday that was so strong it caused a high-frequency radio blackout for an hour. NBCNews.com's Dara Brown reports.">
+            <img src="http://msnbcmedia.msn.com/j/MSNBC/Components/Video/130514/a_3k_brown_flare_130514.video-260x195.jpg" >
+        </a>
+        <div class="caption">
+            <h5>Explosive flare dances off sun on Mother's Day</h5>
+            <p>NBCNews.com
+            
+            <br>May 14, 2013</p>
+        </div>
+    </li>
+
+    </ul>
+
+              </div>
+              <!--// second tab for transcript //-->
+              <div class="tab-pane" id="transcript">
+                <h4>Sorry, we do not have a transcript available for this video at this time.</h4>
+                <div class="transcript">
+                    
+                </div>
+              </div>
+             </div>
+        </div>
+     </div>
+ </div>
+
+
+
+
+<script type="text/javascript" src="http://assets3d.msnbc.msn.com/Rendering/msnbc/html40/assets/Js/VideoCanonical.js?h=7DF3710CDACC5AEB4CEA2C63A33FA513"></script>
+
+    <script type="text/javascript">
+      ijv.model = {"headline":"This live event has concluded","siteName":"msnbc","section":"","subSection":"","sourceName":"","sitePageId":"51877280"} ;
+    </script>
+    <script type="text/javascript">
+      videoLandingPageAnalytics().trackInitialPageView();
+    </script>
+
+</body>
+</html>

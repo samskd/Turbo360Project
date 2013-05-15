@@ -7,10 +7,10 @@ package edu.nyu.cs.cs2580;
  * @author congyu
  */
 class ScoredDocument implements Comparable<ScoredDocument> {
-  private Document _doc;
+  private DocumentIndexed _doc;
   private double _score;
 
-  public ScoredDocument(Document doc, double score) {
+  public ScoredDocument(DocumentIndexed doc, double score) {
     _doc = doc;
     _score = score;
   }
@@ -22,7 +22,10 @@ class ScoredDocument implements Comparable<ScoredDocument> {
   public String asTextResult() {
     StringBuffer buf = new StringBuffer();
     buf.append(_doc._docid).append("\t");
-    buf.append(_doc.getTitle()).append("\t");
+    if(_doc._isTweet)
+    	buf.append("<a href='"+_doc.getUrl()+"'>"+_doc.getTitle()+"</a>").append("\t");
+    else
+    	buf.append(_doc.getTitle()).append("\t");
     //buf.append(_doc.getPageRank()).append("\t");
     //buf.append(_doc.getNumViews()).append("\t");
     buf.append(_score);

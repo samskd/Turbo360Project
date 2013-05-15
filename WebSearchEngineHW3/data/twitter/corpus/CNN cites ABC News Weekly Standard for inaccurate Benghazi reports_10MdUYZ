@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<title>CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports</title>
+<meta name="keywords" content="ABC News,CNN,Weekly Standard,Benghazi," /><meta name="viewport" content="width=device-width" />
+    <script>
+        if (!(document.cookie.indexOf("sd=") == 0 || document.cookie.indexOf("; sd=") >= 0 )) {
+            if (window.screen.width * window.screen.height / Math.pow((window.devicePixelRatio == undefined || navigator.userAgent.match(/(iPhone|iPod|iPad)/i) ? 1 : window.devicePixelRatio),2) < 480000) {
+                window.location=window.location.toString().replace(/.*\/\/[^\/]+/, "http://m.washingtonpost.com");
+            }
+        }
+
+        if ((document.cookie.indexOf("sd=1") == 0 || document.cookie.indexOf("; sd=1") >= 0 )) {
+            document.cookie= "sd=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=.washingtonpost.com;"; // clear cookie
+        }
+    </script>	
+
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<!-- no additions needed here, variables are in place -->
+<script type="text/javascript">
+    
+        var siteContext           = '/rw/sites/twpweb';
+        var sectionContext        = '/';
+        var eidosBase             = 'http://www.washingtonpost.com';
+        
+         var navNode = "opinions";var thisNode = "opinions";var commercialNode = "opinions";var wp_channel = "wp - opinions";var wp_content_category = "wp - opinions";var wp_content_type = "blog";var wp_blogname = "erik-wemple";var wp_page_name = "opinions:blog:erik-wemple - 5086 - 20130514 - cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports";var wp_author = "Erik Wemple";var wp_section_front = "opinions";var wp_subsection = "opinions";var wp_source = "washingtonpost.com";var wp_hierarchy = "opinions|blog";var wp_application = "application - projects";        
+
+        var TWP                   = window.TWP || {}
+        
+        TWP.Data                  = ( typeof TWP.Data == 'undefined' ) ? {} : TWP.Data;
+        TWP.Data.NN               = {
+            init: function(){
+                this.pageType     = 'SectionPage';
+                this.canonicalURL = window.location.href;
+                this.shortURL     = '';
+                this.section      = '/';
+                this.homepage     = true;
+            }
+        }
+        TWP.Data.NN.init();
+        wp_meta_data = {showAds:true,showPreRollAds:false,isHomepage: false,isMultimedia: false,wt:"BlogStory",contentName:["erik-wemple"],page_id:["5086"],author:["Erik Wemple"], subsection:[""],keywords:["ABC News,CNN,Weekly Standard,Benghazi,"],contentType:["BlogStory"]}    
+    </script>
+
+<link rel="alternate" type="application/rss+xml" title="Erik Wemple &raquo; Feed" href="http://www.washingtonpost.com/blogs/erik-wemple/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Erik Wemple &raquo; Comments Feed" href="http://www.washingtonpost.com/blogs/erik-wemple/comments/feed/" />
+<link rel='stylesheet' id='wp-email-css'  href='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/plugins/wp-email/email-css.css?ver=2.60' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/themes/wapo-blogs/css/lib/fontawesome/css/font-awesome.min.css?ver=3.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://js.washingtonpost.com/wpost/js/combo?c=true&#038;m=true&#038;context=eidos&#038;r=%2Fjquery-1.7.1.js&#038;ver=1.7.3'></script>
+<script type='text/javascript' src='http://js.washingtonpost.com/1h/twp-scripts.js?jsGroups=adScripts&#038;ver=3.5.1'></script>
+<script type='text/javascript' src='http://js.washingtonpost.com/1h/twp-internal.js?ver=3.8'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/rw/sites/twpweb/js/util/util-ajax-replace-2.0.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/rw/sites/twpweb/js/plugin/plugin.accordion-1.0.0.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/themes/wapo-blogs/inc/wapo-blogs-scripts.js?ver=4.2'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/themes/wapo-blogs/js/sharebar-scripts.js?ver=4.0'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/themes/wapo-blogs/js/floating-menus.js?ver=4.3'></script>
+<script type='text/javascript' src='http://bunsen.wapolabs.com/revplat/prod/1.4.5-5/js/revplat.wp-config.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://bunsen.wapolabs.com/revplat/prod/1.4.5-5/js/revplat.min.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.washingtonpost.com/blogs/erik-wemple/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.washingtonpost.com/blogs/erik-wemple/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='AP subpoena: Journo says he lost sources in 2001 case' href='http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/ap-subpoen/' />
+<link rel='next' title='AP subpoena: Government wants your sources' href='http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/ap-subpoena-government-wants-your-sources/' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/' />
+<link rel='shortlink' href='http://www.washingtonpost.com/blogs/erik-wemple/?p=5086' />
+<!-- Infinite-Scroll Style -->
+	<style type="text/css">
+	 #infscr-loading { text-align: center; }
+	</style>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+
+// Begin chartbeat code
+try {
+    var _sf_async_config={uid:19624,domain:"washingtonpost.com"};
+    _sf_async_config.sections = thisNode + "," + wp_blogname;
+    _sf_async_config.path = document.location.pathname;
+    _sf_async_config.useCanonical =  true;
+    _sf_async_config.title = 'CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports';    
+    jQuery(document).ready(function() {
+        jQuery.getScript('http://static.chartbeat.com/js/chartbeat.js');
+    });
+} catch(e) {
+    // catch error
+}
+    
+</script>
+<link rel="pingback" href="http://www.washingtonpost.com/blogs/erik-wemple/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.washingtonpost.com/blogs/erik-wemple/wp-content/themes/wapo-blogs/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="http://www.washingtonpost.com/blogs/erik-wemple/wp-content/themes/erik-wemple/style.css?token=2013051055550" />
+<link type="text/css" rel="stylesheet" href="http://css.washingtonpost.com/wpost/css/combo?context=eidos&c=true&r=/2.0.0/right-rail.css&r=/2.0.0/modal.css&r=/2.0.0/accordion.css&r=/2.0.0/flipper.css&r=/2.0.0/modules.css&r=/2.0.0/network-news.css&r=/2.0.0/rules.css" charset="utf-8">
+<script src="http://platform.tumblr.com/v1/share.js"></script>
+
+	<meta property="og:url" content="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/"/>  
+	<meta property="og:title" content="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" />  
+	<meta property="og:description" content="A White House official may not have been as partial to the State Department as previous reports suggested. Does that matter? " />  
+	<meta property="og:image" content="http://www.washingtonpost.com/blogs/erik-wemple/files/2013/05/TV_CNN_Tapper.JPEG-07707-300x168.jpg" /> 
+
+</head>
+
+<body class="single single-post postid-5086 single-format-standard single-author singular two-column right-sidebar">
+
+
+<div id="page" class="hfeed">
+  <!-- HEADER INCLUDES -->
+  <!-- EXTERNAL HEADER -->
+<!-- JSONP Header -->
+<div id="header-v3" class="external preloaded opinions" data-config="hotTopics=false&blogId=erik-wemple&section=opinions">
+  <!-- DO NOT REMOVE THIS COMMENT -->
+<div id="header-v3" data-tracking-ctx="nav" data-tracking-section="opinions" style="visibility:hidden;">
+
+	<script type="text/javascript" src="http://js.washingtonpost.com/wp-srv/otto/js/mbox.js"></script>
+	<div class="mboxDefault"></div>
+		<script type="text/javascript" class="strip-proof">
+		window.mboxCreate(
+			'global'
+				,"loggedIn="+(/wpniuser=[^;]+/.test( document.cookie )),
+				"pageType="+((!!window.wp_content_type)?wp_content_type:''),
+				"subSection="+((!!window.thisNode)?thisNode:''),
+				"pageName="+((!!window.wp_page_name)?wp_page_name:'')
+			
+		);
+		</script><div id="utility-wrapper" data-tracking-type="utility">
+	<ul id="utility-links" class="inline-list">
+	<li id="global-signin" style="min-width:32px;"></li>
+    <li id="global-registration" class="no-right" style="margin-right:25px;"></li>      
+    <li><a href="http://www.washingtonpost.com/wl/jobs/home">Jobs</a></li>
+    <li><a href="http://www.washingtonpost.com/realestate/">Real Estate</a></li>
+    <li><a href="http://www.washingtonpost.com/rentals/?nid=top_rentals">Rentals</a></li>
+    <li><a href="http://www.washingtonpost.com/cars">Cars</a></li>    
+	<li><a href="https://ssl.washingtonpost.com/acquisition/">Print Subscription</a></li>	
+	<li><a href="http://thewashingtonpost.newspaperdirect.com/epaper/viewer.aspx">Today's Paper</a></li>
+	<li><a href="http://www.washingtonpost.com/discussions">Discussions</a></li>
+	<li><a href="http://www.washingtonpost.com/gog/?nid=top_gog">Going Out Guide</a></li>
+	<li><a href="http://personalpost.washingtonpost.com/">Personal Post</a></li>	
+	<li class="no-right"><a href="/video">Videos</a></li>		
+	</ul>
+
+
+<script type="text/cjs">
+		
+function mypopup()
+	{
+		mywindow = window.open("http://www.facebook.com/washingtonpost", "mywindow", "location=1, status=1, scrollbars=1, width=500, height=500");
+		mywindow.moveTo(0, 0);
+		}
+</script></div><div id="main-nav-wrapper-v2" class="relative notHome">
+	<ul id="main-nav" class="inline-list" data-tracking-type="main">
+		<li class="first top" data-tracking-section="home">
+				<a class="top home" href="http://www.washingtonpost.com">Home</a> 
+			</li>
+		<li class="top politics" data-tracking-section="politics">
+						<a class="top uc" href="http://www.washingtonpost.com/politics">Politics</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/politics">In Politics</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/congress/gJQArkxgtW_topic.html">Congress</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/courts-and-law/gJQAvz8ptW_topic.html">Courts &amp; Law</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/federal-government">The Fed Page</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/health-care-reform-supreme-court-hearings/gIQAYBC67R_topic.html">Health Care</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/polling">Polling</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/white-house/gJQAugUh6W_topic.html">White House</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/politics/washington-in-transition">Washington in Transition</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/mdpolitics">Md. Politics</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/vapolitics">Va. Politics</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/dcpolitics">D.C. Politics</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/politics/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/post-politics/wp/2013/05/14/shorthand-156/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/rachel_weiner.jpg"  height="30" width="30" alt="rachel_weiner" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/post-politics/wp/2013/05/14/shorthand-156/"><strong>	Shorthand</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/post-politics">Post Politics</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/rachel-weiner/2011/03/08/ABDMyKP_page.html"> Rachel Weiner</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="/blogs/fact-checker/post/obamas-claim-he-called-benghazi-an-act-of-terrorism/2013/05/13/7b65b83e-bc14-11e2-97d4-a479289a31f9_blog.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/glenn_kessler.jpg"  height="30" width="30" alt="glenn_kessler" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/blogs/fact-checker/post/obamas-claim-he-called-benghazi-an-act-of-terrorism/2013/05/13/7b65b83e-bc14-11e2-97d4-a479289a31f9_blog.html"><strong>	Obama's claim on 'act of terrorism'</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/fact-checker">The Fact Checker</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/glenn-kessler/2011/03/02/ABzNymP_page.html"> Glenn Kessler</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/she-the-people/wp/2013/05/14/weighing-justice-and-vengeance-from-boston-to-cleveland-to-philadelphia/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="mary_c_curtis" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/she-the-people/wp/2013/05/14/weighing-justice-and-vengeance-from-boston-to-cleveland-to-philadelphia/"><strong>	Weighing justice and vengeance...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/she-the-people">She The People</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/mary-c-curtis/2012/11/14/226665ee-2e84-11e2-89d4-040c9330702a_page.html"> Mary C. Curtis</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/the-fix/wp/2013/05/14/jay-carneys-day-in-8-faces/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/chris_cillizza.jpg"  height="30" width="30" alt="chris_cillizza" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/the-fix/wp/2013/05/14/jay-carneys-day-in-8-faces/"><strong>	Jay Carney's day â in 7 faces</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/the-fix">The Fix</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/chris-cillizza/2011/02/24/AB7OmvI_page.html"> Chris Cillizza</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top opinions" data-tracking-section="opinions">
+						<a class="top uc on" href="http://www.washingtonpost.com/opinions">Opinions</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/opinions">In Opinions</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/opinions/toles">Toles Cartoons
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/opinions/telnaes">Telnaes Animations</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/the-posts-view/2011/12/07/gIQAoEIscO_page.html">The Post&#039;s View</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/opinions/left-leaning">Left-Leaning</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/opinions/right-leaning">Right-Leaning</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/opinions/local-opinions">Local Opinions</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/opinions/personalities">Columnist Index</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/opinions">Featured Blogs</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/compost/wp/2013/05/14/the-unfettered-press-whats-in-a-word/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/alexandra_petri.jpg"  height="30" width="30" alt="alexandra_petri" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/compost/wp/2013/05/14/the-unfettered-press-whats-in-a-word/"><strong>	'Unfettered'</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/compost">ComPost</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/alexandra-petri/2011/02/02/AB3jKAJ_page.html"> Alexandra Petri</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/plum-line/wp/2013/05/14/happy-hour-roundup-104/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/plum-line.jpg"  height="30" width="30" alt="jonathan_bernstein" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/plum-line/wp/2013/05/14/happy-hour-roundup-104/"><strong>	Happy Hour Roundup</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/plum-line">The Plum Line</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/jonathan-bernstein/2013/02/06/fb6c975c-70a4-11e2-8b8d-e0b59a1b8e2a_page.html"> Jonathan Bernstein</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/post-partisan/wp/2013/05/14/postscript-will-and-watergates/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/post-partisan.jpg"  height="30" width="30" alt="rachel_manteuffel" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/post-partisan/wp/2013/05/14/postscript-will-and-watergates/"><strong>	PostScript: Will and Watergates</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/post-partisan">PostPartisan</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/jonathan-bernstein/2013/02/06/fb6c975c-70a4-11e2-8b8d-e0b59a1b8e2a_page.html"> Rachel Manteuffel</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/right-turn/wp/2013/05/14/gang-of-eight-moves-forward/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/jennifer_rubin.jpg"  height="30" width="30" alt="jennifer_rubin" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/right-turn/wp/2013/05/14/gang-of-eight-moves-forward/"><strong>	Gang of Eight vs. the fringe</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/right-turn">Right Turn</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/jennifer-rubin/2011/02/24/ABbIUXN_page.html"> Jennifer Rubin</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top local" data-tracking-section="local">
+						<a class="top uc" href="http://www.washingtonpost.com/local">Local</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/local">In Local</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/dc">D.C.
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/md">Maryland
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/va">Virginia
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/local/crime">Crime
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/local/education">Education
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/local/obituaries">Obituaries
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/local/traffic-commuting">Transportation
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/weather">Weather
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/local/therootdc">The Root DC
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/local/blogs-columns">Blogs &amp; Columns
+			</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/local/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/capital-weather-gang/wp/2013/05/14/pm-update-here-comes-the-warmth-seasonal-allergies-explained-video/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/jason_samenow.jpg"  height="30" width="30" alt="jason_samenow" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/capital-weather-gang/wp/2013/05/14/pm-update-here-comes-the-warmth-seasonal-allergies-explained-video/"><strong>	PM Update: Here comes the warmth</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/capital-weather-gang">Capital Weather Gang</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/jason-samenow/2011/08/01/gIQAMnn9nI_page.html"> Jason Samenow</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/going-out-guide/wp/2013/05/14/the-top-10-moments-from-anthony-bourdains-d-c-show/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/tim_carman.jpg"  height="30" width="30" alt="tim_carman" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/going-out-guide/wp/2013/05/14/the-top-10-moments-from-anthony-bourdains-d-c-show/"><strong>	The top 10 moments from Anthony...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/going-out-gurus">Going Out Guide</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/tim-carman/2011/05/12/AFbgMy0G_page.html"> Tim Carman</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top sports" data-tracking-section="sports">
+						<a class="top uc" href="http://www.washingtonpost.com/sports">Sports</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/sports">In Sports</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/redskins">
+				Redskins/NFL
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/capitals">
+				Capitals/NHL
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/wizards">Wizards/NBA
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/nationals">Nationals/MLB
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/dcunited">
+				D.C.
+				United/Soccer</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/colleges">
+				Colleges
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/highschools">AllMetSports
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/blogs-columns">Blogs &amp; Columns
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/forums">Forums
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/sports/othersports">Other
+				Sports</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/sports/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/capitals-insider/wp/2013/05/14/ovechkin-it-doesnt-matter-if-you-score-or-not-you-have-to-win/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/katie_carrera.jpg"  height="30" width="30" alt="katie_carrera" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/capitals-insider/wp/2013/05/14/ovechkin-it-doesnt-matter-if-you-score-or-not-you-have-to-win/"><strong>	Ovechkin: 'Nobody remember losers'</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/capitals-insider">Capitals Insider</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/2011/02/24/ABJAnxI_page.html"> Katie Carrera</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/dc-sports-bog/wp/2013/05/14/post-sports-live-capitals-collapse-harpers-playing-style-and-strasburgs-struggles/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="mitch_rubin" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/dc-sports-bog/wp/2013/05/14/post-sports-live-capitals-collapse-harpers-playing-style-and-strasburgs-struggles/"><strong>	PSL: Caps, Harper and Strasburg</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/dc-sports-bog">DC Sports Bog</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/2011/02/24/ABJAnxI_page.html"> Mitch Rubin</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/football-insider/wp/2013/05/14/redskins-sign-wide-receiver-lance-lewis/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="keith_mcmillan" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/football-insider/wp/2013/05/14/redskins-sign-wide-receiver-lance-lewis/"><strong>	Redskins sign WR Lance Lewis</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/football-insider">The Insider</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/keith-mcmillan/2012/10/04/cb9ed9a6-0e32-11e2-bb5e-492c0d30bff6_page.html"> Keith McMillan</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/nationals-journal/wp/2013/05/14/tonights-nationals-lineup-bryce-harper-denard-span-out/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/adam_kilgore.jpg"  height="30" width="30" alt="adam_kilgore" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/nationals-journal/wp/2013/05/14/tonights-nationals-lineup-bryce-harper-denard-span-out/"><strong>	Harper, Span out</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/nationals-journal">Nationals Journal</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/adam-kilgore/2011/02/25/ABj1o9I_page.html"> Adam Kilgore</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top national" data-tracking-section="national">
+						<a class="top" href="http://www.washingtonpost.com/national">National</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/national">In National</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/national/energy-environment">Energy &amp;
+				Environment</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/national/health-science">Health &amp; Science
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/national/higher-education">Education
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/national-security">National Security
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/investigations">Investigations</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/national/on-faith">On Faith
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/national/on-leadership">On Leadership
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/national/on-innovations">Innovations
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/ongiving">On Giving
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/wp-srv/interactivity/corrections/">Corrections</a>
+													</li>
+										
+									</ul>
+							</div>
+						<a class="subnav-ad" target="_blank" href="http://www.washingtonpost.com/business/capitalbusiness/a-game-changer-for-career-advancement-and-job-placement/82c377bc-9728-11e2-b68f-dc5c4b47e519_topic.html">
+								<img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/sites/twpweb/img/ads/subnav-ads/national_2.png?v=2"  /></a>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/national/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/innovations/wp/2013/05/14/the-doctor-will-see-and-know-everything-about-you-now/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/emi_kolawole.jpg"  height="30" width="30" alt="emi_kolawole" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/innovations/wp/2013/05/14/the-doctor-will-see-and-know-everything-about-you-now/"><strong>	The doctor will see and know everything...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/innovations">Innovations</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/emi-kolawole/2011/03/02/AB6t4sM_page.html"> Emi Kolawole</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/on-leadership/wp/2013/05/14/the-trio-of-scandals-engulfing-the-white-house/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/jena_mcgregor.jpg"  height="30" width="30" alt="jena_mcgregor" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/on-leadership/wp/2013/05/14/the-trio-of-scandals-engulfing-the-white-house/"><strong>	The trio of scandals engulfing...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/on-leadership">On Leadership</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/jena-mcgregor/2011/02/28/ABWXIIQ_page.html"> Jena McGregor</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/on-faith/wp/2013/05/14/dan-browns-inferno-does-dante/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="elizabeth_tenety" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/on-faith/wp/2013/05/14/dan-browns-inferno-does-dante/"><strong>	Hell is expected to be hot with...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/on-faith">On Faith</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/elizabeth-tenety/2011/03/16/ABIQauf_page.html"> Elizabeth Tenety</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top world" data-tracking-section="world">
+						<a class="top" href="http://www.washingtonpost.com/world">World</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/world">In World</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/world/africa">Africa
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/americas">The
+				Americas</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/asia-pacific">Asia &amp;
+				Pacific
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/europe">Europe
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/middle-east">Middle East
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/national-security">National Security
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/war-zones">War Zones
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/world/special-reports">Special Reports
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/blogs/worldviews">Columns &amp; Blogs</a>
+													</li>
+										
+									</ul>
+							</div>
+						<a class="subnav-ad" target="_blank" href="http://ad.doubleclick.net/clk;266928255;84638425;y?http://chinawatch.washingtonpost.com/">
+								<img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/sites/twpweb/img/ads/subnav-ads/world.png?v=1"  /><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://ad.doubleclick.net/ad/wpni.test/chinawatchnavtile;sz=1x1;ord=[timestamp]?"  height="1" width="1" style="border:0; visibility:hidden;" /></a>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/blogs/worldviews/">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/a-heartbreaking-photo-of-a-young-syrian-girl-selling-bread-amid-destruction/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/max_fisher.jpg"  height="30" width="30" alt="max_fisher" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/a-heartbreaking-photo-of-a-young-syrian-girl-selling-bread-amid-destruction/"><strong>	Syrian girl sells bread amid destruction</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/blogpost">WorldViews</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/max-fisher/2012/10/10/9d0a891e-12e7-11e2-a16b-2c110031514a_page.html"> Max Fisher</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/how-europeans-stereotype-one-another-in-one-chart/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/max_fisher.jpg"  height="30" width="30" alt="max_fisher" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/how-europeans-stereotype-one-another-in-one-chart/"><strong>	How Europeans stereotype one another...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/blogpost">WorldViews</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/max-fisher/2012/10/10/9d0a891e-12e7-11e2-a16b-2c110031514a_page.html"> Max Fisher</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/kenyans-release-three-dozen-pigs-in-front-of-parliament/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="anup_kaphle" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/kenyans-release-three-dozen-pigs-in-front-of-parliament/"><strong>	Kenyans release pigs in front of...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/blogpost">WorldViews</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/anup-kaphle/2012/02/08/gIQAxtk8yQ_page.html"> Anup Kaphle</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/pew-poll-shows-europeans-losing-faith-in-the-e-u/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="eliza_mackintosh" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/14/pew-poll-shows-europeans-losing-faith-in-the-e-u/"><strong>	Europeans losing faith in the EU</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/blogpost">WorldViews</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/anup-kaphle/2012/02/08/gIQAxtk8yQ_page.html"> Eliza Mackintosh</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top business" data-tracking-section="business">
+						<a class="top" href="http://www.washingtonpost.com/business">Business</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/business">In Business</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/business/economy/gJQAJOtp1V_topic.html">
+				Economy
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://washpost.bloomberg.com/industries/">Industries</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/business/local-business">Local Business
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://washpost.bloomberg.com/market-news/">Markets</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/business/policy-and-regulation/gJQAprsL7V_topic.html">Policy
+				&amp;
+				Regulation</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/business/technology">Technology
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://washpost.bloomberg.com/worldbusiness/">World
+				Business</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/capital_business">Capital Business</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/business/on-small-business">On Small Business
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/business/on-it">On I.T.
+			</a>
+													</li>
+										
+									</ul>
+							</div>
+						<a class="subnav-ad" target="_blank" href="http://www.washingtonpost.com/business/on-small-business/small-business-success-how-to-take-your-company-online/3582e0d8-9871-11e2-b68f-dc5c4b47e519_topic.html">
+								<img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/sites/twpweb/img/ads/subnav-ads/business_2.png?v=2"  /></a>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/business/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="/business/michelles-mailbag-credit-card-limits-and-saving-while-youre-young/2013/05/13/d8c0c794-bbd8-11e2-97d4-a479289a31f9_story.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/michelle_singletary.jpg"  height="30" width="30" alt="michelle_singletary" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/business/michelles-mailbag-credit-card-limits-and-saving-while-youre-young/2013/05/13/d8c0c794-bbd8-11e2-97d4-a479289a31f9_story.html"><strong>	Michelle's Mailbag: Credit card...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/michelle-singletary/2011/02/24/ABWCMzI_page.html">The Color of Money</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/michelle-singletary/2011/02/24/ABWCMzI_page.html"> Michelle Singletary</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="/blogs/post-tech/post/the-circuit-federal-judges-to-discuss-patent-system-at-national-press-club/2013/05/14/a08ad9c6-bc8e-11e2-97d4-a479289a31f9_blog.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/hayley_tsukayama.jpg"  height="30" width="30" alt="hayley_tsukayama" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/blogs/post-tech/post/the-circuit-federal-judges-to-discuss-patent-system-at-national-press-club/2013/05/14/a08ad9c6-bc8e-11e2-97d4-a479289a31f9_blog.html"><strong>	The Circuit: Federal judges to...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/post-tech">Post Tech</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/hayley-tsukayama/2011/03/25/AFwMAnXB_page.html"> Hayley Tsukayama</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/14/read-the-inspector-general-report-on-the-irs-scandal/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/brad_plumer.jpg"  height="30" width="30" alt="brad_plumer" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/14/read-the-inspector-general-report-on-the-irs-scandal/"><strong>	READ: The Inspector General report...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/wonkblog">Wonkblog</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/brad-plumer/2011/07/28/gIQAPrqSfI_page.html"> Brad Plumer</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top technology" data-tracking-section="technology">
+						<a class="top" href="http://www.washingtonpost.com/business/technology">Tech</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/technology">In Technology</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/business/technology/policy">
+				Policy
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/technology/gadget-reviews">Gadget
+				Reviews
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/national/on-innovations">Innovation
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/technology/green-technology">Green
+				Technology
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/technology/tech-galleries">Photo
+				Galleries
+			</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/technology/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="/business/technology/bing-releases-translation-tool-for-klingon/2013/05/14/e30e039e-bccb-11e2-97d4-a479289a31f9_story.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/hayley_tsukayama.jpg"  height="30" width="30" alt="hayley_tsukayama" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/business/technology/bing-releases-translation-tool-for-klingon/2013/05/14/e30e039e-bccb-11e2-97d4-a479289a31f9_story.html"><strong>	Bing releases translation tool...</strong></a></span><br/>
+										<span class="blog-title">
+									</span> 
+									<span class="blog-byline"><a href="http://www.washingtonpost.com/hayley-tsukayama/2011/03/25/AFwMAnXB_page.html"> Hayley Tsukayama</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="/blogs/post-tech/post/the-circuit-federal-judges-to-discuss-patent-system-at-national-press-club/2013/05/14/a08ad9c6-bc8e-11e2-97d4-a479289a31f9_blog.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/hayley_tsukayama.jpg"  height="30" width="30" alt="hayley_tsukayama" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/blogs/post-tech/post/the-circuit-federal-judges-to-discuss-patent-system-at-national-press-club/2013/05/14/a08ad9c6-bc8e-11e2-97d4-a479289a31f9_blog.html"><strong>	The Circuit: Federal judges to...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/post-tech">Post Tech</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/hayley-tsukayama/2011/03/25/AFwMAnXB_page.html"> Hayley Tsukayama</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top lifestyle" data-tracking-section="lifestyle">
+						<a class="top" href="http://www.washingtonpost.com/lifestyle">Lifestyle</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/lifestyle">In Lifestyle</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/advice">Advice
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/carolyn-hax/2011/02/24/ABBRcOJ_page.html">Carolyn Hax
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/food">Food
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/home-garden">Home &amp; Garden
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/style">Style
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/travel">Travel
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/weddings">Weddings
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/wellness">Wellness
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/magazine">Magazine
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/kidspost">KidsPost
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/lifestyle/on-parenting">On Parenting
+			</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/lifestyle/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/style-blog/wp/2013/05/14/randy-rogers-band-britta-persson-chapin-sisters-critics-notebook/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="chris_richards" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/style-blog/wp/2013/05/14/randy-rogers-band-britta-persson-chapin-sisters-critics-notebook/"><strong>	Randy Rogers Band, Britta Persson...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/arts-post">The Style Blog</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/chris-richards/2011/02/28/ABuyksM_page.html"> Chris Richards</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/reliable-source/wp/2013/05/14/sen-patrick-leahy-calls-out-the-ugliest-buildings-in-washington/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/the_reliable_source.jpg"  height="30" width="30" alt="the_reliable_source" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/reliable-source/wp/2013/05/14/sen-patrick-leahy-calls-out-the-ugliest-buildings-in-washington/"><strong>	Sen. Patrick Leahy calls out the...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/reliable-source">The Reliable Source</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/the-reliable-source/2011/02/02/AB309KP_page.html"> The Reliable Source</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top entertainment" data-tracking-section="entertainment">
+						<a class="top" href="http://www.washingtonpost.com/entertainment">Entertainment</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/entertainment">In Entertainment</a></div>
+							<ul class="normal">
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/books">Books</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/comics">Comics
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/gog/">Going Out Guide</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/horoscopes">Horoscopes
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/gog/dc-movies-theaters.html">Movies</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/museums">Museums
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/music">Music
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://games.washingtonpost.com/">Puzzles &amp; Games
+			</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/theater-dance">Theater &amp;
+				Dance</a>
+													</li>
+										
+									<li>		
+												<a href="http://www.washingtonpost.com/entertainment/tv">TV
+			</a>
+													</li>
+										
+									</ul>
+							</div>
+						</div>
+		<div class="wp-column six margin-right">
+	<div data-tracking-type="blogcol">
+			<div class="column-header">
+				<p class="heading heading2"><a  href="http://www.washingtonpost.com/entertainment/blogs-columns">Blogs & Columns</a></p></div>
+			<ul class="normal">
+				<li class="bio-image-wrapper">
+							<a href="/blogs/classical-beat/post/weekend-roundup-so-many-premieres-so-little-time/2013/04/23/33ff85fa-ab76-11e2-a8b9-2a63d75b5459_blog.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/anne_midgette.jpg"  height="30" width="30" alt="anne_midgette" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/blogs/classical-beat/post/weekend-roundup-so-many-premieres-so-little-time/2013/04/23/33ff85fa-ab76-11e2-a8b9-2a63d75b5459_blog.html"><strong>	So many premieres, so little time</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/classical-beat">Classical Beat</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/anne-midgette/2011/02/25/ABvDSCJ_page.html"> Anne Midgette</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="/blogs/tv-column/post/abcs-new-schedule-dancing-with-the-stars-just-one-night-a-week-rebel-wilson-comedy-gets-post-modern-family-spot/2013/05/14/57e1fa48-bcb0-11e2-9b09-1638acc3942e_blog.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/header_default.jpg"  height="30" width="30" alt="lisa_de_moraes" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/blogs/tv-column/post/abcs-new-schedule-dancing-with-the-stars-just-one-night-a-week-rebel-wilson-comedy-gets-post-modern-family-spot/2013/05/14/57e1fa48-bcb0-11e2-9b09-1638acc3942e_blog.html"><strong>	ABC's new schedule: 'Dancing With...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/tv-column">The TV Column</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/lisa-de-moraes/2011/03/01/ABj0TKL_page.html"> Lisa de Moraes</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="/blogs/comic-riffs/post/iron-man-3-tony-stark-holds-off-the-great-gatsbys-great-opening-nears-1b-worldwide/2013/05/12/4a4aa78e-bb2c-11e2-97d4-a479289a31f9_blog.html"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/michael_cavna.jpg"  height="30" width="30" alt="michael_cavna" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="/blogs/comic-riffs/post/iron-man-3-tony-stark-holds-off-the-great-gatsbys-great-opening-nears-1b-worldwide/2013/05/12/4a4aa78e-bb2c-11e2-97d4-a479289a31f9_blog.html"><strong>	'Iron Man 3' holds off 'Great Gatsby'...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/comic-riffs">Comic Riffs</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/michael-cavna/2011/03/04/AB01KwN_page.html"> Michael Cavna</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					<li class="bio-image-wrapper">
+							<a href="http://www.washingtonpost.com/blogs/going-out-guide/wp/2013/05/14/the-top-10-moments-from-anthony-bourdains-d-c-show/"><img class=" nav-unloaded" src="http://www.washingtonpost.com/rw/sites/twpweb/img/blogs/spacer.gif" data-src="http://img.washingtonpost.com/rw/WashingtonPost/Content/Staff-Bio/Images/header-images/tim_carman.jpg"  height="30" width="30" alt="tim_carman" /></a>
+									</li>
+						<li class="blogger-metadata-wrapper">
+							<div class="blogger-metadata">
+								<div>
+									<span><a href="http://www.washingtonpost.com/blogs/going-out-guide/wp/2013/05/14/the-top-10-moments-from-anthony-bourdains-d-c-show/"><strong>	The top 10 moments from Anthony...</strong></a></span><br/>
+										<span class="blog-title">
+									<a href="http://www.washingtonpost.com/blogs/going-out-gurus">Going Out Guide</a>
+											</span> 
+									<span class="blog-byline">| <a href="http://www.washingtonpost.com/tim-carman/2011/05/12/AFbgMy0G_page.html"> Tim Carman</a>	
+										</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+		</div>
+		
+
+	</div>
+<!--/col --></div>
+</div></li>
+				<li class="top jobs" data-tracking-section="jobs">
+						<a class="top" href="http://www.washingtonpost.com/wl/jobs/home">Jobs</a>
+						<div class="rollMe" style="display: block; visibility:hidden;">
+	<div class="rollMeInner" class="wp-row">
+		<div class="wp-column three subnav first-col">
+						<div data-tracking-type="in">
+							<div class="column-header"><a href="http://www.washingtonpost.com/wl/jobs/home">In Jobs</a></div>
+							</div>
+						</div>
+		</div>
+</div></li>
+				<style>
+			#header-v3 #main-nav li.realestate{
+				display:none;
+			}
+			
+			#header-v3 #main-nav li a.top, 
+			#header-v3 #main-nav li a.top:link, 
+			#header-v3 #main-nav li a.top:visited, 
+			#header-v3 #main-nav li a.top:hover {
+				font-size:13px;
+				padding: 0 4px 0 5px !important;
+			}
+			
+			#header-v3 #main-nav li a.home, 
+			#header-v3 #main-nav li a.home:link, 
+			#header-v3 #main-nav li a.home:visited, 
+			#header-v3 #main-nav li a.home:hover {
+				padding: 0px !important;
+			}
+			
+			#header-v3 #main-nav li.politics {
+				border-left:none;
+			}
+			
+			#header-v3 #main-nav li.classifieds {
+				border-right:none;
+			}
+			
+			#header-v3 #main-nav-wrapper-v2 .classifieds .rollMe {
+				right:-1px;
+				height:140px;
+				width:260px;
+			}
+			
+			#header-v3 #main-nav li.politics:hover {
+				-moz-box-shadow: none;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+		</style>
+		
+		<li class="top classifieds" data-tracking-section="classifieds">
+			<a class="top" href="http://www.washingtonpost.com/wp-srv/admin/classifieds/" style="font-weight:bold;">More</a>
+			<div class="rollMe" style="display: block; visibility:hidden;">
+			<div class="rollMeInner" data-tracking-type="in">
+				<div class="more-left">
+					<ul class="normal">
+						<li><a href="http://www.washingtonpost.com/classifieds">Classifieds</a></li>
+						<li><a href="http://www.washingtonpost.com/cars">Cars</a></li>
+						<li><a href="http://www.thecapitoldeal.com/">Deals</a></li>
+						<li><a href="http://www.washingtonpost.com/realestate">Real Estate</a></li>
+						<li><a href="http://www.washingtonpost.com/rentals/?nid=top_rentals">Rentals</a></li>
+						<li><a href="http://www.washingtonpost.com/photography">Photos</a></li>
+					</ul>
+				</div>
+				<div class="more-right">
+					<ul class="normal">		
+						<li><a href="http://findnsave.washingtonpost.com">Find&amp;Save</a></li>				
+						<li><a href="http://www.washingtonpost.com/local/obituaries">Obituaries</a></li>
+						<li><a href="http://pqasb.pqarchiver.com/washingtonpost/search.html">Archives</a></li>
+						<li><a href="http://www.washingtonpost.com/topics">Topics</a></li>
+						<li><a href="http://www.washingtonpost.com/blogs">Blogs</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</li>
+		<!--NAV_TILE AD BEGIN-->
+			<li id="slug_nav_tile" style="display:block;">
+				<script type="text/javascript">placeAd2(commercialNode,"nav_tile",false,"");</script>
+			</li>
+			</ul>
+
+</div>
+
+<!-- begin: branding -->
+<div id="masthead-v4" data-tracking-type="masthead">
+	<div class="leftArea hItem">
+				<a alt="" href="http://www.washingtonpost.com/blogs/erik-wemple">
+						<div class="sectionTitle opinions">
+							<div class="erik-wemple left"><div style="background-image:url('http://img.wpdigital.net/rw/WashingtonPost/Content/Staff-Bio/Images/opinions-blogs/external/erik-wemple-80x80-white-bg.png'); height:76px; width:80px; margin-top:-9px;"></div></div>
+        <div class="FranklinITCProThin darkgrayfont left"><div class="erik-wemple">
+        <h1 style="height:46px;line-height:48px;color:#222;">Erik Wemple</h1>
+        <h2 style="height:16px;line-height:26px;color:#222;">A reported opinion blog on news media</h2>
+        </div></div></div>
+					</a>
+					</div> 		
+		<div class="rightArea hItem">
+				<div id="tiffanyAd-hItem" class="tiffanyAd hItem">
+					<div class="adSpace">
+						<!-- START: tiffany_tile-ad -->
+		<div id="slug_tiffany_tile" style="display:none;">
+			<div id="wpni_adi_tiffany_tile" class="ads slug tiffany_tile header">
+				<script type="text/javascript">
+							placeAd2(commercialNode+'','tiffany_tile',false,'');
+						</script>
+					</div>
+			
+		</div>
+		<!-- END: tiffany_tile-ad -->
+	</div> </div> </div></div> <!-- end: branding --><div id="main-tertiary-nav-wrapper" >
+					</div>
+<div class="clear"></div>
+</div>
+
+</div> 
+<!-- LEADERBOARD AD -->
+	<div class="ad-top ads align-center block">
+		<div style="display: none;" id="slug_leaderboard">
+			<div class="ads slug leaderboard top" id="wpni_adi_leaderboard">
+				<script type="text/javascript">if(document.location.href.indexOf('template=ipad')== -1){ placeAd2(commercialNode+'','leaderboard',false,''); }
+				</script>
+			</div>
+		</div>
+	</div>	<!-- MASTHEAD TAG NAV -->
+<div id="blog-tag-search-subnav">
+    <div class="tags">
+        <ul class="mega-menu">
+            </li>            <li class="last"><a href="/blogs/erik-wemple/archives">Archives</a></li>
+        </ul>
+    </div><!-- /.tags -->
+    
+    <div class="right">
+        
+        <!-- MASTHEAD SHARBAR -->
+        <!-- masthead-sharebar.php -->
+<div id="newsharebarMasthead" class="topbar">
+  <div class="newshare">
+    <ul class="share mega-menu inline-list">
+      <li class="sharetop">
+        <span class="share-text">Follow:</span>
+      </li>
+      <li class="sharetop">
+        <a href="http://www.facebook.com/pages/Erik-Wemple/214299731938109" class="shareitems facebook" target="_blank"></a>
+      </li>
+      <li class="sharetop">
+        <a href="http://www.twitter.com/ErikWemple" class="shareitems twitter" target="_blank"></a>
+      </li>
+      <li class="sharetop">
+        <a href="http://feeds.washingtonpost.com/rss/rss_erik-wemple" class="shareitems rss" target="_blank"></a>
+      </li>
+    </ul>
+  </div>
+</div>
+        <!-- START: 88x31-ad -->
+        <div id="slug_88x31" style="display:none;height:0;">
+            <div id="wpni_adi_88x31" class="ads slug 88x31 ">
+                <script type="text/javascript">
+                    placeAd2(commercialNode+'','88x31',false,'');
+                </script>
+            </div>
+        </div>
+        
+        <!-- SEARCH-->
+        <ul class="search-wrap">
+            <li data="none" class="search">
+                <form name="headersearch" action="http://www.washingtonpost.com/newssearch/search.html" method="get">
+                    <input class="restore text" type="text" name="st" onFocus="this.value = ''; this.onfocus = function () {}" value="Search The Washington Post">
+                    <input type="submit" class="button global-search" name="submit">
+                </form>
+            </li>
+        </ul>
+    </div><!-- /.right -->
+</div><!-- /#blog-tag-search-subnav -->
+
+<div class="clear"></div>
+
+
+
+<div id="main">
+<div id="floatMenuWrapper" style="position:relative;">
+	<div id="floatMenu" style="top:20px;">
+       	<div class="comments">
+		    <div class="float-comment">
+             	<a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/#comments"><div class="comment-number echo-counter" guid="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" style="top: 13px;font: 13px georgia;"></div></a>
+             </div>
+         	<div class="comments-count comment-number"><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/#comments">Comments</a></div>
+  		</div>
+       	
+        <div class="fb-like" data-send="false" data-layout="box_count" data-width="70" data-show-faces="false" style="margin:15px 15px 15px 13px;"></div>
+
+		<div class="twitter-share">
+         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+       </div>
+       <!--<div class="email-share">
+         <div class="share-hover"><a href="#">Email</a></div>
+		 <a href="#" class="float-sprite float-email comments-count"></a>
+       </div>-->
+        <div id="slider">
+    		<div class="float-sprite more comments-count" style="border-bottom:none;">More</div>
+	  
+            <div class="more-buttons">
+                <div class="gplus-float"><g:plusone size="small" annotation="none"></g:plusone></div>
+                <a href="http://digg.com/submit?phase=2?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Digg" class="digg float-sprite"></a>
+                <a href="http://del.icio.us/post?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Delicious" class="delicious float-sprite"> </a>
+                <a href="http://www.stumbleupon.com/submit?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="StumbleUpon" class="stumble float-sprite"> </a>
+                <a href="http://www.tumblr.com/share" title="Share on Tumblr" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Tumblr" class="tumble float-sprite"> </a>
+                 <a href="http://www.reddit.com/submit" class="reddit-share" onclick="window.location='http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit4.gif" alt="submit to reddit" border="0" /> </a> 
+               <a href="http://pinterest.com/post?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Pinterest" class="pinterest float-sprite" style="display: block;"></a>
+           </div>
+        </div>
+	</div>
+</div>
+<div id="primary">
+	<div id="content" role="main">
+					<!-- TOOLBAR -->
+					
+<article id="post-5086" class="post-5086 post type-post status-publish format-standard hentry category-uncategorized tag-abc-news tag-benghazi tag-cnn tag-weekly-standard">
+<!-- 
+<style>
+#utility-bar { font-size: 12px; font-family: Helvetica, sans-serif; margin-left: 0; }
+#utility-bar a { color: #6a6a6a; line-height: 18px; text-decoration: none; }
+#utility-bar a:hover { color: #2c2c2c; }
+</style>
+<ul id="utility-bar" class="cf marB15">
+    <li><a class="borR1S left marR5 padR5" href=""><i class="icon-envelope"></i> Email this post</a></li>
+    <li><a class="borR1S left marR5 padR5" href="?print=1"><i class="icon-print"></i> Print</a></li>
+    <li><a class="left" href="http://www.washingtonpostreprints.com/"><i class="icon-copy"></i> Reprints</a></li>
+</ul> -->
+
+    <div class="utility-bar">
+    	<ul class="inline-list">
+    	   		<li class="email"><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/email/" title="Email" rel="nofollow">Email</a>
+</li>
+	    	    <li class="print"><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/?print=1">Print</a></li>
+            <li class="reprints"><a href="http://www.washingtonpostreprints.com/">Reprints</a></li>
+          </ul>
+    
+    </div>
+  <div class="clear"></div>
+  
+<header class="entry-header">
+<h1 class="entry-title">CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports</h1>
+<div class="entry-meta">
+<p class="wp-byline">By <a href="http://www.washingtonpost.com/blogs/erik-wemple/" title="Visit Erik Wemple&#8217;s website" rel="author external">Erik Wemple</a>, <span class="get-the-time">Published: May 14, 2013 at 1:51 pm</span><a id="5086" class="byline-email" href="mailto:wemplee@washpost.com?subject=Reader feedback for 'CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports'" data-href="wemplee5086washpost.com?subject=Reader feedback for 'CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports'">E-mail the writer</a>
+</p>
+</div><!-- .entry-meta -->
+</header><!-- .entry-header -->
+<!-- END UTILITY BAR -->
+<div class="entry-content">
+<!-- UTILITY BAR -->
+    <!-- 
+    <div class="utility-bar">
+    	<ul class="inline-list">
+        	<li class="text-size">
+                <a href="javascript:void(0);" class="fontSizeMinus"><img src="http://www.washingtonpost.com/rw/sites/twpweb/img/icons/icon-minus.png" alt="Smaller Text"></a>
+                <a href="javascript:void(0);" class="fontSizePlus"><img src="http://www.washingtonpost.com/rw/sites/twpweb/img/icons/icon-plus.png" alt="Larger Text"></a>
+                <span>Text Size</span>
+			</li>
+	    <li class="print"><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/?print=1">Print</a></li>
+            <li class="reprints"><a href="http://www.washingtonpostreprints.com/">Reprints</a></li>
+          </ul>
+    
+    </div>
+  <div class="clear"></div>
+  -->
+  
+  
+<div id="staticMenu">
+        <div class="comment-static">
+             <div class="float-comment">
+             	<a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/#comments"><div class="comment-number echo-counter" guid="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/"></div></a>
+          </div>
+             <div class="comments-count-horizontal"><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/#comments">Comments</a></div>
+      </div>
+        <div class="facebook-hover-horizontal">
+        	<div class="fb-like" data-send="false" data-layout="button_count" data-width="73" data-show-faces="false"></div>
+        </div> 
+        <div class="twitter-hover-horizontal">
+        	<div class="static-twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="horizontal">Tweet</a>
+        	</div>
+        </div>
+        <div class="more-horizontal" style="position:relative;">
+            <div id="slider-horizontal" class="float-sprite more" style="z-index:10;">
+                 <a href="#">More</a>            </div>
+          <div class="more-buttons">
+            <div class="more-tiles">
+            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+			<div class="gplus-static"><g:plusone size="small" annotation="none"></g:plusone></div>
+                <a href="http://digg.com/submit?phase=2?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Digg" class="digg float-sprite" class="digg float-sprite" style="display: block;"></a>
+                <a href="http://del.icio.us/post?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Delicious" class="delicious float-sprite" style="display: block;"> </a>
+                <a href="http://pinterest.com/post?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Pinterest" class="pinterest float-sprite" style="display: block;"> </a>            </div>
+            <div class="more-tiles">
+                <a href="http://www.stumbleupon.com/submit?http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="StumbleUpon" class="stumble float-sprite" style="display: block;"> </a>
+                <a href="http://www.tumblr.com/share" title="CNN cites ABC News, Weekly Standard for inaccurate Benghazi reports" target="_blank" title="Tumblr" class="tumble float-sprite" style="display: block;"> </a>
+                <a href="http://www.reddit.com/submit" class="reddit-share" onclick="window.location='http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit4.gif" alt="submit to reddit" border="0" /> </a>  </div>
+            <div style="clear:both;"></div>
+            </div>
+      </div>
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+<div id="attachment_5089" class="wp-caption alignright" style="width: 310px"><a href="http://www.washingtonpost.com/blogs/erik-wemple/files/2013/05/TV_CNN_Tapper.JPEG-07707.jpg"><img class="size-medium wp-image-5089" alt="CNN's Jake Tapper (Associated Press)" src="http://www.washingtonpost.com/blogs/erik-wemple/files/2013/05/TV_CNN_Tapper.JPEG-07707-300x168.jpg" width="300" height="168" /></a><p class="wp-caption-text">CNN&#8217;s Jake Tapper (Associated Press)</p></div>
+<p>CNN&#8217;s Jake Tapper has an e-mail regarding those <a href="http://thelead.blogs.cnn.com/2013/05/14/cnn-exclusive-white-house-email-contradicts-benghazi-leaks/">famous Benghazi talking points</a>. This particular document, Tapper&#8217;s story suggests:</p>
+<p>1) Puts the White House&#8217;s role in editing the Benghazi talking points in a different light;</p>
+<p>2) Raises questions regarding those who had leaked previous iterations of the talking points;</p>
+<p>3) Outs ABC News and the Weekly Standard as purveyors of inaccurate information!</p>
+<p>The e-mail obtained by Tapper was sent by Deputy National Security Adviser for Strategic Communications Ben Rhodes just after 9:30 p.m. on Friday, Sept. 14, 2012, just as the White House was trying to nail down the talking points that U.S. Ambassador to the U.N. Susan Rice would use on five Sunday talk shows two days later. In those appearances, Rice made mention of an anti-Islam video in explaining the provenance of the Sept. 11, 2012, Benghazi attacks &#8212; a narrative that later collapsed as officials made clear it was a straight-up terrorist attack.</p>
+<p>The central drama in the editing of the talking points revolved around the State Department, which had expressed its concern about language that the CIA had pumped into the document. In recent weeks, the Weekly Standard and ABC News have reported that the White House responded favorably to State&#8217;s concerns.</p><div id="article-side-rail" class="column-five left padding-right margin-top-5 margin-right-15"><div id="slug_inline_bb" style="display:none;" class="left margin-right margin-bottom slug">
+	<div id="wpni_adi_inline_bb">
+		<script type="text/javascript">
+		placeAd2(commercialNode,'inline_bb','adi','');
+		</script>
+	 </div>
+</div></div>
+<p>Tapper&#8217;s story takes on those reports:</p>
+<blockquote><p>ABC News reported that Rhodes wrote: “We must make sure that the talking points reflect all agency equities, including those of the State Department, and we don’t want to undermine the FBI investigation. We thus will work through the talking points tomorrow morning at the Deputies Committee meeting.” The Weekly Standard reported that Rhodes &#8220;responded to the group, explaining that Nuland had raised valid concerns and advising that the issues would be resolved at a meeting of the National Security Council’s Deputies Committee the following morning.&#8221;</p>
+<p>Whoever provided those quotes and paraphrases did so inaccurately, seemingly inventing the notion that Rhodes wanted the concerns of the State Department specifically addressed.</p></blockquote>
+<p>CNN vs. ABC News and the Weekly Standard &#8212; what a great day for a media critic.</p>
+<p>E-mails are such fun. People who send them so rarely seem aware that they could some day come to light. There are no embarrassments here, however: Rhodes&#8217;s missive appears to be a careful and neutral attempt at leading an unruly set of agencies on a matter of high public concern.</p>
+<p>Earlier this year, Washington learned the difference between someone abridging an e-mail and viewing the entire text of an e-mail. In an <a href="http://www.politico.com/story/2013/02/woodward-at-war-88212.html">interview with Politico reporters</a>, Bob Woodward described an e-mail from a White House aide, which Politico interpreted as &#8220;a veiled threat.&#8221; When the entire e-mail later emerged, few saw any threat, veiled or patent.</p>
+<p>CNN&#8217;s release of the Rhodes e-mail won&#8217;t roil the Benghazi issue. Regardless of the interagency allegiances of Rhodes, the talking points underwent a shrinking act that resulted in bogus information getting blasted out to millions of people less than a week after the attacks.</p>
+<p><strong>UPDATE</strong>: A spokesman for ABC News says, &#8220;Assuming the email cited by Jake Tapper is accurate, it is consistent with the summary quoted by Jon Karl.&#8221; </p>
+</p>
+</div><!-- .entry-content -->
+<div style="clear:both;"></div>
+ </article><!-- #post-5086 -->    
+ 
+
+       
+<style> fb span {width:450px !important;}</style>
+	
+	<!--<div class="header-social border-bottom">
+  <div id="social_links"></div>
+</div>-->
+<div style="clear:both;"></div>
+<!-- Previous/Next links with author/date -->
+<div id="previous-next-tags">
+<div class="wp-column two-expanded-first wp-no-pad-right margin-right left margin-top">
+<p class="bkgd-grey-rounded-corner tags-singular">
+<strong><span class="tags-singular">TAGS</span></strong	>
+</p>	
+<p class="left tag-link-normal">
+	<a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/tag/abc-news/" rel="tag">ABC News</a>, <a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/tag/benghazi/" rel="tag">Benghazi</a>, <a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/tag/cnn/" rel="tag">CNN</a>, <a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/tag/weekly-standard/" rel="tag">Weekly Standard</a>	</p>
+	</div>
+	<div id="older-newer" class="bkgd-grey-rounded-corner left">
+	<p class="left margin-left-5" style="line-height:normal;">
+	<strong><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/ap-subpoen/" rel="prev">&laquo; PREVIOUS</a> </strong>
+	</p>
+	<p class="right next-post-link"  style="line-height:normal;"><strong><a href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/ap-subpoena-government-wants-your-sources/" rel="next">NEXT &raquo;</a></strong></p>	</div>
+	  
+	    
+		<p class="nav-previous author-date-logic">
+		<a rel="prev" href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/ap-subpoen/">AP subpoena: Journo says he lost sources in 2001 case</a>
+		<br />
+			<span id="previous-next-byline" class="author">By <a href="http://www.washingtonpost.com/blogs/erik-wemple/" title="Visit Erik Wemple&#8217;s website" rel="author external">Erik Wemple</a></span>
+			<span class="pagination-the-time">May 14, 2013</span>
+		</p> 
+	      
+	    	<p class="nav-previous author-date-logic text-align-right">
+	    		<a rel="prev" href="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/ap-subpoena-government-wants-your-sources/">AP subpoena: Government wants your sources</a><br/>
+			<span id="previous-next-byline" class="author">By <a href="http://www.washingtonpost.com/blogs/erik-wemple/" title="Visit Erik Wemple&#8217;s website" rel="author external">Erik Wemple</a></span>
+			<span class="pagination-the-time">May 14, 2013</span>
+		</p> 
+	      
+	<div style="clear:both;"></div>
+</div>
+<div style="margin-left:126px;"></div>
+<div style="clear:both;"></div>
+		
+
+		 
+
+
+
+				<!-- This template does not need to be touched since it is calling the BLOGID variable  -->
+<a name="comments"></a>
+
+<div id="echo_container" guid="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/"
+	class="echo_container count submitbox stream comment-vars nomobile"
+ includepermalink="true" commentpermalinkurlfacet="http://www.washingtonpost.com/blogs/erik-wemple/wp/2013/05/14/cnn-cites-abc-news-weekly-standard-for-inaccurate-benghazi-reports/" 
+ sectionid="/blogs/erik-wemple" isallcomments="true" defaulttab = "all" includetabs="false"></div>                <!-- auto-assigns guid from page url -->
+    	<!-- #comments -->
+			</div><!-- #content -->
+</div><!-- #primary -->
+<div id="secondary" class="widget-area" role="complementary">
+<div id="right-rail" class="module right-rail background">
+<!--FLEX_SS_BB_HP AD BEGIN -->
+<div id="slug_flex_ss_bb_hp">
+	<div class="ads slug flex_ss_bb_hp rr" id="wpni_adi_flex_ss_bb_hp">
+		<script type="text/javascript">
+		placeAd2(commercialNode,"flex_ss_bb_hp",false,"");
+		</script>
+	</div>
+</div>
+<!--FLEX_SS_BB_HP AD END-->
+
+<div style="width:336px;"> <script type="text/javascript"> adHeaderAlreadyShown = false ; </script> <script type="text/javascript">
+if ( typeof thisNode == "undefined" )
+thisNode = "admin" ;
+</script> <link rel="stylesheet" href="http://media.washingtonpost.com/wp-adv/topjobs/TopJobs.css" /> <script type="text/javascript" 
+
+src="http://media.washingtonpost.com/wp-adv/topjobs/TobJob.js"></script> <script type="text/javascript" 
+
+src="http://www.washingtonpost.com/wp-adv/topjobs/listings.js"></script> <script type="text/javascript" 
+
+src="http://media.washingtonpost.com/wp-adv/topjobs/displayTopJobs2.js"></script> <script type="text/javascript" 
+
+src="http://media.washingtonpost.com/wp-adv/topjobs/TopJobsManager.js"></script> <script type="text/javascript">
+if ( isTjDisplayable( thisNode ) )
+{
+document.write('<br clear="all"/>') ;
+displayTopJobs("article") ;
+}
+// -->
+</script>
+<!--SECTION SPECIFIC MODULES -->
+<div class="module component most-post curved"><p class="heading heading2">The Post Most:Opinions<span class="tooltip"></span></p><ul id="accordion" class="accordion"><li id="post-most-opinions" class="title expand"></li><li id="video-opinions" class="title bkgd-grey-gradient closed"></li><li id="gallery-opinions" class="title bkgd-grey-gradient closed"></li></ul></div>
+<div id="rev_ad_7"></div><div style="display: none;" id="slug_pptile">
+	<div class="ads slug pptile " id="wpni_adi_pptile">
+		<script type="text/javascript">
+			placeAd2(commercialNode+'','pptile',false,'');
+  		</script>
+	</div>
+</div>
+<div id="slug_extra_bb" style="display:none;">
+	<div class="ads slug extra_bb" id="wpni_adi_extra_bb">
+		<script type="text/javascript">
+			placeAd2(commercialNode, 'extra_bb', false, '');
+		</script>
+	</div>
+</div><div id="erik-wemple-right-rail-modules"></div>
+<!-- FEATURED LINKS -->
+<div class="module component curved" style="display: none" id="slug_featured_links">
+  <div class="ads slug featured_links rr" id="wpni_adi_featured_links">
+  <!--#include virtual="/wp-adv/advertisers/textlinks/wp/articles/index.html"-->
+  </div>
+</div><!--SPONSOR_LINKS_RR AD BEGIN-->
+<div id="slug_sponsor_links_rr" class="module component curved" style="display:none;">
+  <script type="text/javascript">
+  placeAd2(commercialNode,"sponsor_links_rr",false,"");
+  </script>
+</div>
+</div>
+
+</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+
+<div id="footer-v3" class="external homepage" data-config="section=homepage">
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://www.washingtonpost.com/wp-srv/graphics/js/social-strip-wp.js?ver=4.0'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/rw/sites/twpweb/js/wp_omniture.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://js.washingtonpost.com/rw/sites/twpweb/js/util/util.bar-manager.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/rw/sites/twpweb/js/module/module.weather.widget.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://js.washingtonpost.com/rw/sites/twpweb/js/site_traffic/comscore.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://js.washingtonpost.com/1d/twp-comments.js?ver=3.9'></script>
+<script type='text/javascript' src='http://js.washingtonpost.com/rw/sites/twpweb/js/module/module.quiz.js?ver=3.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var emailL10n = {"ajax_url":"http:\/\/www.washingtonpost.com\/blogs\/erik-wemple\/wp-admin\/admin-ajax.php","max_allowed":"5","text_error":"The Following Error Occurs:","text_name_invalid":"- Your Name is empty\/invalid","text_email_invalid":"- Your Email is empty\/invalid","text_remarks_invalid":"- Your Remarks is invalid","text_friend_names_empty":"- Friend Name(s) is empty","text_friend_name_invalid":"- Friend Name is empty\/invalid: ","text_max_friend_names_allowed":"- Maximum 5 Friend Names allowed","text_friend_emails_empty":"- Friend Email(s) is empty","text_friend_email_invalid":"- Friend Email is invalid: ","text_max_friend_emails_allowed":"- Maximum 5 Friend Emails allowed","text_friends_tally":"- Friend Name(s) count does not tally with Friend Email(s) count","text_image_verify_empty":"- Image Verification is empty"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/plugins/wp-email/email-js.js?ver=2.60'></script>
+<script type='text/javascript' src='http://www.washingtonpost.com/blogs/erik-wemple/wp-content/plugins/print-me/printme.js?ver=1'></script>
+
+</body>
+</html>

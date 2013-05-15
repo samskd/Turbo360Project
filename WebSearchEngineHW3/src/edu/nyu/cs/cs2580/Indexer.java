@@ -13,7 +13,7 @@ import edu.nyu.cs.cs2580.SearchEngine.Options;
  * In HW1: instructor's {@link IndexerFullScan} is provided as is.
  * 
  * In HW2: students will implement {@link IndexerInvertedDoconly},
- * {@link IndexerInvertedOccurrence}, and {@link IndexerInvertedCompressed}.
+ * {@link IndexerInvertedOccurrence}, and {@link IndexerInvertedCompressedOld}.
  * See comments below for more info.
  * 
  * In HW3: students will incorporate the corpus analysis and log mining results
@@ -153,7 +153,10 @@ public abstract class Indexer {
   }
 
 public int nextPhrase(Query query, int docid, int position) {
-	// TODO Auto-generated method stub
+	return 0;
+}
+
+public int nextPhrase(Query query, int docid, int position, String docType) {
 	return 0;
 }
 }

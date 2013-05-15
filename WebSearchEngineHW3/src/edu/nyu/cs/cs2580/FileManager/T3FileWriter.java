@@ -32,10 +32,11 @@ public class T3FileWriter {
 				fileOutputStream = new FileWriter(filepath);
 				writer = new BufferedWriter(fileOutputStream);
 			} catch (IOException e1) {
-
 				e1.printStackTrace();
 			}
 
+		} catch(Exception e){
+			e.printStackTrace();
 		}
 
 	}
@@ -44,16 +45,16 @@ public class T3FileWriter {
 		try {
 			writer.write(content);
 			writer.flush();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		} 
 	}
 
 	public void close(){
 		try {
 			writer.close();
 			fileOutputStream.close();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -64,7 +65,7 @@ public class T3FileWriter {
 	        bw.write("");
 	        bw.flush();
 	        bw.close();
-	    }catch(IOException ioe){
+	    }catch(Exception ioe){
 	        // You should really do something more appropriate here
 	        ioe.printStackTrace();
 	    }

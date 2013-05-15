@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+	<base href="http://live.huffingtonpost.com/">
+
+	<title>HuffPost Live</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+	<meta name="Description" content="HuffPost Live is a live-streaming network that attempts to create the most social video experience possible. Viewers are invited to join discussions live as on-air guests. Topics range from politics to pop culture." />
+	<meta name="Keywords" content="news, breaking news, news blog, business, sports, politics, technology, entertainment, living" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densityDpi=device-dpi">
+
+	<!-- Schema.org microdata -->
+	<meta itemprop="name" content="HuffPost Live">
+	<meta itemprop="description" content="HuffPost Live is a live-streaming network that attempts to create the most social video experience possible. Viewers are invited to join discussions live as on-air guests. Topics range from politics to pop culture.">
+	<meta itemprop="image" content="http://live.huffingtonpost.com/images/huffpost-live.jpg">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:url" content="http://live.huffingtonpost.com" >
+	<meta name="twitter:title" content="HuffPost Live" >
+	<meta name="twitter:description" content="HuffPost Live is a live-streaming network that attempts to create the most social video experience possible. Viewers are invited to join discussions live as on-air guests. Topics range from politics to pop culture.">
+	<meta name="twitter:image" content="http://live.huffingtonpost.com/images/huffpost-live.jpg" >
+	<meta name="twitter:player" content="https://s.embed.live.huffingtonpost.com/HPLEmbedPlayer/" >
+	<meta name="twitter:player:width" content="480">
+	<meta name="twitter:player:height" content="276">
+
+	<!-- Facebook 321 Card -->
+	<meta property="og:type" content="video.other"/> 
+	<meta property="og:video:secure_url" content="https://s.embed.live.huffingtonpost.com/HPLEmbedPlayer/">
+	<meta property="og:video:url" content="http://embed.live.huffingtonpost.com/HPLEmbedPlayer/"/>
+	<meta property="og:image" content="http://live.huffingtonpost.com/images/huffpost-live.jpg">
+	<meta property="og:title" content="HuffPost Live" >
+	<meta property="og:description" content="HuffPost Live is a live-streaming network that attempts to create the most social video experience possible. Viewers are invited to join discussions live as on-air guests. Topics range from politics to pop culture.">
+	<meta property="og:video:height" content="480">
+	<meta property="og:video:width" content="276">
+
+	<link rel="shortcut icon" href="images/hufflive_favicon.ico">
+	<link rel="stylesheet" href="styles/app.css?v=1.1.20.1863" />
+	<!--[if IE]> 
+		<link rel="stylesheet" href="styles/ie.css?v=1.1.20.1863">
+	<![endif]-->
+
+	<script type="text/javascript" src="http://o.aolcdn.com/ads/adsWrapper.js"></script>
+	<script src="hpl-embed.js?v=1.1.20.1863"></script>
+	<script src="js/vendor.js?v=1.1.20.1863"></script>
+	<script src="js/app.js?v=1.1.20.1863"></script>
+	<script>require('hpsn/mainapp/initialize');</script>
+	<script>
+		if (window.DetectIpad()) {
+			$('head').append("<meta name='apple-itunes-app' content='app-id=572584499, app-argument=huffpost-live:/" + window.location.pathname + "'>");
+		}
+	</script>
+</head>
+<body></body>
+</html>

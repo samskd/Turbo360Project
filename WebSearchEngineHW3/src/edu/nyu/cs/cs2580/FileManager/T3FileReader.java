@@ -17,15 +17,13 @@ public class T3FileReader{
 
 	public T3FileReader(String filepath){
 
-		try 
-		{
+		try {
 			file = new File(filepath);
 			fileInputStream = new FileInputStream(filepath);
 			in = new DataInputStream(fileInputStream);
 			reader = new BufferedReader(new InputStreamReader(in));
 
-		} catch (IOException e) 
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -35,7 +33,7 @@ public class T3FileReader{
 		String retVal = null;
 		try {
 			retVal =  reader.readLine();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 		return retVal;
@@ -48,7 +46,7 @@ public class T3FileReader{
 			byte[] b = new byte[(int) file.length()]; 
 			fileInputStream.read(b);
 			retVal =  new String(b);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 		return retVal;
@@ -59,7 +57,7 @@ public class T3FileReader{
 			reader.close();
 			in.close();
 			fileInputStream.close();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -74,7 +72,7 @@ public class T3FileReader{
 					return true;
 				}
 			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 		return false;

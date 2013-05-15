@@ -79,7 +79,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	private static Map<String, Scanner> scanners= new HashMap<String, Scanner>();
 	private static Map<String, String> pointerToScanners= new HashMap<String, String>();
 	private static int finalIndexCount = 1;
-
+	private final int INFINITY = Integer.MAX_VALUE;
 	private final double[] pageRanks;
 	private final Map<Integer, Integer> numViews;
 	private final String REALTIME = "twitter"; //realtime
@@ -108,7 +108,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	@Override
 	public void constructIndex() throws IOException {
 
-		//createWikiIndex(new File(_options._corpusPrefix));
+		createWikiIndex(new File(_options._corpusPrefix));
 		createTwitterIndex(new File("data/"+REALTIME));
 
 		System.out.println(
@@ -177,6 +177,134 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		}
 	}
 
+	/**
+	 * Process the raw content (i.e., one line in corpus.tsv) corresponding to a
+	 * document, and constructs the token vectors for both title and body.
+	 * @param content
+	 * @throws FileNotFoundException 
+	 */
+	private void processDocument(File file) throws FileNotFoundException {
+
+		DocumentProcessor documentProcessor = new DocumentProcessor();
+
+		Vector<String> titleTokens_Str = documentProcessor .process(file.getName());
+		Vector<String> bodyTokens_Str = documentProcessor.process(file);
+
+		Vector<Integer> titleTokens = new Vector<Integer>();
+		readTermVector(titleTokens_Str, titleTokens);
+
+		Vector<Integer> bodyTokens = new Vector<Integer>();
+		readTermVector(bodyTokens_Str, bodyTokens);
+
+		//Document tokens
+		Vector<Integer> documentTokens = bodyTokens;
+		documentTokens.addAll(titleTokens);
+
+		String title = file.getName();
+
+		//Integer documentID = _documents.size();
+		int documentID = documentsCount++;
+		int numView = numViews.get(documentID);
+		double pageRank = pageRanks[documentID];
+		DocumentIndexed doc = new DocumentIndexed(documentID, null);
+		doc.setTitle(title);
+		doc.setNumViews(numView);
+		doc.setPageRank((float)pageRank);
+		doc.setDocumentTokens(documentTokens);
+		doc.setUrl(title);
+		_documents.add(doc);
+		_docIds.put(title, documentID);
+		++_numDocs;
+
+		Set<Integer> uniqueTerms = new HashSet<Integer>();
+		updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
+
+		for (int idx : uniqueTerms) {
+			_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
+		}
+	}
+
+	private boolean processTweet(File file) {
+
+		DocumentProcessor documentProcessor = new DocumentProcessor();
+		ObjectInputStream ois = null;
+
+		try{
+			ois = new ObjectInputStream(new FileInputStream(file));
+			//			Status tweet = (Status)ois.readObject();
+			T3Status t3Status = (T3Status)ois.readObject();
+			Status tweet = t3Status.status;
+
+			//avoid storing retweeted tweets
+//			if(tweet.isRetweet()){
+//				return false;
+//			}
+
+			Map<String, String> documents = t3Status.documents;
+			Iterator<String> titles = documents.keySet().iterator();
+
+			while(titles.hasNext()){
+
+				String title = titles.next();
+				String url = documents.get(title);
+
+				File titleDoc = new File("data/"+title);
+
+				Vector<String> bodyTokens_Str = documentProcessor.process(titleDoc);
+
+				Vector<Integer> bodyTokens = new Vector<Integer>();
+				readTermVector(bodyTokens_Str, bodyTokens);
+
+				int documentID = documentsCount++;
+				DocumentIndexed doc = new DocumentIndexed(documentID, null);
+				doc.setTitle(title);
+				doc.setUrl(url);
+				doc.setNumViews(0);
+				doc.setPageRank(0);
+				doc.setDocumentTokens(bodyTokens);
+
+				//tweet
+				doc._isTweet = true;
+				doc._createdAt = tweet.getCreatedAt();
+				doc._retweetCount = tweet.getRetweetCount();
+				doc._isFavorited = tweet.isFavorited();
+				doc._isPossiblySensitive = tweet.isPossiblySensitive();
+				long[] contributors = tweet.getContributors();
+				if(contributors != null)
+					doc._totalContributors = tweet.getContributors().length;
+
+				User user = tweet.getUser();
+				doc._isVerified = user.isVerified();
+				doc._userFavoriteCount = user.getFavouritesCount();
+				doc._userFollowers = user.getFollowersCount();
+				doc._totalPublicLists = user.getListedCount();
+
+				_documents.add(doc);
+				_docIds.put(url, documentID);
+				++_numDocs;
+
+				Set<Integer> uniqueTerms = new HashSet<Integer>();
+				updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
+
+				for (int idx : uniqueTerms) {
+					_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
+				}
+
+			}
+
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			try{
+				if(ois != null) ois.close();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+
+		return true;
+	}
+	
 	private void mergeFile(String docType) {
 
 		System.out.println("Merging...");
@@ -388,139 +516,6 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	}
 
 	/**
-	 * Process the raw content (i.e., one line in corpus.tsv) corresponding to a
-	 * document, and constructs the token vectors for both title and body.
-	 * @param content
-	 * @throws FileNotFoundException 
-	 */
-	private void processDocument(File file) throws FileNotFoundException
-	{
-
-		DocumentProcessor documentProcessor = new DocumentProcessor();
-
-		Vector<String> titleTokens_Str = documentProcessor .process(file.getName());
-		Vector<String> bodyTokens_Str = documentProcessor.process(file);
-
-		Vector<Integer> titleTokens = new Vector<Integer>();
-		readTermVector(titleTokens_Str, titleTokens);
-
-		Vector<Integer> bodyTokens = new Vector<Integer>();
-		readTermVector(bodyTokens_Str, bodyTokens);
-
-		//Document tokens
-		Vector<Integer> documentTokens = bodyTokens;
-		documentTokens.addAll(titleTokens);
-
-		String title = file.getName();
-
-		//Integer documentID = _documents.size();
-		int documentID = documentsCount++;
-		int numView = numViews.get(documentID);
-		double pageRank = pageRanks[documentID];
-		DocumentIndexed doc = new DocumentIndexed(documentID, null);
-		doc.setTitle(title);
-		doc.setNumViews(numView);
-		doc.setPageRank((float)pageRank);
-		doc.setDocumentTokens(documentTokens);
-		doc.setUrl(title);
-		_documents.add(doc);
-		_docIds.put(title, documentID);
-		++_numDocs;
-
-		Set<Integer> uniqueTerms = new HashSet<Integer>();
-		updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
-
-		for (int idx : uniqueTerms) {
-			_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
-		}
-	}
-
-	private boolean processTweet(File file) {
-
-		DocumentProcessor documentProcessor = new DocumentProcessor();
-		ObjectInputStream ois = null;
-
-		try{
-			ois = new ObjectInputStream(new FileInputStream(file));
-			//			Status tweet = (Status)ois.readObject();
-			T3Status t3Status = (T3Status)ois.readObject();
-			Status tweet = t3Status.status;
-
-			//avoid storing retweeted tweets
-//			if(tweet.isRetweet()){
-//				return false;
-//			}
-
-			Map<String, String> documents = t3Status.documents;
-			Iterator<String> titles = documents.keySet().iterator();
-
-			while(titles.hasNext()){
-
-				String title = titles.next();
-				String url = documents.get(title);
-
-				File titleDoc = new File("data/"+title);
-
-				if(!titleDoc.exists()){
-					System.out.println("X -> "+file.getPath());
-				}
-
-				Vector<String> bodyTokens_Str = documentProcessor.process(titleDoc);
-
-				Vector<Integer> bodyTokens = new Vector<Integer>();
-				readTermVector(bodyTokens_Str, bodyTokens);
-
-				int documentID = documentsCount++;
-				DocumentIndexed doc = new DocumentIndexed(documentID, null);
-				doc.setTitle(title);
-				doc.setUrl(url);
-				doc.setNumViews(0);
-				doc.setPageRank(0);
-				doc.setDocumentTokens(bodyTokens);
-
-				//tweet
-				doc._isTweet = true;
-				doc._createdAt = tweet.getCreatedAt();
-				doc._retweetCount = tweet.getRetweetCount();
-				doc._isFavorited = tweet.isFavorited();
-				doc._isPossiblySensitive = tweet.isPossiblySensitive();
-				long[] contributors = tweet.getContributors();
-				if(contributors != null)
-					doc._totalContributors = tweet.getContributors().length;
-
-				User user = tweet.getUser();
-				doc._isVerified = user.isVerified();
-				doc._userFavoriteCount = user.getFavouritesCount();
-				doc._userFollowers = user.getFollowersCount();
-				doc._totalPublicLists = user.getListedCount();
-
-				_documents.add(doc);
-				_docIds.put(title, documentID);
-				++_numDocs;
-
-				Set<Integer> uniqueTerms = new HashSet<Integer>();
-				updateStatistics(documentID, doc.getDocumentTokens(), uniqueTerms);
-
-				for (int idx : uniqueTerms) {
-					_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
-				}
-
-			}
-
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			try{
-				if(ois != null) ois.close();
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}
-
-		return true;
-	}
-
-	/**
 	 * Tokenize {@code content} into terms, translate terms into their integer
 	 * representation, store the integers in {@code tokens}.
 	 * @param content
@@ -670,7 +665,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		Vector <Integer> docIds = new Vector<Integer>();
 		for(String token : queryTerms){
 			int nextDocID = next(token, docid, docType);
-			if(nextDocID == Integer.MAX_VALUE){
+			if(nextDocID == INFINITY){
 				//value not found;
 				return null;
 			}
@@ -708,6 +703,9 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		Postings postingList = null;
 		Integer termID = _dictionary.get(term);
 
+		if(termID == null) 
+			return INFINITY;
+		
 		if(docType.equals(REALTIME)){
 
 			if(_realTimePostingLists.containsKey(termID)){
@@ -740,13 +738,14 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		}
 
 
+		if(postingList == null || postingList.size() == 0)
+			return INFINITY;
+		
 		int lt = postingList.size();
-		if(lt == 0)
-			return Integer.MAX_VALUE;
 
 		Integer ct = postingList.getCachedIndex();
 		if(lt == 0)
-			return Integer.MAX_VALUE;
+			return INFINITY;
 
 		if(ct == null){
 			ct = 0;
@@ -755,7 +754,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 		boolean isExit = postingList.get(lt-1) <= currentDoc;
 		if(lt == 0 || isExit){
-			return Integer.MAX_VALUE;
+			return INFINITY;
 		}
 
 		if(postingList.get(0) > currentDoc){
@@ -832,9 +831,13 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	}
 
 	public int documentTermFrequency(String term, String url, String docType) {
+		
+		if(!_dictionary.containsKey(term) || !_docIds.containsKey(term))
+			return 0;
+		
 		int returnValue = 0;
 		int docID =  _docIds.get(url);
-
+		
 		if(docType.equals(REALTIME)){
 
 			Postings p = _realtimeInvertedIndex.get(_dictionary.get(term));
@@ -842,7 +845,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				_realtimeInvertedIndex = getIndex(_dictionary.get(term), docType);
 			}
 
-			HashMap<Integer,Integer> count_terms = _realtimeInvertedIndex.get(_dictionary.get(term)).get_countTerm();
+			Map<Integer,Integer> count_terms = _realtimeInvertedIndex.get(_dictionary.get(term)).get_countTerm();
 			returnValue = count_terms.get(docID);
 			return returnValue;
 
@@ -852,7 +855,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				_invertedIndex = getIndex(_dictionary.get(term), docType);
 			}
 
-			HashMap<Integer,Integer> count_terms = _invertedIndex.get(_dictionary.get(term)).get_countTerm();
+			Map<Integer,Integer> count_terms = _invertedIndex.get(_dictionary.get(term)).get_countTerm();
 			returnValue = count_terms.get(docID);
 			return returnValue;
 		}

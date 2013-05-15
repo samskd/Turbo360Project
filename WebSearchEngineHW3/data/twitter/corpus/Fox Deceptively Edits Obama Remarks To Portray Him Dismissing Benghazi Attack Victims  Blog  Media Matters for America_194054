@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+		<title>Fox Deceptively Edits Obama Remarks To Portray Him Dismissing Benghazi Attack Victims | Blog | Media Matters for America</title>
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:site_name" content="Media Matters for America" />
+			<script type="text/javascript">
+		var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-2420776-1']);_gaq.push(['_setDomainName', 'mediamatters.org']); _gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+	</script>
+		
+	<link href="/css/mmfa-mobile.css" rel="stylesheet" type="text/css" />
+	
+	<link href="/css/jquery-ui-1.8.17.custom.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/js/jwplayer.js"></script>
+	<script type="text/javascript" src="/js/swfobject.js"></script>
+		
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+	  (function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+</head>
+<body>		
+	<div class="logo">
+		<a href="/mobile/"><img src="/layout/mobile-logo.png" /></a>
+	</div>
+	
+	
+<script>
+//clear field on focus
+$(document).ready(function(){
+
+
+
+// clear input on focus for dates and search
+$('#search-advanced').focus(function(){
+	if($(this).val()=="search"){
+		$(this).val("");
+	}
+});
+
+// if field is empty afterward, add text again
+$('#search-advanced').blur(function(){
+	if($(this).val()==""){
+		$(this).val("search");
+	}
+});
+
+
+$('#search').focus(function(){
+	if($(this).val()=="search"){
+		$(this).val("");
+	}
+});
+
+// if field is empty afterward, add text again
+$('#search').blur(function(){
+	if($(this).val()==""){
+		$(this).val("search");
+	}
+});
+
+
+$('#date-range-from').focus(function(){
+	if($(this).val()=="MM/DD/YYYY"){
+		$(this).val("");
+	}
+});
+
+// if field is empty afterward, add text again
+$('#date-range-from').blur(function(){
+	if($(this).val()==""){
+		$(this).val("MM/DD/YYYY");
+	}
+});
+
+
+$('#date-range-to').focus(function(){
+	if($(this).val()=="MM/DD/YYYY"){
+		$(this).val("");
+	}
+});
+
+// if field is empty afterward, add text again
+$('#date-range-to').blur(function(){
+	if($(this).val()==""){
+		$(this).val("MM/DD/YYYY");
+	}
+});
+
+});
+</script>
+
+<div class="search">	
+	<form id="search-form" action="/mobile/search/index" >
+		<input id="search" name="qstring" class="noFocus" "type="text" value="search" ></input>
+		<input id="search-submit" type="image" title="Search" src="/layout/search.png" value="&raquo;"></input>			
+	</form>
+</div>
+
+	    
+
+   	 
+<div class="content">
+	
+		
+	<h4>
+		<a href="/blog">
+		<span itemprop="articleSection">Blog</span></a> &rsaquo;&rsaquo;&rsaquo; 
+	</h4>
+	<h1 style="margin-top:0; padding-top:0;">Fox Deceptively Edits Obama Remarks To Portray Him Dismissing Benghazi Attack Victims</h1>
+    <small class="under-hed">
+    	10 hours ago &rsaquo;&rsaquo;&rsaquo; 
+			REMINGTON SHEPARD
+	</small>
+<div class="clear"></div>
+
+<div class="item mobile-video">
+	<div class="mobile-video-inner">
+
+	</div>
+
+        <p>Fox News accused President Obama of dismissing as a "sideshow" four Americans killed in attacks in Benghazi, Libya, by distorting remarks he made at a press conference.</p>
+<p>During a May 13 <a href="http://www.whitehouse.gov/the-press-office/2013/05/13/remarks-president-obama-and-prime-minister-cameron-united-kingdom-joint-">press conference</a>, Obama responded to a question regarding the September 2012 attack on a U.S. diplomatic facility in Benghazi and the initial talking points used to describe the attack.&nbsp;</p>
+<p><em>Fox</em><em> &amp; Friends </em>co-host Gretchen Carlson accused Obama of dismissing the victims of the attack as a "sideshow," using a version of Obama's response cropped by Fox:</p>
+<blockquote>
+<p>CARLSON: Three things jump out at me. There was the question, right off the bat. The mainstream media is finally paying attention to this story.&nbsp; The president probably knew he was going to possibly get the question now after ABC jumped into the game last week. But to say that is a sideshow, is that offensive to the four people who died in Benghazi? If you're one of those family members today, do you think that's offensive to call this a sideshow?</p>
+<p>BRIAN KILMEADE (CO-HOST): Well he said that talk--</p>
+<p>CARLSON: We still have not apprehended anybody for those murders, number one. If he's talking about the talking points being a sideshow, you now have people saying that they were changed 12 times and what the White House said originally -- they only changed two words -- may not be the truth.</p>
+</blockquote>
+<p><iframe width="480" height="360" src="http://mediamatters.org/embed/static/clips/2013/05/14/30177/fnc-ff-20130514-sideshow" allowfullscreen="" frameborder="0" scrolling="no"></iframe></p>
+
+		<p>Fox displayed the following graphic when airing its cropped portion of Obama's remarks:</p>
+<p><img src="/static/images/item/fnc-ff-20130514-sideshow2.jpg" width="637" height="361" /></p>
+<p>But Fox deceptively edited Obama's answer to only include the portion of his response in which he discusses <a href="/blog/2013/05/10/cnns-borger-uses-right-wing-benghazi-myth-to-as/194014">long debunked myths</a> related to the talking points, removing the beginning of Obama's answer to the question about the Benghazi attacks and the related talking points.</p>
+<p>Obama began his <a href="http://www.whitehouse.gov/the-press-office/2013/05/13/remarks-president-obama-and-prime-minister-cameron-united-kingdom-joint-">response</a> by saying that "Americans died in Benghazi." He followed by asserting that he wanted to ensure that a similar situation doesn't happen again and that the assailants would be "held accountable":</p>
+<blockquote>
+<p>OBAMA: With respect to Benghazi, we've now seen this argument that's been made by some folks primarily up on Capitol Hill for months now.&nbsp; And I've just got to say -- here's what we know.&nbsp; Americans died in Benghazi.&nbsp; What we also know is clearly they were not in a position where they were adequately protected.&nbsp; The day after it happened, I acknowledged that this was an act of terrorism.&nbsp; And what I pledged to the American people was that we would find out what happened, we would make sure that it did not happen again, and we would make sure that we held accountable those who had perpetrated this terrible crime.</p>
+<p>And that's exactly what we've been trying to do.&nbsp; And over the last several months, there was a review board headed by two distinguished Americans -- Mike Mullen and Tom Pickering -- who investigated every element of this.&nbsp; And what they discovered was some pretty harsh judgments in terms of how we had worked to protect consulates and embassies around the world.&nbsp; They gave us a whole series of recommendations.&nbsp; Those recommendations are being implemented as we speak.</p>
+</blockquote>
+<p>He then explained that the recent focus on the talking points used to initially describe the attack was a "sideshow," as the issue had been addressed months ago.</p>
+<p>Indeed, Fox's distortion of Obama's remarks is another step in its campaign to continue <a href="/blog/2013/05/08/the-john-bolton-acknowledgment-that-should-end/193964">scandal mongering</a> over talking points with <a href="/research/2013/05/12/sunday-shows-rehash-debunked-benghazi-myths/194025">long dispelled myths</a> in an effort to prop up its <a href="/blog/2013/05/13/right-wing-benghazi-witch-hunt-sets-sites-on-pi/194032">witch hunt</a>.</p>
+
+
+
+
+</div>
+
+
+
+
+
+	<div class="item-info-wrap">
+	<div class="item-info">
+		<div class="social-strip-medium">
+			<iframe class="share-fb" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmm4a.org%2FYGOLNa&ref=article&send=false&layout=box_count&width=90&show_faces=false&action=like&colorscheme=light&font&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+
+
+			<iframe class="share-twitter" allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fmm4a.org%2FYGOLNa&counturl=http://mediamatters.org/blog/2013/05/14/fox-deceptively-edits-obama-remarks-to-portray/194054&count=vertical&text=Fox Deceptively Edits Obama Remarks To Portray Him Dismissing Benghazi Attack Victims"></iframe>
+
+
+							
+			<div class="g-plusone-override">
+	<div class="g-plusone" data-size="tall" data-href="http://mediamatters.org/blog/2013/05/14/fox-deceptively-edits-obama-remarks-to-portray/194054"></div>
+</div>	
+		</div>
+		<div class="item-info-issues-tags">
+	<strong>Posted in &rsaquo;&rsaquo;&rsaquo; </strong>	
+	
+
+
+			<a href="/mobile/issues/cabinet-agencies">Cabinet & Agencies</a>&nbsp;
+			<a href="/mobile/issues/national-security-foreign-policy">National Security & Foreign Policy</a>&nbsp;
+
+</div>
+
+			<div class="item-info-issues-tags">
+	<strong>Network/Outlet &rsaquo;&rsaquo;&rsaquo; </strong>
+	
+	<a href='/tags/fox-news-channel'>Fox News Channel</span></a>
+	</div>
+	<div class="item-info-issues-tags">
+	<strong>Person &rsaquo;&rsaquo;&rsaquo; </strong>
+	
+	<a href='/tags/gretchen-carlson'>Gretchen Carlson</span></a>
+	</div>
+	<div class="item-info-issues-tags">
+	<strong>Show/Publication &rsaquo;&rsaquo;&rsaquo; </strong>
+	
+	<a href='/tags/fox-friends'>FOX & Friends</span></a>
+	</div>
+
+
+
+
+	</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+   
+	<div class="footer">
+	<ul>
+		<li><a href="/mobile">Home</a></li>
+		<li><a href="/mobile/about">About / Contact</a></li>
+		<li class="right"><a class="desktop" href="/">Desktop</a></li>
+		<li class="right"><a class="mobile" href="">Mobile</a></li>
+	</ul>		
+	<div class="clear"></div>
+		
+	<p>&copy; 2012 <em>Media Matters For America</em>. All rights reserved.</p>	
+</div>
+
+</body>
+</html>

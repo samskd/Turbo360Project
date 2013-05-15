@@ -141,7 +141,7 @@ public class RankerComprehensive extends Ranker {
 
 				int qtermFreqDoc = 0;
 				if(isPhraseQuery){
-					while(_indexer.nextPhrase(phraseToken, d._docid, -1) != Integer.MAX_VALUE){
+					while(_indexer.nextPhrase(phraseToken, d._docid, -1, docType) != Integer.MAX_VALUE){
 						qtermFreqDoc++;
 					}
 				}else{

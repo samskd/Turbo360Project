@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lisa Reed Fitness - Northern Virginia, Washington DC, Maryland - In Home Personal Training - </title>
+<meta name="revisit-after" content="1 month">
+<meta name="description" content="Our team consists of some of the best personal trainers not only in the Northern Virginia, Arlington, Alexandria, and Washington, DC metro area, but in the world!">
+<meta name="keywords" content="washington dc, alexandria, arlington, personal trainer, dc metro area, in home personal training">
+
+<!-- favicon custom logo goes here png or ico format -->
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.html">
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../assets/css/style2.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/colorbox.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/jshare.css" />
+<!-- js -->
+<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="../assets/js/cufon-yui.js"></script>
+<script type="text/javascript" src="../assets/js/TitilliumText14L_800.font.js"></script>
+<script type="text/javascript" src="../assets/js/hoverIntent.js"></script>
+<script type="text/javascript" src="../assets/js/menu.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.qtip-1.0.0-rc3.min.html"></script>
+<script type="text/javascript" src="../assets/js/AC_RunActiveContent.js"></script>
+<script type="text/javascript" src="../assets/js/simpleCart.js"></script>
+<script type="text/javascript" src="../assets/js/lrf.js"></script>
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	$(".news1").colorbox({width:"50%", height:"40%", inline:true, href:"#news1", opacity: "0.1"});
+	$("#view-cart").colorbox({width:"70%", inline:true, href:"#shopping-cart-div", opacity: "0.1"});
+	$(".youtube1").colorbox({iframe:true, width:560, height:340});
+	$(".youtube2").colorbox({iframe:true, width:640, height:385});
+	$().jshare({ jsharedir : '/assets/jshare/', iconsdir: '/assets/jshare/images/icons/' }); 
+});
+
+jQuery(function(){
+	jQuery('ul.menu').superfish();
+});
+
+
+
+simpleCart.email = "lisareedfitness@yahoo.com";
+simpleCart.checkoutTo = PayPal;
+simpleCart.currency = USD;
+simpleCart.shippingFlatRate = 0.00;
+simpleCart.cartHeaders = ["Name" , "Price" , "Decrease" , "Quantity" , "Increase" , "Total" ];
+
+</script>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<style>
+	.smoothmenu { margin-left:60px; }
+</style>
+<![endif]-->
+
+<style>
+p {margin-bottom:10px;}
+</style>
+
+</head>
+<body>
+<div id="fb-root"></div>
+
+	<div id="header-wrap"><!-- begin #header-wrap --><a href="http://www.lisareedfitness.com"><img src="http://www.lisareedfitness.com/images/Lisa-Reed-Fitness.png" alt="Lisa Reed Fitness" width="400" height="145" border="0"></a>
+	  <header class="container_12">
+	    <div class="menuContainer" style="top:10px;">
+  <a href="http://www.linkedin.com/pub/lisa-reed/9/897/a10" target="_blank"><img src="../images/linkedin.png" alt="Lisa Reed on Facebook!" width="40" height="40" class="frame" title="Lisa Reed on LinkedIn "  style="float:right;" /> </a>     
+        <a href="http://www.youtube.com/user/reediculouslyfit"> <img src="../images/YouTube.png" alt="Lisa Reed on You Tube" width="40" height="40" class="frame" title="Lisa Reed on You Tube!" style="float:right;"></a>
+ <a href="http://twitter.com/lisareedfitness"><img src="../images/twitter.png" alt="Lisa Reed on Twitter!" width="40" height="40" class="frame" title="Lisa Reed on Twitter!" style="float:right;"> </a>
+  <a href="http://www.facebook.com/pages/Lisa-Reed-Fitness-LLC/105192299541369"><img src="../images/facebook.png" alt="Lisa Reed on Facebook!" width="40" height="40" class="frame" title="Lisa Reed on Facebook!" style="float:right;"> </a>
+<ul class="menu" style="float:none; clear:both;">
+<li><a href="../index.html">Home</a></li>
+<li><a href="#" class="dontclick">About</a>
+<ul>
+<li class="first"><a href="../team/lisa-reed.html">About Lisa</a></li>
+<li><a href="../team/lisa-reed.html" class="dontclick">Meet the Team</a>
+
+<ul>
+<li class="first"><a href="../team/amanda.html">Amanda, Business Assistant </a></li>
+<li><a href="../team/ashley.html">Ashley</a></li>
+<li><a href="../team/brittney.html">Brittney</a></li>
+<li><a href="../team/jerome.html">Jerome, Boxer</a></li>
+<li><a href="../team/Jonathan.html">Jonathan</a></li>
+<li><a href="../team/Julie.html">Julie</a></li>					
+<li><a href="../team/Justin.html">Justin</a></li>
+
+<li><a href="../team/jerome.html">Jerome, Boxer</a></li>
+</ul>
+</li>
+<li><a href="../join-lrf.html">Join our Team!</a></li>
+<li><a href="../testimonials.html">Testimonials</a></li>
+<li><a href="../media.html">Media</a></li>
+</ul>
+</li>
+<li><a href="#" class="dontclick">Get Fit</a>
+<ul>
+<li class="first"><a href="../personal-training.html">Personal Training</a></li>
+<li><a href="#" class="dontclick">Plan Ahead</a>
+<ul>
+<li class="first"><a href="../get-fit/bride-to-be-fit.html">Bride To Be Fit</a></li>
+<li><a href="../get-fit/mom-to-be-fit.html">Mom To Be Fit</a></li>
+</ul>
+<li><a href="#">Look Your Best</a>
+<ul>
+<li class="first"><a href="../get-fit/photo-fit.html">Photo Fit</a></li>
+<li><a href="../get-fit/photo-fit-pro.html">Competition Prep</a></li>
+<li><a href="../nutrition.html">Nutrition</a></li>
+</ul>
+</li>
+<li><a href="#">Stay Healthy</a>
+<ul>
+<li class="first"><a href="../get-fit/weight-loss.html">Weight Loss</a></li>
+<li><a href="../get-fit/heart-health.html">Heart Health</a></li>
+<li><a href="../get-fit/athletic-performance.html">For Athletes</a></li>
+<li><a href="../get-fit/childrens-fitness.htm">Children's Fitness</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Shop!</a>
+	<ul>
+		<li><a href="../rates.html">Training Rates</a></li>
+        <li><a href="http://www.lisareedfitness.com/DVD/">DVD</a></li>
+<li><a href="../merchandise.html">LRF Merchandise</a></li>
+    </ul>
+</li>
+
+<li><a href="#">Extra</a>
+	<ul>
+        <li><a href="../policies.html">LRF Policies</a></li>
+        <li><a href="../links.html">Lisa's Links</a></li>
+        <li><a href="../photo-gallery.html">Photo Gallery</a></li>
+        <li><a href="http://www.facebook.com/pages/Lisa-Reed-Fitness-LLC/105192299541369">Facebook</a></li>
+        <li><a href="http://twitter.com/lisareedfitness">Twitter</a></li>
+    </ul>
+</li>
+<li><a href="http://reediculouslyfit.tumblr.com/">LRF BLog</a>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</div>		</header>
+	</div>
+<!-- end #header-wrap -->
+	
+	<!-- begin .bg -->
+<div class="bg">  
+<div id="wrap" class="container_12" style="background-image:url(../images/bkgd-videopage.jpg); background-position:bottom; background-repeat:repeat-x;"><!-- begin #wrap --> 
+
+ <div style="width:630px; float:left;  background-color:#fff; margin:10px 0 10px 10px; ">
+ <h2>&quot;REEDiculously Fit with Lisa in 7 Minutes&quot; </h2>
+ <img src="../images/LRF-DVD.jpg" width="340" height="482" alt="Reed-iculously Fit with Lisa In 7 Minutes!" style="float:left; padding:10px 10px 40px 0;" />   
+<p>Professional Fitness Trainer, Lisa Reed, MS, CSCS, owner of Lisa Reed Fitness, LLC, is known as the fitness expert in not only Washington DC, but around the world.  Lisa is the renowned strength & conditioning/ performance/ nutrition coach for tennis icon, Monica Seles, University of Florida and the United States Naval Academy as well as her virtual and in-home clients. </p>
+<p>Now you can train with Lisa at home with her Reed-iculously Fit 7 Minute Circuit Training Workouts.</p>
+<p>Targeted for those busy bodies who do not have time to go to the gym. In only 7 minutes you can achieve maximum results.</p>
+<p>Transform your body, burn fat, strengthen your muscles, increase your metabolism, have more energy, feel great, and be Reed-iculously Fit!</p>
+<p>What makes the difference is what you do daily to sculpt your body and burn calories!</p>
+<p style="font-size:18px; line-height:22px; text-align:center; font-weight:bold; font-style:italic;">“Success is the sum of small efforts&#8212;repeated day in and day out.”</p>
+<div style="float:left; width:540px; padding:10px 30px;">
+<h4>Six 7 Minute Reed-iculously Fit Strength &amp; Cardio Circuits:</h4>
+<ul>
+  <li>Boot Camp </li>
+  <li>Lower Body</li>
+  <li>Fit to Fight </li>
+  <li> Upper Body  </li>
+  <li>Perfect Posture &amp; Stretch for Success</li>
+  <li> Total Body </li>
+  </ul>
+<h4>PLUS Bonus Workout! </h4>
+<ul>
+  <li>Awesome Abs</li>
+</ul>
+</div>
+ </div>
+
+<div id="vidcontainer">
+<h3>Watch a Preview Here!!</h3>
+<iframe width="300" height="169" src="http://www.youtube.com/embed/Eei864glc7Q" frameborder="0" allowfullscreen></iframe>
+
+<div style="background-color:#fff; margin:10px; height:576px; border:2px solid #c91300;">
+<h3 style="background-color:#c91300; color:#fff; padding:5px; margin-bottom:25px;">Order Your Copy Now AND Get Signed up for <br />
+  REED-iculously Fit Facts!!</h3>
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="XPM6PAZ78K8K6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<img src="../images/Lisa-Reed-DVD.jpg" width="214" height="274" alt="DVD From Lisa Reed: Reed-iculously Fit with Lisa In 7 Minutes!" style="padding-left:10px;" />
+<p style="font-size:18px; line-height:22px; text-align:center; font-weight:bold; font-style:italic;">Live to be Reed-iculously Fit!</p>
+</div>
+</div>
+<div style="background-color:#fff; margin:10px; padding:10px; clear:both; ">
+<p style="font-size:18px; line-height:22px; text-align:center; font-weight:bold; font-style:italic;">See what others are saying about "Reed-iculously Fit with Lisa In 7 Minutes!"</p>
+<p>As a former competitive gymnast, fitness and my body image are extremely important to me.  But, with my demanding job and my family to care for, my workouts often get put on the back burner. That’s why I started doing Lisa Reed's Reed-iculously Fit in 7 min workouts.  I do one of Lisa's circuit training workouts every morning before work. It’s amazing how she can pack such a great workout into only 7 mintues!  I love how each workout burns out a different muscle group – I rotate them so I get in a total body workout by the end of each week. Thanks Lisa for making it so easy to stay strong and lean!<br />
+~ Carla</p>
+<p>"I've seen tremendous improvements in my strength and cardiovascular fitness level since starting Lisa's 7 minute circuits. Her expert workouts and motivational style really do produce results. I am proud to say that I am Reed-iculously Fit!!!"<br />
+~Jessica</p>
+
+</div></div>
+</div>
+    <!-- end .bg -->
+	
+	<!-- begin #info-wrap -->
+	     <div id="info-wrap">
+          <div id="info" class="container_12">
+               <!-- begin #info -->
+            <section id="home-about" class="grid_8">
+                 <h2>Find out More About Lisa Reed Fitness!</h2>   
+</section>
+          </div>
+<!-- end #info -->
+</div>    
+	     <!-- end #info-wrap -->
+	
+<!-- begin .bg -->
+	     <div class="bg">
+          <footer id="footer-a" class="container_12">
+           <section class="useful grid_3 omega" style="width:300px;">
+                        
+ <h3 style="padding-bottom:10px;">Follow Lisa on Twitter!</h3>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 250,
+  height: 160,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('lisareedfitness').start();
+</script>
+              
+
+                         </section>
+               <section class="useful grid_3 alpha">
+                    <h3>The Team</h3>
+                    <ul> 
+<li><a href="..team/lisa-reed.html">Lisa Reed, Owner</a> </li>
+<li><a href="..team/amanda.html">Amanda, Business Assistant </a></li>
+<li><a href="..team/ashley.html">Ashley </a></li>
+<li><a href="..team/brittney.html">Brittney</a></li>
+<li><a href="..team/jerome.html">Jerome, Boxer</a></li>
+<li><a href="..team/Jonathan.html">Jonathan</a></li>
+<li><a href="..team/Julie.html">Julie</a></li>					
+<li><a href="..team/Justin.html">Justin</a></li>
+<li><a href="..team/Marshall.html">Marshall</a></li>
+</ul>
+               </section>
+               <section class="useful grid_3">
+                    <h3>Fitness Programs</h3>
+                    <ul>
+                         <li>
+                              <a href="../personal-training.html">Personal Training</a>
+                              <li>
+                                   <a href="../get-fit/weight-loss.html">Weight Loss</a>
+                              </li>
+                              <li>
+                                   <a href="../get-fit/mom-to-be-fit.html">For Future Moms</a>
+                              </li>
+                              <li>
+                                   <a href="../get-fit/athletic-performance.html">Athletic Performance</a>
+                              </li>
+                              <li><a href="../get-fit/bride-to-be-fit.html">For Future Brides</a></li>
+<li><a href="../get-fit/childrens-fitness.htm">Children's Fitness</a></li>
+                    </ul>
+                    </section>
+                    <section class="useful grid_3">
+                         <h3>General Info</h3>
+                         <ul>
+                              <li>
+                                   <a href="../rates.html">Training Rates</a>
+                              </li>
+                              <li><a href="http://www.lisareedfitness.com/DVD/">DVD</a></li>
+<li><a href="../merchandise.html">Merchandise</a></li>
+                              <li>
+                                   <a href="../policies.html">Policies</a>
+                              </li>
+                              <li>
+                                   <a href="../contact.html">Contact LRF</a>
+                              </li>
+                         </ul>
+                         <h3 style="padding-top:30px;">Contact Us</h3>
+                         <ul>
+                              <li><a href="mailto:lisa@lisareedfitness.com">lisa@lisareedfitness.com</a></li>
+                                   <li>703.899.9075</li>
+                              </ul>
+                    </section>
+                   
+                    </footer>
+               </div>
+               <footer id="footer-b">
+                    <div id="copyright" class="container_12">
+                         <!-- begin #copyright -->
+                         <div class="grid_12">
+                              <p id="legal">
+                                   &copy; Lisa Reed Fitness 2011 All Rights Reserved
+                              </p>
+                              
+                         </div>
+                    </div>
+                    <!-- end #copyright -->
+               </footer>	<!-- end .bg --><div style="display:none;" id="hidden-content">
+<div id="shopping-cart-div">
+	    <h2>Shopping Cart</h2>
+	    <div class="simpleCart_items"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32166028-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+<!-- Mirrored from www.lisareedfitness.com/ by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 13 Sep 2011 16:40:29 GMT -->
+</html>
