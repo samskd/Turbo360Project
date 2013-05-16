@@ -169,7 +169,7 @@ public class RankerComprehensive extends Ranker {
 		double score = 0.0;
 
 		try{
-			if(!d._isTweet) return 0.0;
+			if(!d._isRealtime) return 0.0;
 
 			long retweetCount = d._retweetCount;
 			score += retweetCount*0.3;

@@ -1,7 +1,6 @@
 package edu.nyu.cs.cs2580;
 
 import java.util.Date;
-import java.util.Map;
 import java.util.Vector;
 
 /**
@@ -18,7 +17,6 @@ public class DocumentIndexed extends Document {
 	private Indexer _indexer = null;
 	
 	//Tweet Features
-	public boolean _isTweet = false;
 	public long _retweetCount = 0;
 	public boolean _isFavorited = false;
 	public boolean _isPossiblySensitive = false;

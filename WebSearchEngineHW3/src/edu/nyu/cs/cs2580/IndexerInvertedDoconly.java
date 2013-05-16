@@ -127,11 +127,13 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	private void createWikiIndex(File corpusDirectory) throws FileNotFoundException {
 		int fileCount = 0;
 		finalIndexCount = 1;
+		
+		DocumentProcessor documentProcessor = new DocumentProcessor();
+		
 		System.out.println("Processing Documents");
-
 		if(corpusDirectory.isDirectory()){
 			for(File corpusFile :corpusDirectory.listFiles()){
-				processDocument(corpusFile);	
+				processDocument(corpusFile, documentProcessor);	
 				fileCount++;
 
 				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
@@ -153,6 +155,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		docId = 1;
 		fileId = 1;
 
+		DocumentProcessor documentProcessor = new DocumentProcessor();
 		try{
 			System.out.println("Processing Tweets");
 
@@ -160,7 +163,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				for(File tweetFile : corpusDirectory.listFiles()){
 					if(tweetFile.isDirectory()) continue;
 					//to avoided retweeted tweets
-					if(!processTweet(tweetFile)) continue;	
+					if(!processTweet(tweetFile, documentProcessor)) continue;	
 					fileCount++;
 					if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 						saveIndexInFile(REALTIME);
@@ -182,9 +185,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 	 * @param content
 	 * @throws FileNotFoundException 
 	 */
-	private void processDocument(File file) throws FileNotFoundException {
-
-		DocumentProcessor documentProcessor = new DocumentProcessor();
+	private void processDocument(File file, DocumentProcessor documentProcessor) throws FileNotFoundException {
 
 		Vector<String> titleTokens_Str = documentProcessor .process(file.getName());
 		Vector<String> bodyTokens_Str = documentProcessor.process(file);
@@ -223,21 +224,14 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		}
 	}
 
-	private boolean processTweet(File file) {
+	private boolean processTweet(File file, DocumentProcessor documentProcessor) {
 
-		DocumentProcessor documentProcessor = new DocumentProcessor();
 		ObjectInputStream ois = null;
 
 		try{
 			ois = new ObjectInputStream(new FileInputStream(file));
-			//			Status tweet = (Status)ois.readObject();
 			T3Status t3Status = (T3Status)ois.readObject();
 			Status tweet = t3Status.status;
-
-			//avoid storing retweeted tweets
-//			if(tweet.isRetweet()){
-//				return false;
-//			}
 
 			Map<String, String> documents = t3Status.documents;
 			Iterator<String> titles = documents.keySet().iterator();
@@ -263,7 +257,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 				doc.setDocumentTokens(bodyTokens);
 
 				//tweet
-				doc._isTweet = true;
+				doc._isRealtime = true;
 				doc._createdAt = tweet.getCreatedAt();
 				doc._retweetCount = tweet.getRetweetCount();
 				doc._isFavorited = tweet.isFavorited();

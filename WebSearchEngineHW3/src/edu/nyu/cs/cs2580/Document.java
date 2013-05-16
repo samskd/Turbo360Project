@@ -60,6 +60,7 @@ class Document implements Serializable {
   }
 
   public int _docid;
+  public boolean _isRealtime = false;
 
   // Basic information for display
   private String _title = "";

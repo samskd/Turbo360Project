@@ -7,13 +7,13 @@ package edu.nyu.cs.cs2580;
  * @author congyu
  */
 class ScoredDocument implements Comparable<ScoredDocument> {
-  private DocumentIndexed _doc;
+  private Document _doc;
   private double _score;
 
-  public ScoredDocument(DocumentIndexed doc, double score) {
-    _doc = doc;
-    _score = score;
-  }
+  public ScoredDocument(Document doc, double score) {
+	    _doc = doc;
+	    _score = score;
+	  }
 
   public Document getDocument(){
 	 return _doc;
@@ -22,7 +22,7 @@ class ScoredDocument implements Comparable<ScoredDocument> {
   public String asTextResult() {
     StringBuffer buf = new StringBuffer();
     buf.append(_doc._docid).append("\t");
-    if(_doc._isTweet)
+    if(_doc._isRealtime)
     	buf.append("<a href='"+_doc.getUrl()+"'>"+_doc.getTitle()+"</a>").append("\t");
     else
     	buf.append(_doc.getTitle()).append("\t");
@@ -39,7 +39,7 @@ class ScoredDocument implements Comparable<ScoredDocument> {
 	  
 	  String url;
 	  
-	  if(_doc._isTweet){
+	  if(_doc._isRealtime){
 		  url = _doc.getUrl();
 	  }else{
 		  url = "file://localhost/Users/samitpatel/Desktop/Turbo360Project/WebSearchEngineHW3/data/wiki/"+_doc.getUrl();

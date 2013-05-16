@@ -74,8 +74,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 
 	private final Integer INFINITY = Integer.MAX_VALUE;
-	//	private final String contentFolderName;
-	//	private final String tweetFolderName;
 	private final String indexFolder = "invertedOccurenceCompressionIndex";
 	private final String indexFileName = "invertedOccurenceCompressionIndex.idx";
 
@@ -116,8 +114,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		try{
 
 			System.out.println("Using Indexer: " + this.getClass().getSimpleName());
-			//			contentFolderName = _options._corpusPrefix;
-			//			tweetFolderName = "data/tweets";
 			String idxFolder = _options._indexPrefix + "/"+indexFolder;
 			File indexDirectory = new File(idxFolder);
 			if(!indexDirectory.exists())
@@ -279,8 +275,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				processDocument(corpusFile, documentProcessor);	
 				fileCount++;
 
-				if(fileCount > 200) break;
-
 				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 					saveIndexInFile(CORPUS);
 				}
@@ -375,14 +369,9 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 		try{
 			ois = new ObjectInputStream(new FileInputStream(file));
-			//			Status tweet = (Status)ois.readObject();
 			T3Status t3Status = (T3Status)ois.readObject();
 			Status tweet = t3Status.status;
 
-			//avoid storing retweeted tweets
-			//			if(tweet.isRetweet()){
-			//				return false;
-			//			}
 
 			Map<String, String> documents = t3Status.documents;
 			Iterator<String> titles = documents.keySet().iterator();
@@ -393,10 +382,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				String url = documents.get(title);
 
 				File titleDoc = new File("data/"+title);
-
-				if(!titleDoc.exists()){
-					System.out.println("X -> "+file.getPath());
-				}
 
 				Vector<String> bodyTokens_Str = documentProcessor.process(titleDoc);
 
@@ -412,7 +397,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				doc.setDocumentTokens(bodyTokens);
 
 				//tweet
-				doc._isTweet = true;
+				doc._isRealtime = true;
 				doc._createdAt = tweet.getCreatedAt();
 				doc._retweetCount = tweet.getRetweetCount();
 				doc._isFavorited = tweet.isFavorited();
@@ -428,7 +413,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				doc._totalPublicLists = user.getListedCount();
 
 				_documents.add(doc);
-				_docIds.put(title, documentID);
+				_docIds.put(url, documentID);
 				++_numDocs;
 
 				Set<Integer> uniqueTerms = new HashSet<Integer>();
@@ -463,7 +448,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 			T3FileWriter indexWriter = new T3FileWriter(finalIndex);
 
 			File indexDirectory = new File(tempIndex);
-			Gson gson = new Gson();
+//			Gson gson = new Gson();
 
 			if(indexDirectory.isDirectory()) {
 
