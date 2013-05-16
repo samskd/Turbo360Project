@@ -1,6 +1,5 @@
 package edu.nyu.cs.cs2580;
 
-import java.io.Serializable;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
@@ -11,9 +10,8 @@ import java.util.Vector;
  * 
  * @author samitpatel
  * */
-class PostingEntry<T> implements Serializable {
+class PostingEntry<T> {
 
-	private static final long serialVersionUID = 3167577397839073790L;
 	private Integer _docid;
 	private Vector<T> _values;
 
@@ -55,11 +53,15 @@ class PostingEntry<T> implements Serializable {
 
 	@Override
 	public String toString() {
-		String str = _docid+" ";
-		for(T value : _values){
-			str = str + value.toString() + " ";
+		StringBuilder str = new StringBuilder(_docid.toString()+":");
+		for(int i=0; i<_values.size(); i++){
+			T value = _values.get(i);
+			str.append(value.toString());
+			if(i<_values.size()-1)
+				str.append(" ");
 		}
-		return str;
+		
+		return str.toString();
 	}
 }
 
@@ -130,21 +132,16 @@ public class PostingsWithOccurences<T> extends Vector<PostingEntry<T>>{
 
 
 	@Override
-	public synchronized String toString() {
-		String str = "";
-		for(PostingEntry<T> entry : this){
-			str = str + entry.toString() + ":";
+	public String toString() {
+		StringBuilder str = new StringBuilder("[");
+		for(int i=0; i < this.size(); i++){
+			PostingEntry<T> entry = this.get(i);
+			str.append(entry.toString());
+			if(i<this.size()-1)
+				str.append(", ");
 		}
-		return str;
-	}
-	
-
-	public synchronized String formatString() {
-		String str = this.get(0).getDocID() + ":";
-		for(PostingEntry<T> entry : this){
-			str = str + entry.toString() + ":";
-		}
-		return str;
+		str.append("]");
+		return str.toString();
 	}
 
 }

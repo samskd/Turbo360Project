@@ -97,7 +97,7 @@ public class IndexerInvertedCompressed extends Indexer {
 
 	// Maps each term to their posting list
 	private Map<Integer, PostingsWithOccurences<String>>  _invertedIndexWithCompresion = 
-			new HashMap<Integer, PostingsWithOccurences<String>>();
+			new TreeMap<Integer, PostingsWithOccurences<String>>();
 
 	// Maps each term to their posting list
 	private Map<Integer, PostingsWithOccurences<String>> _realtimeInvertedIndex = null;
@@ -242,13 +242,13 @@ public class IndexerInvertedCompressed extends Indexer {
 	public void constructIndex() throws IOException {
 
 		createWikiIndex(new File(_options._corpusPrefix));
-		createTwitterIndex(new File("data/"+REALTIME));
+		//createTwitterIndex(new File("data/"+REALTIME));
 
 		System.out.println(
 				"Indexed " + Integer.toString(_numDocs) + " docs with " +
 						Long.toString(_totalTermFrequency) + " terms.");
 
-		String indexFile = _options._indexPrefix + "/"+indexFolder+"/"+indexFileName;
+		String indexFile = _options._indexPrefix + "/" + indexFileName;
 		System.out.println("Store index to: " + indexFile);
 		ObjectOutputStream writer =
 				new ObjectOutputStream(new FileOutputStream(indexFile));
@@ -272,7 +272,7 @@ public class IndexerInvertedCompressed extends Indexer {
 				processDocument(corpusFile, documentProcessor);	
 				fileCount++;
 				
-				if(fileCount > 3000) break;
+				if(fileCount > 200) break;
 				
 				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 					saveIndexInFile(CORPUS);
@@ -283,7 +283,6 @@ public class IndexerInvertedCompressed extends Indexer {
 		saveIndexInFile(CORPUS);
 		mergeFile(CORPUS);
 	}
-
 
 
 	private void createTwitterIndex(File corpusDirectory) throws FileNotFoundException {
@@ -321,7 +320,6 @@ public class IndexerInvertedCompressed extends Indexer {
 			e.printStackTrace();
 		}
 	}
-
 
 
 	private void processDocument(File file, DocumentProcessor documentProcessor) throws FileNotFoundException {
@@ -362,7 +360,6 @@ public class IndexerInvertedCompressed extends Indexer {
 			_termDocFrequency.put(idx, _termDocFrequency.get(idx) + 1);
 		}
 	}
-
 
 
 	private boolean processTweet(File file, DocumentProcessor documentProcessor) {
@@ -450,16 +447,15 @@ public class IndexerInvertedCompressed extends Indexer {
 	}
 
 
-
-
 	private void mergeFile(String docType) {
 
 		try{
-			String index = _options._indexPrefix+"/"+indexFolder+"/"+docType+"/";
+			String tempIndex = _options._indexPrefix+"/"+indexFolder+"/temp/"+docType+"/";
 			//Final index file
-			T3FileWriter indexWriter = new T3FileWriter(index+(finalIndexCount++)+".idx");
+			String finalIndex = _options._indexPrefix+"/"+indexFolder+"/"+docType+"/"+(finalIndexCount++)+".idx";
+			T3FileWriter indexWriter = new T3FileWriter(finalIndex);
 
-			File indexDirectory = new File(index);
+			File indexDirectory = new File(tempIndex);
 			Gson gson = new Gson();
 
 			if(indexDirectory.isDirectory()) {
@@ -483,7 +479,8 @@ public class IndexerInvertedCompressed extends Indexer {
 					System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
 
 					//get posting list of term_id i from all the files and merge them
-					List<Integer> mergedPostingList = new ArrayList<Integer>();
+//					List<Integer> mergedPostingList = new ArrayList<Integer>();
+					StringBuilder mergedPostingListStr = new StringBuilder();
 
 					for(int f=0; f<files.length; f++) {
 						File indexTempFile = files[f];
@@ -495,7 +492,6 @@ public class IndexerInvertedCompressed extends Indexer {
 								Scanner scanner = new Scanner(indexTempFile);
 								scanner.useDelimiter("],");
 								scanners.put(indexTempFile.getName(),scanner);
-
 							} catch (FileNotFoundException e) {
 								e.printStackTrace();
 							}
@@ -504,17 +500,25 @@ public class IndexerInvertedCompressed extends Indexer {
 
 
 						String postingList = getPostingList(indexTempFile , i);
-
-						//sample posting list = [1,2,3,4,5]
+						
+						//sample posting list = [0:81 82 02b2 03f8 0185 02df, 2:81 0290 cc]
 						if(postingList != null){
 							try{
+								
+								postingList = postingList.replaceAll("\\]", "");
+								postingList = postingList.replaceAll("\\[", "");
 
-								if(postingList.charAt(postingList.length()-2)== '}'){
-									postingList = postingList.substring(0,postingList.length()-2);
-								}
-
-								int[] intList = gson.fromJson(postingList, int[].class); 
-								mergedPostingList.addAll(asList(intList));
+								if(mergedPostingListStr.length() > 0)
+									mergedPostingListStr.append(", ");
+								
+								mergedPostingListStr.append(postingList);
+								
+//								if(postingList.charAt(postingList.length()-2)== '}'){
+//									postingList = postingList.substring(0,postingList.length()-2);
+//								}
+//
+//								int[] intList = gson.fromJson(postingList, int[].class); 
+//								mergedPostingList.addAll(asList(intList));
 							}catch(Exception e){
 								e.printStackTrace();
 							}
@@ -526,10 +530,12 @@ public class IndexerInvertedCompressed extends Indexer {
 					if(i%mergeCount == 0 && i>0 ){
 						indexWriter.write("}");
 						indexWriter.close();
-						indexWriter = new T3FileWriter(indexFolder+(finalIndexCount++)+".idx");
+						indexWriter = new T3FileWriter(_options._indexPrefix+"/"+indexFolder+"/"+docType+"/"+(finalIndexCount++)+".idx");
 						indexWriter.write("{");
 					}
-					String entry = "\""+i+"\""+":"+gson.toJson(mergedPostingList);
+//					String entry = "\""+i+"\""+":"+gson.toJson(mergedPostingList);
+					
+					String entry = "\""+i+"\""+":["+mergedPostingListStr+"]";
 					indexWriter.write(entry);
 					if((i+1)%mergeCount != 0){
 						indexWriter.write(",");
@@ -554,15 +560,14 @@ public class IndexerInvertedCompressed extends Indexer {
 
 
 
-	private void deleteTempFiles(String type) {
-		File directory = new File(_options._indexPrefix+"/Comp_temp/"+type);
+	private void deleteTempFiles(String docType) {
+		File directory = new File(_options._indexPrefix+"/"+indexFolder+"/temp/"+docType);
 		try{
 			delete(directory);
 		}catch(IOException e){
 			e.printStackTrace();
 		}
 	}
-
 
 
 	public static void delete(File file) throws IOException{
@@ -605,8 +610,6 @@ public class IndexerInvertedCompressed extends Indexer {
 	}
 
 
-
-
 	public List<Integer> asList(int[] ints) {
 		List<Integer> intList = new ArrayList<Integer>();
 		for (int index = 0; index < ints.length; index++)
@@ -627,23 +630,31 @@ public class IndexerInvertedCompressed extends Indexer {
 			if(pointerToScanners.get(indexTempFile.getName()) == null){
 				nextElement = scanner.next();
 				if(nextElement.startsWith(".")) continue;
-				nextElement += "]";
+//				nextElement += "]";
 			}else{
 				nextElement = pointerToScanners.get(indexTempFile.getName());
 				if(nextElement.startsWith(".")) continue;
 			}
 
-
-			nextElement = nextElement.substring(nextElement.indexOf("\""));
-
-			String currentTerm_id =nextElement.substring(nextElement.indexOf("\"")+1,nextElement.indexOf(("\""),1));
-
-			if(term_id == Integer.parseInt(currentTerm_id)){
-				pointerToScanners.remove(indexTempFile.getName());
-				return nextElement.substring(nextElement.indexOf(":")+1);
+			String currentTerm_id;
+			
+			if(nextElement.startsWith("{")){
+				nextElement = nextElement.substring(nextElement.indexOf("{"));
+				currentTerm_id = nextElement.substring(nextElement.indexOf("{")+1,nextElement.indexOf("=", 1));
+			}else{
+				currentTerm_id = nextElement.substring(0, nextElement.indexOf("="));
+				currentTerm_id = currentTerm_id.trim();
 			}
 
-			if(Integer.parseInt(currentTerm_id) > term_id){
+			int currentTermID_int = Integer.parseInt(currentTerm_id);
+			
+
+			if(term_id == currentTermID_int){
+				pointerToScanners.remove(indexTempFile.getName());
+				return nextElement.substring(nextElement.indexOf("=")+1);
+			}
+
+			if(currentTermID_int > term_id){
 				pointerToScanners.put(indexTempFile.getName(), nextElement);
 				break;
 			}else{
@@ -659,22 +670,26 @@ public class IndexerInvertedCompressed extends Indexer {
 	private void saveIndexInFile(String docType) {
 
 		try{
-			String index = _options._indexPrefix+"/"+indexFolder+"/"+docType+"/";
+			String tempIndex = _options._indexPrefix+"/"+indexFolder+"/temp/"+docType+"/";
 
 			System.out.println("Saving file "+fileId);
 
-			T3FileWriter fileWriter= new T3FileWriter(index+(fileId++)+".idx");
-			GsonBuilder builder = new GsonBuilder();
-
-			Gson gson =
-					builder.enableComplexMapKeySerialization().setPrettyPrinting().create();
-			Type type = new TypeToken<HashMap<Integer, PostingsWithOccurences<String>>>(){}.getType();
-			String json = gson.toJson(_invertedIndexWithCompresion, type);
-
+			T3FileWriter fileWriter= new T3FileWriter(tempIndex+(fileId++)+".idx");
+//			GsonBuilder builder = new GsonBuilder();
+//
+//			Gson gson =
+//					builder.enableComplexMapKeySerialization().create();
+//			Type type = new TypeToken<Map<Integer, PostingsWithOccurences<String>>>(){}.getType();
+//			String json = gson.toJson(_invertedIndexWithCompresion, type);
+			Gson gson = new Gson();
+//			String json = gson.toJson(_invertedIndexWithCompresion);
+			
+			String json = _invertedIndexWithCompresion.toString();
+			
 			fileWriter.write(json);
 			fileWriter.close();
 
-			fileWriter= new T3FileWriter(_options._indexPrefix+"/Comp_Documents/"+(docId++)+".idx");
+			fileWriter= new T3FileWriter(_options._indexPrefix+"/Documents/"+docType+"/"+(docId++)+".idx");
 			json = gson.toJson(_documents);
 			fileWriter.write(json);
 			fileWriter.close();
@@ -686,14 +701,10 @@ public class IndexerInvertedCompressed extends Indexer {
 	}
 
 
-
-
 	private void clearMem() {
 		_invertedIndexWithCompresion.clear();
 		_documents.clear();
 	}
-
-
 
 
 	/**
@@ -726,7 +737,7 @@ public class IndexerInvertedCompressed extends Indexer {
 	 * @param tokens
 	 * @param uniques
 	 */
-	private void updateStatistics(Integer documentID, Vector<Integer> tokens, Set<Integer> uniques) {
+	private void updateStatistics(int documentID, Vector<Integer> tokens, Set<Integer> uniques) {
 
 		for(int i=0; i<tokens.size(); i++){
 
@@ -764,7 +775,6 @@ public class IndexerInvertedCompressed extends Indexer {
 	}
 
 
-
 	@Override
 	public void loadIndex() throws IOException, ClassNotFoundException {
 		String indexFile = _options._indexPrefix + "/"+indexFileName;
@@ -792,7 +802,6 @@ public class IndexerInvertedCompressed extends Indexer {
 	}
 
 
-
 	@Override
 	public Document getDoc(int docid) {
 		return getDoc(docid, CORPUS);
@@ -808,7 +817,6 @@ public class IndexerInvertedCompressed extends Indexer {
 
 		return _documentsMap.get(docid);
 	}
-
 
 	private Map<Integer, Document> getDocuments(int docid, String docType) {
 
@@ -1163,12 +1171,10 @@ public class IndexerInvertedCompressed extends Indexer {
 		return _termCorpusFrequency.get(_dictionary.get(term));
 	}
 
-
 	@Override
 	public String getTerm(int termId) {
 		return _terms.get(termId);
 	}
-
 
 	@Override
 	public int getTermID(String term) {
