@@ -16,13 +16,11 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.util.Version;
-import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.html.HtmlParser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.ContentHandler;
-import org.xml.sax.SAXException;
 
 import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.ArticleExtractor;
@@ -67,20 +65,26 @@ public class DocumentProcessor {
 
 		Vector<String> processedTokens = null;
 
-		InputStream input = new ByteArrayInputStream(htmlText.getBytes());
+		//		InputStream input = new ByteArrayInputStream(htmlText.getBytes());
+		//
+		//		ContentHandler handler = new BodyContentHandler(10*1024*1024);  
+		//		Metadata metadata = new Metadata();  
+		//		try {
+		//			new HtmlParser().parse(input, handler, metadata, new ParseContext());
+		//		} catch (Exception e) {
+		//			// TODO Auto-generated catch block
+		//			e.printStackTrace();
+		//		}
+		//		String plainText = handler.toString(); 
+		try{
+			String plainText = ArticleExtractor.INSTANCE.getText(htmlText);
+			Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
+			processedTokens = new Vector<String>(parseKeywords(analyzer,plainText));
 
-		ContentHandler handler = new BodyContentHandler(10*1024*1024);  
-		Metadata metadata = new Metadata();  
-		try {
-			new HtmlParser().parse(input, handler, metadata, new ParseContext());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		}catch(Exception e){
 			e.printStackTrace();
 		}
-		String plainText = handler.toString(); 	
-		Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
-		processedTokens = new Vector<String>(parseKeywords(analyzer,plainText));
-		
+
 		return processedTokens;
 	}
 

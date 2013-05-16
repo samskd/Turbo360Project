@@ -2,6 +2,8 @@ package edu.nyu.cs.cs2580;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Vector;
 
 import com.sun.net.httpserver.Headers;
@@ -32,7 +34,7 @@ class QueryHandler implements HttpHandler {
 		private int _numResults = 10;
 		private int _numDocs = 10;
 		private int _numTerms = 10;
-		public double _realtimeWeight = 0.0; //all corpus based
+		public double _realtimeWeight = 0.5; //all corpus based
 
 		// The type of the ranker we will be using.
 		public enum RankerType {
@@ -116,10 +118,13 @@ class QueryHandler implements HttpHandler {
 		_indexer = indexer;
 	}
 
-	private void respondWithMsg(HttpExchange exchange, final String message)
+	private void respondWithMsg(HttpExchange exchange, final String message, String format)
 			throws IOException {
 		Headers responseHeaders = exchange.getResponseHeaders();
-		responseHeaders.set("Content-Type", "text/plain");
+		if(format.equals("html"))
+			responseHeaders.set("Content-Type", "text/html");
+		else
+			responseHeaders.set("Content-Type", "text/plain");
 		exchange.sendResponseHeaders(200, 0); // arbitrary number of bytes
 		OutputStream responseBody = exchange.getResponseBody();
 		responseBody.write(message.getBytes());
@@ -133,6 +138,22 @@ class QueryHandler implements HttpHandler {
 			response.append(doc.asTextResult());
 		}
 		response.append(response.length() > 0 ? "\n" : "");
+	}
+	
+	/**
+	 * Creates HTML output
+	 * */
+	private void constructHTMLOutput(
+			final Vector<ScoredDocument> docs, StringBuffer response) {
+
+		response.append("<html><body><br>" + 
+				"<div style='font-size:25px; font-weight:bold'></div><br>");
+		
+		for (ScoredDocument doc : docs) {
+			response.append(response.length() > 0 ? "\n" : "");
+			response.append(doc.asHtmlResult());
+		}
+		response.append("</body></html>");
 	}
 
 	public void handle(HttpExchange exchange) throws IOException {
@@ -153,17 +174,17 @@ class QueryHandler implements HttpHandler {
 		String uriQuery = exchange.getRequestURI().getQuery();
 		String uriPath = exchange.getRequestURI().getPath();
 		if (uriPath == null || uriQuery == null) {
-			respondWithMsg(exchange, "Something wrong with the URI!");
+			respondWithMsg(exchange, "Something wrong with the URI!", "text");
 		}
 		if (!uriPath.equals("/search") && !uriPath.equals("/prf")) {
-			respondWithMsg(exchange, "Only /search and /prf is handled!");
+			respondWithMsg(exchange, "Only /search and /prf is handled!", "text");
 		}
 		System.out.println("Query: " + uriQuery);
 
 		// Process the CGI arguments.
 		CgiArguments cgiArgs = new CgiArguments(uriQuery);
 		if (cgiArgs._query.isEmpty()) {
-			respondWithMsg(exchange, "No query is given!");
+			respondWithMsg(exchange, "No query is given!", "text");
 		}
 
 		// Create the ranker.
@@ -171,7 +192,7 @@ class QueryHandler implements HttpHandler {
 				cgiArgs, SearchEngine.OPTIONS, _indexer);
 		if (ranker == null) {
 			respondWithMsg(exchange,
-					"Ranker " + cgiArgs._rankerType.toString() + " is not valid!");
+					"Ranker " + cgiArgs._rankerType.toString() + " is not valid!", "text");
 		}
 
 		// Processing the query.
@@ -188,33 +209,38 @@ class QueryHandler implements HttpHandler {
 			switch (cgiArgs._outputFormat) {
 			case TEXT:
 				constructTextOutput(scoredDocs, response);
+				respondWithMsg(exchange, response.toString(), "text");
 				break;
 			case HTML:
-				// @CS2580: Plug in your HTML output
+				constructHTMLOutput(scoredDocs, response);
+				respondWithMsg(exchange, response.toString(), "html");
 				break;
 			default:
 				// nothing
 			}
-			respondWithMsg(exchange, response.toString());
+			
 			System.out.println("Finished query: " + cgiArgs._query);
 			
 		}else if(uriPath.equals("/prf")){
 			if (cgiArgs._numDocs <= 0) {
-				respondWithMsg(exchange, "Invalid numdocs value!");
+				respondWithMsg(exchange, "Invalid numdocs value!", "text");
 			}
 			if (cgiArgs._numTerms <= 0) {
-				respondWithMsg(exchange, "Invalid numterms value!");
+				respondWithMsg(exchange, "Invalid numterms value!", "text");
 			}
 			QueryRepresentation queryRepresentation 
 				= new QueryRepresentation(ranker, _indexer);
 			String representation = queryRepresentation.represent(processedQuery, 
 					cgiArgs._numDocs, cgiArgs._numTerms);
-			respondWithMsg(exchange, representation.toString());
+			respondWithMsg(exchange, representation.toString(), "text");
 			System.out.println("Finished query representation with " + 
 					cgiArgs._numDocs+" documents and "+cgiArgs._numTerms+" terms: " + 
 					cgiArgs._query);
 		}
 		
 	}
+	
+	
+	
 }
 

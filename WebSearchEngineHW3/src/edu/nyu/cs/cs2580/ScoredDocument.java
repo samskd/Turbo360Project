@@ -36,7 +36,21 @@ class ScoredDocument implements Comparable<ScoredDocument> {
    * @CS2580: Student should implement {@code asHtmlResult} for final project.
    */
   public String asHtmlResult() {
-    return "";
+	  
+	  String url;
+	  
+	  if(_doc._isTweet){
+		  url = _doc.getUrl();
+	  }else{
+		  url = "file://localhost/Users/samitpatel/Desktop/Turbo360Project/WebSearchEngineHW3/data/wiki/"+_doc.getUrl();
+	  }
+	  
+	  return "<div>" +
+				"<span style='font-size:20px'>" +
+				"<a href='"+url+"' target='_blank'>"+_doc.getTitle()+"</a>" +
+				"</span><br>" +
+				"<span>Score : "+Double.toString(_score)+"</span>" +
+			"</div><br><br>";
   }
 
   @Override

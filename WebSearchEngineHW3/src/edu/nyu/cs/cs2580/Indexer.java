@@ -125,6 +125,7 @@ public abstract class Indexer {
 
   // Number of documents in which {@code term} appeared, over the full corpus.
   public abstract int corpusDocFrequencyByTerm(String term);
+  public abstract int corpusDocFrequencyByTerm(String term, String docType);
 
   // Number of times {@code term} appeared in corpus. 
   public abstract int corpusTermFrequency(String term);
@@ -159,4 +160,8 @@ public int nextPhrase(Query query, int docid, int position) {
 public int nextPhrase(Query query, int docid, int position, String docType) {
 	return 0;
 }
+
+public abstract String getTerm(int termId);
+
+public abstract int getTermID(String term);
 }

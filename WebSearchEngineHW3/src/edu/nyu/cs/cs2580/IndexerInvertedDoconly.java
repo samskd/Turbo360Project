@@ -158,7 +158,6 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 			if(corpusDirectory.isDirectory()){
 				for(File tweetFile : corpusDirectory.listFiles()){
-					System.out.println(tweetFile);
 					if(tweetFile.isDirectory()) continue;
 					//to avoided retweeted tweets
 					if(!processTweet(tweetFile)) continue;	
@@ -832,11 +831,12 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	public int documentTermFrequency(String term, String url, String docType) {
 		
-		if(!_dictionary.containsKey(term) || !_docIds.containsKey(term))
+		if(!_dictionary.containsKey(term))
 			return 0;
 		
 		int returnValue = 0;
-		int docID =  _docIds.get(url);
+		Integer docID =  _docIds.get(url);
+		if(docID == null) return 0;
 		
 		if(docType.equals(REALTIME)){
 
@@ -856,7 +856,10 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 			}
 
 			Map<Integer,Integer> count_terms = _invertedIndex.get(_dictionary.get(term)).get_countTerm();
-			returnValue = count_terms.get(docID);
+			
+			if(count_terms != null && count_terms.containsKey(docID))
+				returnValue = count_terms.get(docID);
+			
 			return returnValue;
 		}
 	}
@@ -868,5 +871,9 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 
 	public String getTerm(int termId){
 		return _terms.get(termId);
+	}
+	
+	public int getTermID(String term){
+		return _dictionary.get(term);
 	}
 }

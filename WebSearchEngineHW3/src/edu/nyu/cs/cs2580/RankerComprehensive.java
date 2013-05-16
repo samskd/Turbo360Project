@@ -16,11 +16,10 @@ import edu.nyu.cs.cs2580.SearchEngine.Options;
  */
 public class RankerComprehensive extends Ranker {
 
-	private double realtimeWeighingFactor = 0.2;
+	private double realtimeWeighingFactor = 0.5;
 	private double realtimeResultsPercentage = 0.3;
 	private final String REALTIME = "twitter"; //realtime
 	private final String CORPUS = "wiki";
-	private int numDocs = 0;
 
 	public RankerComprehensive(Options options,
 			CgiArguments arguments, Indexer indexer) {
@@ -40,15 +39,12 @@ public class RankerComprehensive extends Ranker {
 			DocumentIndexed doc = null;
 			int docid = -1;
 
+			
 			System.out.println("Corpus Processing");
 			while ((doc = (DocumentIndexed)_indexer.nextDoc(query, docid)) != null) {
 				//Scoring the document
 				double contentScore = this.getContentScore(query, doc, CORPUS);
-				double realtimeScore = this.getRealTimeTwitterScore(doc);
-				double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
-
-				System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
-				corpusRankQueue.add(new ScoredDocument(doc, totalScore));
+				corpusRankQueue.add(new ScoredDocument(doc, contentScore));
 
 				if (corpusRankQueue.size() > numResults) {
 					corpusRankQueue.poll();
@@ -66,8 +62,7 @@ public class RankerComprehensive extends Ranker {
 				double contentScore = this.getContentScore(query, doc, REALTIME);
 				double realtimeScore = this.getRealTimeTwitterScore(doc);
 				double totalScore = realtimeWeighingFactor*realtimeScore + (1-realtimeWeighingFactor)*contentScore;
-
-				System.out.println(contentScore + ", "+realtimeScore + ", "+totalScore);
+				
 				realtimeRankQueue.add(new ScoredDocument(doc, totalScore));
 
 				if (realtimeRankQueue.size() > totalRealtimeDocs) {
@@ -83,13 +78,12 @@ public class RankerComprehensive extends Ranker {
 			}
 			Collections.sort(realtimeResults, Collections.reverseOrder());
 			
-			int totalCorpusDocs = numResults - realtimeResults.size();
 			while ((scoredDoc = corpusRankQueue.poll()) != null) {
 				corpusResults.add(scoredDoc);
 			}
 			Collections.sort(corpusResults, Collections.reverseOrder());
 			
-			totalCorpusDocs = numResults - realtimeResults.size();
+			int totalCorpusDocs = numResults - realtimeResults.size();
 			if(totalCorpusDocs > corpusResults.size()){
 				totalCorpusDocs = corpusResults.size();
 				realtimeResults.addAll(corpusResults);
@@ -107,75 +101,68 @@ public class RankerComprehensive extends Ranker {
 
 
 	private double getContentScore(Query query, DocumentIndexed doc, String docType) {
-		//return this.getScore(query, doc, docType) + 0.2*doc.getNumViews() + 0.8*doc.getPageRank();
-		return this.getScore(query, doc, docType) + doc.getPageRank();
+		return this.getScore(query, doc, docType);
 	}
 
 
 	private double getScore(Query query, DocumentIndexed d, String docType) {
 
+		Vector<String> qv = query._tokens;
+
+		Vector <Integer> dv = d.getDocumentTokens();
+		Vector<Double> QueryVector_Smoothening = new Vector<Double>();
+
+		double smoothFactor = 0.5;
+
 		double score = 1d;
+		int docTermCount = dv.size();
+		long collectionTermCount = _indexer.totalTermFrequency();
 
-		try{
-			Vector<String> qv = query._tokens;
+		for(int i = 0; i < qv.size(); i++){
 
-			Vector <Integer> dv = d.getDocumentTokens();
-			Vector<Double> QueryVector_Smoothening = new Vector<Double>();
+			String queryTerm = qv.get(i);
+			boolean isPhraseQuery = false;
 
-			double smoothFactor = 0.5;
-
-			int docTermCount = dv.size();
-			long collectionTermCount = _indexer.totalTermFrequency();
-
-			for(int i = 0; i < qv.size(); i++){
-
-				String queryTerm = qv.get(i);
-				boolean isPhraseQuery = false;
-
-				Query phraseToken = null;
-				if(queryTerm.indexOf("\\s+") != -1){
-					isPhraseQuery = true;
-					phraseToken = new Query(queryTerm);
-					phraseToken.processQuery();
-				}
-
-				int qtermFreqDoc = 0;
-				if(isPhraseQuery){
-					while(_indexer.nextPhrase(phraseToken, d._docid, -1, docType) != Integer.MAX_VALUE){
-						qtermFreqDoc++;
-					}
-				}else{
-					qtermFreqDoc = _indexer.documentTermFrequency(queryTerm, d.getUrl(), docType);
-				}
-
-				double firstTerm = (double) qtermFreqDoc/docTermCount;
-				firstTerm *= (1-smoothFactor);
-
-				int qtermFreqCollection = 0;
-				if(isPhraseQuery){
-					for(String token : phraseToken._tokens){
-						qtermFreqCollection += _indexer.corpusTermFrequency(token);
-					}
-				}else{
-					qtermFreqCollection = _indexer.corpusTermFrequency(queryTerm);
-				}
-
-				double secondTerm = (double) qtermFreqCollection/collectionTermCount;
-				secondTerm *= smoothFactor;
-				QueryVector_Smoothening.add(firstTerm + secondTerm);
-
+			Query phraseToken = null;
+			if(queryTerm.indexOf("\\s+") != -1){
+				isPhraseQuery = true;
+				phraseToken = new Query(queryTerm);
+//				phraseToken.processQuery();
 			}
 
-			for(int i=0; i<QueryVector_Smoothening.size(); i++){
-				score *= QueryVector_Smoothening.get(i);
+			int qtermFreqDoc = 0;
+			if(isPhraseQuery){
+				while(_indexer.nextPhrase(phraseToken, d._docid, -1) != Integer.MAX_VALUE){
+					qtermFreqDoc++;
+				}
+			}else{
+				qtermFreqDoc = _indexer.documentTermFrequency(queryTerm, d.getUrl(), docType);
 			}
 
-		}catch(Exception e){
-			e.printStackTrace();
+			double firstTerm = (double) qtermFreqDoc/docTermCount;
+			firstTerm *= (1-smoothFactor);
+
+			int qtermFreqCollection = 0;
+			if(isPhraseQuery){
+				for(String token : phraseToken._tokens){
+					qtermFreqCollection += _indexer.corpusTermFrequency(token);
+				}
+			}else{
+				qtermFreqCollection = _indexer.corpusTermFrequency(queryTerm);
+			}
+
+			double secondTerm = (double) qtermFreqCollection/collectionTermCount;
+			secondTerm *= smoothFactor;
+			QueryVector_Smoothening.add(firstTerm + secondTerm);
+
 		}
+
+		for(int i=0; i<QueryVector_Smoothening.size(); i++){
+			score *= QueryVector_Smoothening.get(i);
+		}
+
 		return score;
 	}
-
 
 	private double getRealTimeTwitterScore(DocumentIndexed d) {
 
