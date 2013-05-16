@@ -39,7 +39,6 @@ public class RankerComprehensive extends Ranker {
 			DocumentIndexed doc = null;
 			int docid = -1;
 
-			
 			System.out.println("Corpus Processing");
 			while ((doc = (DocumentIndexed)_indexer.nextDoc(query, docid)) != null) {
 				//Scoring the document
@@ -51,7 +50,7 @@ public class RankerComprehensive extends Ranker {
 				}
 				docid = doc._docid;
 			}
-
+			
 			int totalRealtimeDocs = (int)(numResults*realtimeResultsPercentage);
 			Queue<ScoredDocument> realtimeRankQueue = new PriorityQueue<ScoredDocument>();
 			docid = -1;

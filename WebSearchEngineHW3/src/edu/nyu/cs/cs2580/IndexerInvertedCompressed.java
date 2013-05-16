@@ -82,7 +82,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 	private static int fileId = 1;
 	private static int docId = 1;
 	private static int documentsCount = 0;
-	private int mergeCount = 10000;
+	private int mergeCount = 5000;
 	private int fileCountPerFile = 100;
 	private static Map<String,Scanner> scanners = new HashMap<String,Scanner>();
 	private static Map<String,String> pointerToScanners = new HashMap<String, String>();
@@ -242,7 +242,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 		try{
 			createWikiIndex(new File(_options._corpusPrefix));
-			//createTwitterIndex(new File("data/"+REALTIME));
+			createTwitterIndex(new File("data/"+REALTIME));
 
 			System.out.println(
 					"Indexed " + Integer.toString(_numDocs) + " docs with " +
@@ -275,6 +275,8 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				processDocument(corpusFile, documentProcessor);	
 				fileCount++;
 
+//				if(fileCount > 1000) break;
+				
 				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 					saveIndexInFile(CORPUS);
 				}
@@ -468,16 +470,14 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				indexWriter.write("{");
 				for(int i = 0 ; i < _dictionary.size();i++){
 
-					System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
+//					System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
 
 					//get posting list of term_id i from all the files and merge them
-					//					List<Integer> mergedPostingList = new ArrayList<Integer>();
+					//List<Integer> mergedPostingList = new ArrayList<Integer>();
 					StringBuilder mergedPostingListStr = new StringBuilder();
 
 					for(int f=0; f<files.length; f++) {
 						File indexTempFile = files[f];
-
-						System.out.println(indexTempFile.getName());
 
 						if(scanners.get(indexTempFile.getName()) == null) {
 							try {
@@ -529,7 +529,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 					String entry = "\""+i+"\""+":["+mergedPostingListStr+"]";
 					indexWriter.write(entry);
-					if((i+1)%mergeCount != 0){
+					if((i+1)%mergeCount != 0 && i != _dictionary.size()-1){
 						indexWriter.write(",");
 					}
 
@@ -548,8 +548,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 			e.printStackTrace();
 		}
 	}
-
-
 
 
 	private void deleteTempFiles(String docType) {
@@ -597,7 +595,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		}else{
 			//if file, then delete it
 			file.delete();
-			System.out.println("File is deleted : " + file.getAbsolutePath());
+//			System.out.println("File is deleted : " + file.getAbsolutePath());
 		}
 	}
 
@@ -610,7 +608,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		}
 		return intList;
 	}
-
 
 
 	private String getPostingList(File indexTempFile, int term_id) {
@@ -656,7 +653,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 		return null;
 	}
-
 
 
 	private void saveIndexInFile(String docType) {
@@ -854,7 +850,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		Vector <Integer> docIds = new Vector<Integer>();
 		for(String token : queryTerms){
 			int nextDocID = next(token, docid, docType);
-			if(nextDocID == Integer.MAX_VALUE){
+			if(nextDocID == INFINITY){
 				//value not found;
 				return null;
 			}
@@ -863,8 +859,8 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 		//case 2 
 		boolean documentFound = true;
-		for(int i = 0 ; i < docIds.size() ; i++){
-			if(docIds.get(i) != docIds.get(0)){
+		for(int i = 1; i < docIds.size(); i++){
+			if(!docIds.get(i-1).equals(docIds.get(i))){
 				documentFound = false;
 				break;
 			}
@@ -927,7 +923,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 			}
 		}
 
-
 		if(postingList == null || postingList.size() == 0)
 			return INFINITY;
 
@@ -965,26 +960,59 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		return postingList.get(ct).getDocID();
 	}
 
-	private Map<Integer, PostingsWithOccurences<String>> getIndex(int integer, String docType) {
+	private Map<Integer, PostingsWithOccurences<String>> getIndex(int term, String docType) {
 
-		Map<Integer,PostingsWithOccurences<String>> treeMap = null;
+		Map<Integer, PostingsWithOccurences<String>> invertedIndex = 
+				new HashMap<Integer, PostingsWithOccurences<String>>();
 
 		try{
-			int file_no = (int)(integer/mergeCount) + 1;
+			int file_no = (int)(term/mergeCount) + 1;
 			String filepath = _options._indexPrefix+"/"+indexFolder+"/"+docType+"/"+file_no+".idx";
 			T3FileReader fileReader = new T3FileReader(filepath);
 			String fileContents = fileReader.readAllBytes();
 			fileReader.close();
 
-			GsonBuilder builder = new GsonBuilder();
-			Gson gson = builder.enableComplexMapKeySerialization().setPrettyPrinting().create();
-			Type type = new TypeToken<TreeMap<Integer,PostingsWithOccurences<String>>>(){}.getType();
-			treeMap = gson.fromJson(fileContents, type);
+			//divide string into terms
+			String[] terms = fileContents.split("\\],");
+			
+			for(int i=0; i<terms.length; i++){
+				String termList = terms[i];
+				//extract termID
+				int termID = Integer.parseInt(termList.substring(termList.indexOf("\"")+1, termList.lastIndexOf("\"")));
+				//extract postinglist
+				String postingListStr = termList.substring(termList.indexOf("[")+1);
+				//divide termList into document with its occurences
+				String[] docWithOccurences = postingListStr.split(", ");
+				
+				PostingsWithOccurences<String> postingList;
+				
+				if(invertedIndex.containsKey(termID))
+					postingList = invertedIndex.get(termID);
+				else
+					postingList = new PostingsWithOccurences<String>();
+				
+				//for each docid and occurence update the postinglist
+				for(int j=0; j<docWithOccurences.length; j++){
+					String docWithOccurenceStr = docWithOccurences[j];
+					String[] docWithOccurenceArray = docWithOccurenceStr.split(":");
+					String docIDStr = docWithOccurenceArray[0];
+					
+					if(docIDStr.isEmpty()) continue;
+					int docID = Integer.parseInt(docIDStr);
+					String[] occurences = docWithOccurenceArray[1].split("\\s+");
 
+					for(int k=0; k<occurences.length; k++)
+						postingList.addEntry(docID, occurences[k]);
+					
+				}
+				
+				invertedIndex.put(termID, postingList);
+			}
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return treeMap;
+		return invertedIndex;
 	}
 
 
@@ -1130,7 +1158,8 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 			return 0;
 
 		int term_idx = _dictionary.get(term);
-		int docID = _docIds.get(url);
+		Integer docID = _docIds.get(url);
+		if(docID == null) return 0;
 
 		if(docType.equals(REALTIME)){
 

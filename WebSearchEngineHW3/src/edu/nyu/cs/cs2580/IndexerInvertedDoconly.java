@@ -768,7 +768,7 @@ public class IndexerInvertedDoconly extends Indexer implements Serializable
 		return postingList.get(ct);
 	}
 
-	private Map<Integer, Postings> getIndex(Integer integer, String docType) {
+	private Map<Integer, Postings> getIndex(int integer, String docType) {
 
 		Map<Integer,Postings> treeMap = null;
 

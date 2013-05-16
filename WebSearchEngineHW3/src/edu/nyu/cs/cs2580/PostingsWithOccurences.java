@@ -83,7 +83,7 @@ public class PostingsWithOccurences<T> extends Vector<PostingEntry<T>>{
 	/**
 	 * Adds an entry to Posting List
 	 * */
-	public void addEntry(Integer docid, T value){
+	public void addEntry(int docid, T value){
 		if(!this.isEmpty()){
 			PostingEntry<T> lastDocument = this.lastElement();
 			if(lastDocument.getDocID() == docid){
@@ -101,7 +101,7 @@ public class PostingsWithOccurences<T> extends Vector<PostingEntry<T>>{
 	/**
 	 * Searchs the documentID in the Vector
 	 * */
-	public PostingEntry<T> searchDocumentID(Integer docID) {
+	public PostingEntry<T> searchDocumentID(int docID) {
 
 		int documentID = Collections.binarySearch(this, new PostingEntry<T>(docID, null), new Comparator<PostingEntry<T>>() {
 
