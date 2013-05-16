@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,7 +36,9 @@ import edu.nyu.cs.cs2580.SearchEngine.Options;
 import edu.nyu.cs.cs2580.FileManager.T3FileReader;
 import edu.nyu.cs.cs2580.FileManager.T3FileWriter;
 
-public class IndexerInvertedCompressed extends Indexer {
+public class IndexerInvertedCompressed extends Indexer implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	// Maps terms to (docs to position offset Sums) 
 	private Map<Integer, HashMap<Integer, Integer>> _sumOfOffsets
@@ -241,19 +244,23 @@ public class IndexerInvertedCompressed extends Indexer {
 	@Override
 	public void constructIndex() throws IOException {
 
-		createWikiIndex(new File(_options._corpusPrefix));
-		//createTwitterIndex(new File("data/"+REALTIME));
+		try{
+			createWikiIndex(new File(_options._corpusPrefix));
+			//createTwitterIndex(new File("data/"+REALTIME));
 
-		System.out.println(
-				"Indexed " + Integer.toString(_numDocs) + " docs with " +
-						Long.toString(_totalTermFrequency) + " terms.");
+			System.out.println(
+					"Indexed " + Integer.toString(_numDocs) + " docs with " +
+							Long.toString(_totalTermFrequency) + " terms.");
 
-		String indexFile = _options._indexPrefix + "/" + indexFileName;
-		System.out.println("Store index to: " + indexFile);
-		ObjectOutputStream writer =
-				new ObjectOutputStream(new FileOutputStream(indexFile));
-		writer.writeObject(this);
-		writer.close();
+			String indexFile = _options._indexPrefix + "/" + indexFileName;
+			System.out.println("Store index to: " + indexFile);
+			ObjectOutputStream writer =
+					new ObjectOutputStream(new FileOutputStream(indexFile));
+			writer.writeObject(this);
+			writer.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 
@@ -271,9 +278,9 @@ public class IndexerInvertedCompressed extends Indexer {
 			for(File corpusFile :corpusDirectory.listFiles()){
 				processDocument(corpusFile, documentProcessor);	
 				fileCount++;
-				
+
 				if(fileCount > 200) break;
-				
+
 				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 					saveIndexInFile(CORPUS);
 				}
@@ -459,7 +466,7 @@ public class IndexerInvertedCompressed extends Indexer {
 			Gson gson = new Gson();
 
 			if(indexDirectory.isDirectory()) {
-				
+
 				File[] files = indexDirectory.listFiles();
 
 				Comparator<File> comp = new Comparator<File>() {
@@ -472,21 +479,21 @@ public class IndexerInvertedCompressed extends Indexer {
 					}
 				};
 				Arrays.sort(files, comp); 
-				
+
 				indexWriter.write("{");
 				for(int i = 0 ; i < _dictionary.size();i++){
 
 					System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
 
 					//get posting list of term_id i from all the files and merge them
-//					List<Integer> mergedPostingList = new ArrayList<Integer>();
+					//					List<Integer> mergedPostingList = new ArrayList<Integer>();
 					StringBuilder mergedPostingListStr = new StringBuilder();
 
 					for(int f=0; f<files.length; f++) {
 						File indexTempFile = files[f];
-						
+
 						System.out.println(indexTempFile.getName());
-						
+
 						if(scanners.get(indexTempFile.getName()) == null) {
 							try {
 								Scanner scanner = new Scanner(indexTempFile);
@@ -500,25 +507,25 @@ public class IndexerInvertedCompressed extends Indexer {
 
 
 						String postingList = getPostingList(indexTempFile , i);
-						
+
 						//sample posting list = [0:81 82 02b2 03f8 0185 02df, 2:81 0290 cc]
 						if(postingList != null){
 							try{
-								
+
 								postingList = postingList.replaceAll("\\]", "");
 								postingList = postingList.replaceAll("\\[", "");
 
 								if(mergedPostingListStr.length() > 0)
 									mergedPostingListStr.append(", ");
-								
+
 								mergedPostingListStr.append(postingList);
-								
-//								if(postingList.charAt(postingList.length()-2)== '}'){
-//									postingList = postingList.substring(0,postingList.length()-2);
-//								}
-//
-//								int[] intList = gson.fromJson(postingList, int[].class); 
-//								mergedPostingList.addAll(asList(intList));
+
+								//								if(postingList.charAt(postingList.length()-2)== '}'){
+								//									postingList = postingList.substring(0,postingList.length()-2);
+								//								}
+								//
+								//								int[] intList = gson.fromJson(postingList, int[].class); 
+								//								mergedPostingList.addAll(asList(intList));
 							}catch(Exception e){
 								e.printStackTrace();
 							}
@@ -533,8 +540,8 @@ public class IndexerInvertedCompressed extends Indexer {
 						indexWriter = new T3FileWriter(_options._indexPrefix+"/"+indexFolder+"/"+docType+"/"+(finalIndexCount++)+".idx");
 						indexWriter.write("{");
 					}
-//					String entry = "\""+i+"\""+":"+gson.toJson(mergedPostingList);
-					
+					//					String entry = "\""+i+"\""+":"+gson.toJson(mergedPostingList);
+
 					String entry = "\""+i+"\""+":["+mergedPostingListStr+"]";
 					indexWriter.write(entry);
 					if((i+1)%mergeCount != 0){
@@ -630,14 +637,14 @@ public class IndexerInvertedCompressed extends Indexer {
 			if(pointerToScanners.get(indexTempFile.getName()) == null){
 				nextElement = scanner.next();
 				if(nextElement.startsWith(".")) continue;
-//				nextElement += "]";
+				//				nextElement += "]";
 			}else{
 				nextElement = pointerToScanners.get(indexTempFile.getName());
 				if(nextElement.startsWith(".")) continue;
 			}
 
 			String currentTerm_id;
-			
+
 			if(nextElement.startsWith("{")){
 				nextElement = nextElement.substring(nextElement.indexOf("{"));
 				currentTerm_id = nextElement.substring(nextElement.indexOf("{")+1,nextElement.indexOf("=", 1));
@@ -647,7 +654,7 @@ public class IndexerInvertedCompressed extends Indexer {
 			}
 
 			int currentTermID_int = Integer.parseInt(currentTerm_id);
-			
+
 
 			if(term_id == currentTermID_int){
 				pointerToScanners.remove(indexTempFile.getName());
@@ -675,17 +682,17 @@ public class IndexerInvertedCompressed extends Indexer {
 			System.out.println("Saving file "+fileId);
 
 			T3FileWriter fileWriter= new T3FileWriter(tempIndex+(fileId++)+".idx");
-//			GsonBuilder builder = new GsonBuilder();
-//
-//			Gson gson =
-//					builder.enableComplexMapKeySerialization().create();
-//			Type type = new TypeToken<Map<Integer, PostingsWithOccurences<String>>>(){}.getType();
-//			String json = gson.toJson(_invertedIndexWithCompresion, type);
+			//			GsonBuilder builder = new GsonBuilder();
+			//
+			//			Gson gson =
+			//					builder.enableComplexMapKeySerialization().create();
+			//			Type type = new TypeToken<Map<Integer, PostingsWithOccurences<String>>>(){}.getType();
+			//			String json = gson.toJson(_invertedIndexWithCompresion, type);
 			Gson gson = new Gson();
-//			String json = gson.toJson(_invertedIndexWithCompresion);
-			
+			//			String json = gson.toJson(_invertedIndexWithCompresion);
+
 			String json = _invertedIndexWithCompresion.toString();
-			
+
 			fileWriter.write(json);
 			fileWriter.close();
 
