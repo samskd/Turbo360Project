@@ -1163,4 +1163,16 @@ public class IndexerInvertedCompressed extends Indexer {
 		return _termCorpusFrequency.get(_dictionary.get(term));
 	}
 
+
+	@Override
+	public String getTerm(int termId) {
+		return _terms.get(termId);
+	}
+
+
+	@Override
+	public int getTermID(String term) {
+		return _dictionary.get(term);
+	}
+
 }

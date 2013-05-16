@@ -247,4 +247,22 @@ public int documentTermFrequency(String term, String url, String docType) {
 	throw new NotImplementedException();
 }
 
+@Override
+public int corpusDocFrequencyByTerm(String term, String docType) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+@Override
+public String getTerm(int termId) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public int getTermID(String term) {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
 }
