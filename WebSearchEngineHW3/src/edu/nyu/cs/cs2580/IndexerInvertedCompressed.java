@@ -847,9 +847,22 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		Vector<String> queryTerms = query._tokens;
 
 		//case 1 
-		Vector <Integer> docIds = new Vector<Integer>();
+		Vector<Integer> docIds = new Vector<Integer>();
 		for(String token : queryTerms){
-			int nextDocID = next(token, docid, docType);
+			int nextDocID = -1;
+			System.out.println(token+"->"+_dictionary.get(token));
+			if(token.indexOf(" ") == -1){ // normal query
+				nextDocID = next(token, docid, docType);
+			}else{ //phrase query
+				Query phraseToken = new Query(token);
+				phraseToken.processQuery();
+
+				Document id = nextDoc(phraseToken, docid, docType);
+				if(id == null)
+					return null;
+				nextDocID = nextPhrase(phraseToken, id._docid, -1, docType);
+			}
+			
 			if(nextDocID == INFINITY){
 				//value not found;
 				return null;
@@ -867,6 +880,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		}
 
 		if(documentFound){
+			if(docIds.size() == 0) return null;
 			Document doc = getDoc(docIds.get(0), docType);
 			return doc;
 		}
@@ -1012,6 +1026,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		
 		return invertedIndex;
 	}
 
@@ -1028,15 +1043,17 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 	public int nextPhrase(Query query, int docid, int position, String docType) {
 
 		Document document_verfiy = nextDoc(query, docid-1, docType);
-		if(document_verfiy._docid != docid)
+		
+		if(document_verfiy == null || document_verfiy._docid != docid)
 			return INFINITY;
 
+		
 		Vector<String> queryTerms = query._tokens;
 
 		//case 1 
 		Vector <Integer> positions = new Vector<Integer>();
 		for(String token : queryTerms) {
-			Integer nextPosition = nextPosition(token,docid, position, docType);
+			int nextPosition = nextPosition(token, docid, position, docType);
 			if(nextPosition == INFINITY) {
 				//value not found;
 				return INFINITY;
@@ -1048,18 +1065,19 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		boolean documentFound = true;
 
 		for(int i = 0 ; i < positions.size()-1 ; i++) {
-			if(positions.get(i) + 1 != positions.get(i+1)){
+			if(positions.get(i)+1 != positions.get(i+1).intValue()){
 				documentFound = false;
 				break;
 			}
 		}
 
 		if(documentFound) {
+			if(positions.size() == 0) return INFINITY;
 			return positions.get(0);
 		}
 
 		//case 3 
-		return nextPhrase(query, docid, Collections.max(positions), docType);
+		return nextPhrase(query, docid, Collections.max(positions)-queryTerms.size(), docType);
 	}
 
 
@@ -1114,9 +1132,14 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		if(documentEntry != null && documentEntry.getDocID() == docId){
 			Vector<String> strOffsets = documentEntry.getOffset();
 			Vector<Integer> offsets = decode(strOffsets);
+			if(offsets.size() == 0) return INFINITY;
+			if(pos == -1) return offsets.get(0);
 			for(int i=0; i<offsets.size()-1; i++){
-				if(offsets.get(i) == pos){
-					return offsets.get(i+1);
+//				if(offsets.get(i).intValue() == pos){
+//					return offsets.get(i+1);
+//				}
+				if(offsets.get(i).intValue() >= pos){
+					return offsets.get(i);
 				}
 			}
 		}

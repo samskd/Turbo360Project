@@ -123,10 +123,10 @@ public class RankerComprehensive extends Ranker {
 			boolean isPhraseQuery = false;
 
 			Query phraseToken = null;
-			if(queryTerm.indexOf("\\s+") != -1){
+			if(queryTerm.indexOf(" ") != -1){
 				isPhraseQuery = true;
 				phraseToken = new Query(queryTerm);
-//				phraseToken.processQuery();
+				phraseToken.processQuery();
 			}
 
 			int qtermFreqDoc = 0;

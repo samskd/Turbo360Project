@@ -41,7 +41,6 @@ public class QueryPhrase extends Query {
 					_tokens.add(s.next());
 				}
 				s.close();
-
 			}
 		}else{
 			Scanner s = new Scanner(_query);
