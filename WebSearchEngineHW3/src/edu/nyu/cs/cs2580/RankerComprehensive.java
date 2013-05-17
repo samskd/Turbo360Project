@@ -20,7 +20,8 @@ public class RankerComprehensive extends Ranker {
 	private double realtimeResultsPercentage = 0.3;
 	private final String REALTIME = "twitter"; //realtime
 	private final String CORPUS = "wiki";
-
+	private final int INFINITY = Integer.MAX_VALUE;
+	
 	public RankerComprehensive(Options options,
 			CgiArguments arguments, Indexer indexer) {
 		super(options, arguments, indexer);
@@ -131,8 +132,12 @@ public class RankerComprehensive extends Ranker {
 
 			int qtermFreqDoc = 0;
 			if(isPhraseQuery){
-				while(_indexer.nextPhrase(phraseToken, d._docid, -1) != Integer.MAX_VALUE){
+				int position = -2;
+				while((position = _indexer.nextPhrase(phraseToken, d._docid, position+1, docType)) != INFINITY){
 					qtermFreqDoc++;
+				}
+				for(String token : phraseToken._tokens){
+					qtermFreqDoc += _indexer.documentTermFrequency(token, d.getUrl(), docType);
 				}
 			}else{
 				qtermFreqDoc = _indexer.documentTermFrequency(queryTerm, d.getUrl(), docType);

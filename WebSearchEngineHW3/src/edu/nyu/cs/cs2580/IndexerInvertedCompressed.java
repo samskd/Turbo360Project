@@ -275,8 +275,8 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				processDocument(corpusFile, documentProcessor);	
 				fileCount++;
 
-//				if(fileCount > 1000) break;
-				
+				//				if(fileCount > 1000) break;
+
 				if(fileCount > 0 && fileCount % fileCountPerFile == 0){
 					saveIndexInFile(CORPUS);
 				}
@@ -450,7 +450,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 			T3FileWriter indexWriter = new T3FileWriter(finalIndex);
 
 			File indexDirectory = new File(tempIndex);
-//			Gson gson = new Gson();
+			//			Gson gson = new Gson();
 
 			if(indexDirectory.isDirectory()) {
 
@@ -470,7 +470,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				indexWriter.write("{");
 				for(int i = 0 ; i < _dictionary.size();i++){
 
-//					System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
+					//					System.out.println("Merging indexes "+i+" out of "+_dictionary.size()+" terms");
 
 					//get posting list of term_id i from all the files and merge them
 					//List<Integer> mergedPostingList = new ArrayList<Integer>();
@@ -595,7 +595,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		}else{
 			//if file, then delete it
 			file.delete();
-//			System.out.println("File is deleted : " + file.getAbsolutePath());
+			//			System.out.println("File is deleted : " + file.getAbsolutePath());
 		}
 	}
 
@@ -849,31 +849,49 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		//case 1 
 		Vector<Integer> docIds = new Vector<Integer>();
 		for(String token : queryTerms){
-			int nextDocID = -1;
-			System.out.println(token+"->"+_dictionary.get(token));
+			int nextDocID = INFINITY;
+
 			if(token.indexOf(" ") == -1){ // normal query
 				nextDocID = next(token, docid, docType);
 			}else{ //phrase query
 				Query phraseToken = new Query(token);
 				phraseToken.processQuery();
+				Document nextPhraseDoc = null;
 
-				Document id = nextDoc(phraseToken, docid, docType);
-				if(id == null)
-					return null;
-				nextDocID = nextPhrase(phraseToken, id._docid, -1, docType);
+//				int currentPhraseDocID = docid;
+//				nextPhraseDoc = nextDoc(phraseToken, currentPhraseDocID, docType);
+//				int nextPhrase = nextPhrase(phraseToken, nextPhraseDoc._docid, -1, docType);
+//				if(nextPhrase != INFINITY){
+//					nextDocID = nextPhraseDoc._docid;
+//				}
+
+
+				int currentPhraseDocID = docid;
+				while((nextPhraseDoc = nextDoc(phraseToken, currentPhraseDocID, docType)) != null){
+					int nextPhrase = nextPhrase(phraseToken, nextPhraseDoc._docid, -1, docType);
+					if(nextPhrase != INFINITY){
+						nextDocID = nextPhraseDoc._docid;
+						break;
+					}
+					currentPhraseDocID = nextPhraseDoc._docid;
+				}
+
+
+
 			}
-			
+
 			if(nextDocID == INFINITY){
 				//value not found;
 				return null;
 			}
+
 			docIds.add(nextDocID);
 		}
 
 		//case 2 
 		boolean documentFound = true;
-		for(int i = 1; i < docIds.size(); i++){
-			if(!docIds.get(i-1).equals(docIds.get(i))){
+		for(int i = 0; i < docIds.size(); i++){
+			if(!docIds.get(i).equals(docIds.get(0))){
 				documentFound = false;
 				break;
 			}
@@ -988,7 +1006,7 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 			//divide string into terms
 			String[] terms = fileContents.split("\\],");
-			
+
 			for(int i=0; i<terms.length; i++){
 				String termList = terms[i];
 				//extract termID
@@ -997,36 +1015,36 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 				String postingListStr = termList.substring(termList.indexOf("[")+1);
 				//divide termList into document with its occurences
 				String[] docWithOccurences = postingListStr.split(", ");
-				
+
 				PostingsWithOccurences<String> postingList;
-				
+
 				if(invertedIndex.containsKey(termID))
 					postingList = invertedIndex.get(termID);
 				else
 					postingList = new PostingsWithOccurences<String>();
-				
+
 				//for each docid and occurence update the postinglist
 				for(int j=0; j<docWithOccurences.length; j++){
 					String docWithOccurenceStr = docWithOccurences[j];
 					String[] docWithOccurenceArray = docWithOccurenceStr.split(":");
 					String docIDStr = docWithOccurenceArray[0];
-					
+
 					if(docIDStr.isEmpty()) continue;
 					int docID = Integer.parseInt(docIDStr);
 					String[] occurences = docWithOccurenceArray[1].split("\\s+");
 
 					for(int k=0; k<occurences.length; k++)
 						postingList.addEntry(docID, occurences[k]);
-					
+
 				}
-				
+
 				invertedIndex.put(termID, postingList);
 			}
-			
+
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
+
 		return invertedIndex;
 	}
 
@@ -1043,11 +1061,11 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 	public int nextPhrase(Query query, int docid, int position, String docType) {
 
 		Document document_verfiy = nextDoc(query, docid-1, docType);
-		
+
 		if(document_verfiy == null || document_verfiy._docid != docid)
 			return INFINITY;
 
-		
+
 		Vector<String> queryTerms = query._tokens;
 
 		//case 1 
@@ -1063,7 +1081,6 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 
 		//case 2 
 		boolean documentFound = true;
-
 		for(int i = 0 ; i < positions.size()-1 ; i++) {
 			if(positions.get(i)+1 != positions.get(i+1).intValue()){
 				documentFound = false;
@@ -1077,7 +1094,13 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 		}
 
 		//case 3 
-		return nextPhrase(query, docid, Collections.max(positions)-queryTerms.size(), docType);
+		int newPosition = Collections.max(positions)-queryTerms.size()+1;
+		
+		//avoid infinite loops
+		if(newPosition == position)
+			newPosition++;
+
+		return nextPhrase(query, docid, newPosition, docType);
 	}
 
 
@@ -1134,10 +1157,16 @@ public class IndexerInvertedCompressed extends Indexer implements Serializable {
 			Vector<Integer> offsets = decode(strOffsets);
 			if(offsets.size() == 0) return INFINITY;
 			if(pos == -1) return offsets.get(0);
-			for(int i=0; i<offsets.size()-1; i++){
-//				if(offsets.get(i).intValue() == pos){
-//					return offsets.get(i+1);
-//				}
+
+			//binary search for the index or the index where the pos would 
+			//be and start searching form there.
+			int binarySearchIndex = Collections.binarySearch(offsets, pos);
+			if(binarySearchIndex < 0)
+				binarySearchIndex = -binarySearchIndex - 1;
+
+			if(binarySearchIndex == offsets.size()) return INFINITY;
+
+			for(int i=binarySearchIndex; i<offsets.size(); i++){
 				if(offsets.get(i).intValue() >= pos){
 					return offsets.get(i);
 				}
